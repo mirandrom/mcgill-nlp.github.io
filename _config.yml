@@ -20,8 +20,8 @@ description: >- # this means to ignore newlines until "baseurl:"
   line in _config.yml. It will appear in your document head meta (for
   Google search results) and in your feed.xml site description.
 twitter_username: username
-github_username: username
-minimal_mistakes_skin: default
+github_username: McGill-NLP
+minimal_mistakes_skin: dark
 search: true
 
 # Build settings
@@ -29,9 +29,7 @@ markdown: kramdown
 remote_theme: mmistakes/minimal-mistakes@4.24.0
 # Outputting
 permalink: /:categories/:title/
-paginate: 5 # amount of posts to show
-paginate_path: /page:num/
-timezone: # https://en.wikipedia.org/wiki/List_of_tz_database_time_zones
+timezone: America/Montreal
 
 include:
   - _pages
@@ -70,10 +68,7 @@ author:
       url: "https://twitter.com/"
     - label: "GitHub"
       icon: "fab fa-fw fa-github"
-      url: "https://github.com/"
-    - label: "Instagram"
-      icon: "fab fa-fw fa-instagram"
-      url: "https://instagram.com/"
+      url: "https://github.com/McGill-NLP"
 
 footer:
   links:
@@ -82,10 +77,7 @@ footer:
       url: "https://twitter.com/"
     - label: "GitHub"
       icon: "fab fa-fw fa-github"
-      url: "https://github.com/"
-    - label: "Instagram"
-      icon: "fab fa-fw fa-instagram"
-      url: "https://instagram.com/"
+      url: "https://github.com/McGill-NLP"
 
 defaults:
   # _posts
@@ -105,7 +97,21 @@ defaults:
       type: pages
     values:
       layout: single
+      classes: 
+        - no-sidebar
+        - wide
+      author_profile: false
+  # _papers
+  - scope:
+      path: "_papers"
+      type: papers
+    values:
+      layout: single
       author_profile: true
+      read_time: true
+      comments: true
+      share: true
+      related: true
 
 category_archive:
   type: liquid
