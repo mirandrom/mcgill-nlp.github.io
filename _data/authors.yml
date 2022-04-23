@@ -1,11 +1,8 @@
-Nouha:
-  name: "Nouha Dziri"
-  avatar: "/assets/images/bio-photo.jpg"
-
-Siva Reddy:
+siva:
   name: "Siva Reddy"
   bio: "Assistant Professor at McGill University, Facebook CIFAR AI Chair"
   avatar: "/assets/images/headshots/siva.jpg"
+  role: "Faculty"
   links:
     - label: "Website"
       icon: "fas fa-fw fa-link"
@@ -17,5 +14,167 @@ Siva Reddy:
       icon: "fab fa-fw fa-github"
       url: "https://github.com/sivareddyg"
     - label: "Scholar"
-      icon: "fab fa-fw fa-graduation-cap"
+      icon: "fas fa-fw fa-graduation-cap"
       url: "https://scholar.google.com/citations?user=LZZAAtoAAAAJ&hl=en&oi=ao"
+
+edoardo:
+  name: "Edoardo Ponti"
+  role: "Postdoc"
+  avatar: "/assets/images/headshots/bio-photo.jpg"
+  date: "Oct 2020"
+  links:
+    - name: "Website"
+      icon: "fas fa-fw fa-link"
+      url: "https://ducdauge.github.io/"
+
+andreas:
+  name: "Andreas Madsen"
+  role: "PhD"
+  avatar: "/assets/images/headshots/bio-photo.jpg"
+  note: "Co-advised with Sarath Chandar; Polytechnique Montreal"
+  links:
+    - name: "Website"
+      icon: "fas fa-fw fa-link"
+      url: "https://andreasmadsen.github.io/"
+
+nicholas:
+  name: "Nicholas Meade"
+  role: "PhD"
+  avatar: "/assets/images/headshots/bio-photo.jpg"
+  date: "Sep 2020"
+  links:
+    - name: "Website"
+      icon: "fas fa-fw fa-link"
+      url: "https://ncmeade.github.io/"
+
+vaibhav:
+  name: "Vaibhav Adlakha"
+  role: "PhD"
+  avatar: "/assets/images/headshots/bio-photo.jpg"
+  date: "Sep 2020"
+  links:
+    - name: "Website"
+      icon: "fas fa-fw fa-link"
+    - label: "Scholar"
+      icon: "fas fa-fw fa-graduation-cap"
+      url: "https://scholar.google.com/citations?user=0qmIfUoAAAAJ&hl=en"
+
+zichao:
+  name: "Zichao Li"
+  role: "PhD"
+  avatar: "/assets/images/headshots/bio-photo.jpg"
+  date: "Sep 2020"
+  note: "Co-advised with Jackie Cheung"
+  links:
+    - name: "Website"
+      icon: "fas fa-fw fa-link"
+      url: "https://aclanthology.org/people/z/zichao-li/"
+
+benno:
+  name: "Benno Krojer"
+  role: "PhD"
+  avatar: "/assets/images/headshots/bio-photo.jpg"
+  date: "Sep 2021"
+  links:
+    - name: "Website"
+      icon: "fas fa-fw fa-link"
+      url: "https://www.bennokrojer.com/"
+
+devang:
+  name: "Devang Kulshreshtha"
+  role: "Master"
+  avatar: "/assets/images/headshots/bio-photo.jpg"
+  date: "Sep 2020"
+  links:
+    - name: "Website"
+      icon: "fas fa-fw fa-link"
+      url: "https://geekydevu.netlify.app/"
+
+nathan:
+  name: "Nathan Schucher"
+  role: "Master"
+  avatar: "/assets/images/headshots/bio-photo.jpg"
+  date: "Sep 2020"
+  links:
+    - name: "Website"
+      icon: "fas fa-fw fa-link"
+      url: "https://nathanschucher.com/"
+
+amirhossein:
+  name: "Amirhossein Kazemnejad"
+  role: "Master"
+  avatar: "/assets/images/headshots/bio-photo.jpg"
+  date: "Jan 2021"
+  links:
+    - name: "Website"
+      icon: "fas fa-fw fa-link"
+      url: "https://kazemnejad.com/"
+
+aristides:
+  name: "Aristides Milios"
+  role: "Master"
+  avatar: "/assets/images/headshots/bio-photo.jpg"
+  date: "Sep 2021"
+  links:
+    - name: "Website"
+      icon: "fas fa-fw fa-link"
+      url: "http://atmilios.com/"
+
+parishad:
+  name: "Parishad BehnamGhader"
+  role: "Master"
+  avatar: "/assets/images/headshots/bio-photo.jpg"
+  date: "Sep 2021"
+  links:
+    - name: "Website"
+      icon: "fas fa-fw fa-link"
+      url: "https://parishadbehnam.github.io/"
+
+xing:
+  name: "Xing Han Lu"
+  role: "Master"
+  avatar: "/assets/images/headshots/bio-photo.jpg"
+  date: "Sep 2021"
+  links:
+    - name: "Website"
+      icon: "fas fa-fw fa-link"
+      url: "https://xinghanlu.com/"
+
+
+neshma:
+  name: "Neshma Metri"
+  role: "Undergraduate"
+  avatar: "/assets/images/headshots/bio-photo.jpg"
+  date: "Fall 2021"
+  links:
+    - name: "Website"
+      icon: "fas fa-fw fa-link"
+      url: ""
+
+sivan:
+  name: "Sivan Milton"
+  role: "Undergraduate"
+  avatar: "/assets/images/headshots/bio-photo.jpg"
+  date: "Fall 2021"
+  links:
+    - name: "Website"
+      icon: "fas fa-fw fa-link"
+      url: ""
+
+nouha:
+  name: "Nouha Dziri"
+  role: "Intern"
+  avatar: "/assets/images/bio-photo.jpg"
+  links:
+    - label: "Scholar"
+      icon: "fas fa-fw fa-graduation-cap"
+      url: "https://scholar.google.com/citations?hl=en&user=_1OMA0EAAAAJ"
+
+emanuele:
+  name: "Emanuele Bugliarello"
+  role: "Intern"
+  avatar: "/assets/images/bio-photo.jpg"
+  links:
+    - name: "Website"
+      icon: "fas fa-fw fa-link"
+      url: ""

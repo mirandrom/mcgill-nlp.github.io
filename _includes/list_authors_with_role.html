@@ -1,0 +1,22 @@
+<ul>
+    {% for hash in include.authors -%}
+    {% assign author = hash[1] -%}
+    {% if author.role == include.role -%}
+    <li>
+        {% if author.links %}
+        <a href="{{ author.links[0].url }}">{{ author.name }}</a>
+        {% else %}
+        {{ author.name }}
+        {% endif %}
+
+        {% if author.date %}
+        ({{ author.date }})
+        {% endif %}
+
+        {% if author.note %}
+        - {{ author.note }}
+        {% endif %}
+    </li>
+    {%endif -%}
+    {% endfor %}
+</ul>
