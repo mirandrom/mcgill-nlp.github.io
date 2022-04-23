@@ -102,6 +102,21 @@ Some starting statement
 More content.
 ```
 
+## Add a course description
+
+```markdown
+---
+title: "COMP XYZ - Semester YYYY"  # Add course code, followed by the semester it's taught
+author: siva  # Name of the instructor
+categories:
+  - Teaching  # Used to list all posts describing a course in /teaching/
+tags:
+  - Winter 2022  # Semester
+link: "https://docs.google.com/document/d/..." # Link to an external course description
+---
+
+*Name of the course*
+```
 
 ## Troubleshooting
 
