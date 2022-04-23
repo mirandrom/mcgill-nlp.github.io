@@ -1,6 +1,6 @@
 ---
 permalink: /blog/
-layout: home
+layout: posts
 classes:
     - wide
     - no-sidebar

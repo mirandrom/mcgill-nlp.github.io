@@ -80,17 +80,19 @@ footer:
       url: "https://github.com/McGill-NLP"
 
 defaults:
-  # _posts
+  # _posts/blog
   - scope:
-      path: ""
+      path: _posts/blog
       type: posts
     values:
       layout: single
       author_profile: true
       read_time: true
-      comments: true
+      comments: false
       share: true
-      related: true
+      related: false
+      classes:
+        - wide
   # _pages
   - scope:
       path: "_pages"
@@ -101,17 +103,16 @@ defaults:
         - no-sidebar
         - wide
       author_profile: false
-  # _papers
+  # _posts/papers
   - scope:
-      path: "_papers"
-      type: papers
+      path: _posts/papers
+      type: posts
     values:
       layout: single
+      classes:
+        - wide
       author_profile: true
-      read_time: true
-      comments: true
       share: true
-      related: true
 
 category_archive:
   type: liquid

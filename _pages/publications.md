@@ -1,7 +1,10 @@
 ---
-permalink: /publications/
-layout: home
+title: Papers
+layout: category
 classes:
-    - wide
     - no-sidebar
+    - wide
+permalink: /publications/
+taxonomy: Publications
+author_profile: false
 ---
