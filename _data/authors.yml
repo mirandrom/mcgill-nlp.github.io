@@ -1,7 +1,7 @@
 siva:
   name: "Siva Reddy"
   bio: "Assistant Professor at McGill University, Facebook CIFAR AI Chair"
-  avatar: "/assets/images/headshots/siva.jpg"
+  avatar: "/assets/images/bio/siva.jpg"
   role: "Faculty"
   links:
     - label: "Website"
@@ -24,17 +24,15 @@ edoardo:
   date: "Oct 2020"
   links:
     - name: "Website"
-      icon: "fas fa-fw fa-link"
       url: "https://ducdauge.github.io/"
 
 andreas:
   name: "Andreas Madsen"
   role: "PhD"
   avatar: "/assets/images/headshots/bio-photo.jpg"
-  note: "Co-advised with Sarath Chandar; Polytechnique Montreal"
+  note: "Co-advised with Sarath Chandar; Polytechnique Montréal"
   links:
     - name: "Website"
-      icon: "fas fa-fw fa-link"
       url: "https://andreasmadsen.github.io/"
 
 nicholas:
@@ -42,9 +40,9 @@ nicholas:
   role: "PhD"
   avatar: "/assets/images/headshots/bio-photo.jpg"
   date: "Sep 2020"
+  alumni: false
   links:
     - name: "Website"
-      icon: "fas fa-fw fa-link"
       url: "https://ncmeade.github.io/"
 
 vaibhav:
@@ -52,9 +50,8 @@ vaibhav:
   role: "PhD"
   avatar: "/assets/images/headshots/bio-photo.jpg"
   date: "Sep 2020"
+  alumni: false
   links:
-    - name: "Website"
-      icon: "fas fa-fw fa-link"
     - label: "Scholar"
       icon: "fas fa-fw fa-graduation-cap"
       url: "https://scholar.google.com/citations?user=0qmIfUoAAAAJ&hl=en"
@@ -65,79 +62,79 @@ zichao:
   avatar: "/assets/images/headshots/bio-photo.jpg"
   date: "Sep 2020"
   note: "Co-advised with Jackie Cheung"
+  alumni: false
   links:
     - name: "Website"
-      icon: "fas fa-fw fa-link"
       url: "https://aclanthology.org/people/z/zichao-li/"
 
 benno:
   name: "Benno Krojer"
   role: "PhD"
   avatar: "/assets/images/headshots/bio-photo.jpg"
+  alumni: false
   date: "Sep 2021"
   links:
     - name: "Website"
-      icon: "fas fa-fw fa-link"
       url: "https://www.bennokrojer.com/"
 
 devang:
   name: "Devang Kulshreshtha"
   role: "Master"
   avatar: "/assets/images/headshots/bio-photo.jpg"
+  alumni: false
   date: "Sep 2020"
   links:
     - name: "Website"
-      icon: "fas fa-fw fa-link"
       url: "https://geekydevu.netlify.app/"
 
 nathan:
   name: "Nathan Schucher"
   role: "Master"
   avatar: "/assets/images/headshots/bio-photo.jpg"
+  alumni: false
   date: "Sep 2020"
   links:
     - name: "Website"
-      icon: "fas fa-fw fa-link"
       url: "https://nathanschucher.com/"
 
 amirhossein:
   name: "Amirhossein Kazemnejad"
   role: "Master"
   avatar: "/assets/images/headshots/bio-photo.jpg"
+  alumni: false
   date: "Jan 2021"
   links:
     - name: "Website"
-      icon: "fas fa-fw fa-link"
       url: "https://kazemnejad.com/"
 
 aristides:
   name: "Aristides Milios"
   role: "Master"
   avatar: "/assets/images/headshots/bio-photo.jpg"
+  alumni: false
   date: "Sep 2021"
   links:
     - name: "Website"
-      icon: "fas fa-fw fa-link"
       url: "http://atmilios.com/"
 
 parishad:
   name: "Parishad BehnamGhader"
   role: "Master"
   avatar: "/assets/images/headshots/bio-photo.jpg"
+  alumni: false
   date: "Sep 2021"
   links:
     - name: "Website"
-      icon: "fas fa-fw fa-link"
       url: "https://parishadbehnam.github.io/"
 
 xing:
   name: "Xing Han Lu"
   role: "Master"
   avatar: "/assets/images/headshots/bio-photo.jpg"
+  alumni: false
   date: "Sep 2021"
   links:
     - name: "Website"
-      icon: "fas fa-fw fa-link"
       url: "https://xinghanlu.com/"
 
 
@@ -145,30 +142,25 @@ neshma:
   name: "Neshma Metri"
   role: "Undergraduate"
   avatar: "/assets/images/headshots/bio-photo.jpg"
+  alumni: false
   date: "Fall 2021"
-  links:
-    - name: "Website"
-      icon: "fas fa-fw fa-link"
-      url: ""
 
 sivan:
   name: "Sivan Milton"
   role: "Undergraduate"
   avatar: "/assets/images/headshots/bio-photo.jpg"
+  alumni: false
   date: "Fall 2021"
-  links:
-    - name: "Website"
-      icon: "fas fa-fw fa-link"
-      url: ""
 
 nouha:
   name: "Nouha Dziri"
   role: "Intern"
   avatar: "/assets/images/bio-photo.jpg"
+  alumni: false
   links:
     - label: "Scholar"
       icon: "fas fa-fw fa-graduation-cap"
-      url: "https://scholar.google.com/citations?hl=en&user=_1OMA0EAAAAJ"
+      url: "https://webdocs.cs.ualberta.ca/~dziri/"
 
 emanuele:
   name: "Emanuele Bugliarello"
@@ -177,4 +169,46 @@ emanuele:
   links:
     - name: "Website"
       icon: "fas fa-fw fa-link"
-      url: ""
+      url: "https://e-bug.github.io/"
+
+michelle:
+  name: "Michelle Yang"
+  role: "Undergraduate"
+  date: "Fall 2021"
+  avatar: "/assets/images/bio-photo.jpg"
+  alumni: true
+
+elinor:
+  name: "Elinor Poole-Dayan"
+  role: "Undergraduate"
+  date: "Winter 2021"
+  avatar: "/assets/images/bio-photo.jpg"
+  alumni: true
+
+emily:
+  name: "Emily Goodwin"
+  role: "Master"
+  new_role: "PhD at Stanford Linguistics"
+  avatar: "/assets/images/bio-photo.jpg"
+  date: "Jan 2020"
+  note: "Co-advised with Tim O'Donnell"
+  alumni: true
+  links:
+    - name: "Website"
+      icon: "fas fa-fw fa-link"
+      url: "https://emilygoodwin.github.io/"
+
+lucas:
+  name: "Lucas Torroba Hennigen"
+  role: "Intern"
+  new_role: "PhD at MIT Computer Science"
+  avatar: "/assets/images/bio-photo.jpg"
+  date: "Fall 2021"
+  alumni: true
+
+victor:
+  name: "Victor Prokhorov"
+  role: "Intern"
+  avatar: "/assets/images/bio-photo.jpg"
+  date: "Fall 2021"
+  alumni: true

@@ -5,49 +5,49 @@ layout: single
 ---
 
 
-## Faculty
+### Faculty
 
-{% include list_authors_with_role.html authors=site.data.authors role="Faculty" %}
+{% include list_authors_with_role.html authors=site.data.authors role="Faculty" alumni=false %}
 
-## Postdocs
+### Postdocs
 
-{% include list_authors_with_role.html authors=site.data.authors role="Postdoc" %}
+{% include list_authors_with_role.html authors=site.data.authors role="Postdoc" alumni=false %}
 
-## PhD Students
+### PhD Students
 
-{% include list_authors_with_role.html authors=site.data.authors role="PhD" %}
+{% include list_authors_with_role.html authors=site.data.authors role="PhD" alumni=false %}
 
-## Masters Students
+### Masters Students
 
-{% include list_authors_with_role.html authors=site.data.authors role="Master" %}
+{% include list_authors_with_role.html authors=site.data.authors role="Master" alumni=false %}
 
-<!-- * Devang Kulshreshtha (Sep 2020)
-* Nathan Schucher (Sep 2020)
-* Amirhossein Kazemnejad (Jan 2021)
-* Aristides Milios (Sep 2021)
-* Xing Han Lu (Sep 2021)
-* Parishad BehnamGhader (Jan 2022)  -->
+### Undergraduate Students
 
-## Undegraduate Students
+{% include list_authors_with_role.html authors=site.data.authors role="Undergraduate" alumni=false %}
 
-{% include list_authors_with_role.html authors=site.data.authors role="Undergraduate" %}
+### Interns
 
-<!-- * Neshma Metri (Fall 2021)
-* Sivan Milton (Fall 2021)  -->
-
-## Interns
-
-{% include list_authors_with_role.html authors=site.data.authors role="Intern" %}
-
-<!-- * Nouha Dziri
-* Emanuele Bugliarello -->
+{% include list_authors_with_role.html authors=site.data.authors role="Intern" alumni=false %}
 
 ## Alumni
 
-{% include list_authors_with_role.html authors=site.data.authors role="Alumni" %}
 
-<!-- * Michelle Yang (Fall 2021; undergrad at McGill)
-* Elinor Poole-Dayan (Winter 2021; undergrad at McGill)
-* Emily Goodwin (Jan 2020; MA -> PhD at Stanford Linguistics; co-advised with Tim O'Donnell)
-* Lucas Torroba Hennigen (intern -> PhD at MIT Computer Science)
-* Victor Prokhorov (intern, back to Cambridge University) -->
+### Postdocs
+
+{% include list_authors_with_role.html authors=site.data.authors role="Postdoc" alumni=true %}
+
+### PhD Students
+
+{% include list_authors_with_role.html authors=site.data.authors role="PhD" alumni=true %}
+
+### Masters Students
+
+{% include list_authors_with_role.html authors=site.data.authors role="Master" alumni=true %}
+
+### Undergraduate Students
+
+{% include list_authors_with_role.html authors=site.data.authors role="Undergraduate" alumni=true %}
+
+### Interns
+
+{% include list_authors_with_role.html authors=site.data.authors role="Intern" alumni=true %}
