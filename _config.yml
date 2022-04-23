@@ -13,7 +13,7 @@
 # you will see them accessed via {{ site.title }}, {{ site.email }}, and so on.
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
-title: MM
+title: McGill NLP
 email:
 description: >- # this means to ignore newlines until "baseurl:"
   Write an awesome description for your new site here. You can edit this
@@ -56,13 +56,13 @@ plugins:
   - jekyll-include-cache
 
 author:
-  name   : "First Lastname"
+  name   : "McGill NLP Member(s)"
   avatar : "/assets/images/bio-photo.jpg"
-  bio    : "My awesome biography constrained to a sentence or two goes here."
+  bio    : "Current or former lab member(s) worked on this."
   links:
     - label: "Website"
       icon: "fas fa-fw fa-link"
-      url: "https://"
+      url: "https://mcgill-nlp.github.io"
     - label: "Twitter"
       icon: "fab fa-fw fa-twitter-square"
       url: "https://twitter.com/"
@@ -80,6 +80,16 @@ footer:
       url: "https://github.com/McGill-NLP"
 
 defaults:
+  # _pages
+  - scope:
+      path: "_pages"
+      type: pages
+    values:
+      layout: single
+      classes: 
+        - no-sidebar
+        - wide
+      author_profile: false
   # _posts/blog
   - scope:
       path: _posts/blog
@@ -93,19 +103,19 @@ defaults:
       related: false
       classes:
         - wide
-  # _pages
-  - scope:
-      path: "_pages"
-      type: pages
-    values:
-      layout: single
-      classes: 
-        - no-sidebar
-        - wide
-      author_profile: false
   # _posts/papers
   - scope:
       path: _posts/papers
+      type: posts
+    values:
+      layout: single
+      classes:
+        - wide
+      author_profile: true
+      share: true
+  # _posts/teaching
+  - scope:
+      path: _posts/teaching
       type: posts
     values:
       layout: single

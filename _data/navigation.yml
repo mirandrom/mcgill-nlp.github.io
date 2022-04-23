@@ -3,9 +3,9 @@ main:
     url: /people/
   - title: "Publications"
     url: /publications/
+  - title: "Teaching"
+    url: /teaching/
   - title: "Blog"
     url: /blog/
   - title: "Contact"
     url: /contact/
-  - title: "About"
-    url: /about/

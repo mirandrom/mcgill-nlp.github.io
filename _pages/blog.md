@@ -1,6 +1,8 @@
 ---
+title: Blog
 permalink: /blog/
-layout: posts
+layout: category
+taxonomy: Blog
 classes:
     - wide
     - no-sidebar
