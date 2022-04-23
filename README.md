@@ -40,9 +40,15 @@ Replace `<username>` with your firstname or nickname. If someone already has the
 
 ## Front matters and YAML
 
-For any type of post (publication, blog post, course description), we use something called ["Front Matters"](https://jekyllrb.com/docs/front-matter/) to tell Jekyll about the purpose of the file. This is a block of YAML text at the beginning of the file. The rest of the file is regular [markdown](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet).
+For any type of page or post (publication, blog post, course description), we use something called ["Front Matters"](https://jekyllrb.com/docs/front-matter/) to tell Jekyll about the purpose of the file. This is a block of YAML text at the beginning of the file. The rest of the file is regular [markdown](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet).
 
-## Add publication link
+## Modifying a page
+
+To modify a page, navigate to [_pages](_pages/) and update the desired file. If you add a new file, you will also need to edit the [_data/navigation.yml](./_data/navigation.yml) file with the correct relative URL.
+
+## Creating a post
+
+### Publication link
 
 To add a link to a publication, create a new file called `<YYYY>-<MM>-<DD>-<shorthand>.md` in the [`_posts/papers` directory](https://github.com/McGill-NLP/group-webpage/tree/master/_posts/papers). Note that `<shorthand>` will determine the URL of the file, so choose carefully.
 
@@ -70,9 +76,9 @@ Followed by the content in markdown:
 ```
 
 
-## Write a blog post
+### Blog post
 
-To write a blogpost, create a new file called `<YYYY>-<MM>-<DD>-<shorthand>.md` in the [`_posts/blog` directory](_posts/blog). Note that `<shorthand>` will determine the URL of the file, so choose carefully.
+To write a blog post, create a new file called `<YYYY>-<MM>-<DD>-<shorthand>.md` in the [`_posts/blog` directory](_posts/blog). Note that `<shorthand>` will determine the URL of the file, so choose carefully.
 
 Every file should start with the following:
 ```yaml
@@ -102,7 +108,7 @@ Some starting statement
 More content.
 ```
 
-## Add a course description
+### Course description
 
 ```markdown
 ---
