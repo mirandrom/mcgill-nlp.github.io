@@ -56,24 +56,35 @@ Every file should start with the following:
 ```yaml
 ---
 title: "My cool paper" # Add official title
-author: <username> # Add your name (see above)
-categories:
-  - Publications  # Used to list all posts about publications in /publications/
-tags:  # Include conference if relevant
-  - ACL  # Example
-link: https://arxiv.org/abs/1234.5678 # link to the publication; this will be opened when clicking on the publication title
-excerpt_separator: "<!--more-->"  # Separate the excerpt from the body
+author: <username> # Add name to show profile in sidebar
+categories: Publications # Used to list all posts about publications in /publications/
+names: "Firstname lastname, Firstname lastname, ..." # Add names of all authors
+link: https://arxiv.org/abs/1234.5678 # link to paper
+code: https://github.com/McGill-NLP/example  # link to code
+webpage: https://mcgill-nlp.github.io/project  # link to project
+video: https://youtube.com  # link to video
+twitter: https://twitter.com/username  # link to twitter thread
+demo: https://project-demo.com  # link to interactive demo
+venue: ACL 2022  # venue and year of the paper
+tags: ACL # tag of the paper (exclude year, use shorthand)
 ---
 ```
 
+Then, it should be followed with the content in markdown:
+
 ```markdown
-*Firstname lastname, firstname lastname,...*
 
-<!--more-->
+*{{ page.names }}*
+**{{ page.venue }}**
 
-Followed by the content in markdown:
-<!-- Your content here -->
+
+{% include display-publication-links.html pub=page %}
+
+## Abstract
+<!-- Your abstract here -->
 ```
+
+Note that `include display-publication-links.html` will display the icons and links to code, webpage, tweets, etc. `pub=page` refers to the page object, which is handled by Jekyll.
 
 
 ### Blog post
@@ -124,7 +135,13 @@ link: "https://docs.google.com/document/d/..." # Link to an external course desc
 *Name of the course*
 ```
 
-## Troubleshooting
+## Advanced
+
+### Editing CSS
+
+If you need to modify some CSS attributes directly, you need to use sass. You can create a new file in [_sass/custom](_sass/custom) and import it inside [_sass/main.scss](_sass/main.scss).
+
+### Troubleshooting
 
 If you have a question about using Jekyll, start a discussion on the [Jekyll Forum](https://talk.jekyllrb.com/) or [StackOverflow](https://stackoverflow.com/questions/tagged/jekyll). Other resources:
 

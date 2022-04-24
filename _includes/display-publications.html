@@ -1,0 +1,28 @@
+<div>
+    <article itemscope itemtype="https://schema.org/CreativeWork">
+
+        {% if post.thumbnail %}
+        <div class="publication-thumbnail">
+            <img src="{{ post.thumbnail }}" alt="">
+        </div>
+        {% endif %}
+
+        <h2 class="publication-title" itemprop="headline">
+            <a href="{{ post.url }}">{{ post.title }}</a>
+        </h2>
+
+        {% if post.names %}
+        <div>
+            <i>{{ post.names }}</i>
+        </div>
+        {% endif %}
+
+        {% if post.venue %}
+        <div>
+            <b> {{ post.venue }} </b>
+        </div>
+        {% endif %}
+
+        {% include display-publication-links.html pub=post%}
+    </article>
+</div>

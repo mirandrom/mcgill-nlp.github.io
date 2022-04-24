@@ -1,0 +1,44 @@
+<div class="publication-links">
+    {% assign pub = include.pub %}
+    {% if pub.link %}
+    <a class="publication-ext-link" href="{{ pub.link }}">
+        <i class="fas fa-book"></i>
+        <span>Read</span>
+    </a>
+    {% endif %}
+
+    {% if pub.code %}
+    <a class="publication-ext-link" href="{{ pub.code }}">
+        <i class="fab fa-github"></i>
+        <span>Code</span>
+    </a>
+    {% endif %}
+    {% if pub.webpage %}
+    <a class="publication-ext-link" href="{{ pub.webpage }}">
+        <i class="fas fa-link"></i>
+        <span>Page</span>
+    </a>
+    {% endif %}
+
+    {% if pub.twitter %}
+    <a class="publication-ext-link" href="{{ pub.twitter }}">
+        <i class="fab fa-twitter"></i>
+        <span>Tweet</span>
+    </a>
+    {% endif %}
+
+    {% if pub.video %}
+    <a class="publication-ext-link" href="{{ pub.video }}">
+        <i class="fas fa-video"></i>
+        <span>Video</span>
+    </a>
+    {% endif %}
+
+    {% if pub.demo %}
+    <a class="publication-ext-link" href="{{ pub.demo }}">
+        <i class="fas fa-laptop"></i>
+        <span>Demo</span>
+    </a>
+    {% endif %}
+
+</div>

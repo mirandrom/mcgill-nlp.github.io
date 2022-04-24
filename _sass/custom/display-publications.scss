@@ -1,0 +1,21 @@
+div.publication-thumbnail {
+    float: left;
+    max-width: 25%;
+    margin-right: 2%;
+    min-width: 200px;
+    aspect-ratio: 16/9;
+}
+
+.publication-title > a {
+    text-decoration: none;
+}
+
+.publication-ext-link {
+    text-decoration: none;
+    padding-right: 15px;
+    display: inline-block;
+}
+
+.publication-links {
+    margin-top: 10px;
+}

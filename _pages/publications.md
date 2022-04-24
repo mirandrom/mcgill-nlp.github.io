@@ -1,6 +1,6 @@
 ---
 title: Publications
-layout: category
+layout: publication
 classes:
     - no-sidebar
     - wide
