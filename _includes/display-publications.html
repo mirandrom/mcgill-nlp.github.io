@@ -3,7 +3,7 @@
 
         {% if post.thumbnail %}
         <div class="publication-thumbnail">
-            <img src="{{ post.thumbnail }}" alt="">
+            <img src="{{ post.thumbnail | | relative_url }}" alt="">
         </div>
         {% endif %}
 
