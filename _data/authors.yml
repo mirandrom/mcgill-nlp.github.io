@@ -1,6 +1,6 @@
 siva:
   name: "Siva Reddy"
-  bio: "Assistant Professor at McGill University, Facebook CIFAR AI Chair"
+  bio: "Assistant Professor, Facebook CIFAR AI Chair"
   avatar: "/assets/images/bio/siva.jpg"
   date: "Jan 2020"
   role: "Faculty"
@@ -9,7 +9,7 @@ siva:
       icon: "fas fa-fw fa-link"
       url: "https://sivareddy.in"
     - label: "Twitter"
-      icon: "fab fa-fw fa-twitter-square"
+      icon: "fab fa-fw fa-twitter"
       url: "https://twitter.com/sivareddyg"
     - label: "GitHub"
       icon: "fab fa-fw fa-github"
@@ -21,7 +21,7 @@ siva:
 edoardo:
   name: "Edoardo Ponti"
   role: "Postdoc"
-  avatar: "/assets/images/headshots/bio-photo.jpg"
+  avatar: "/assets/images/bio/default.jpg"
   date: "Oct 2020"
   links:
     - name: "Website"
@@ -30,7 +30,7 @@ edoardo:
 andreas:
   name: "Andreas Madsen"
   role: "PhD"
-  avatar: "/assets/images/headshots/bio-photo.jpg"
+  avatar: "/assets/images/bio/default.jpg"
   note: "Co-advised with Sarath Chandar; Polytechnique Montréal"
   links:
     - name: "Website"
@@ -39,7 +39,7 @@ andreas:
 nicholas:
   name: "Nicholas Meade"
   role: "PhD"
-  avatar: "/assets/images/headshots/bio-photo.jpg"
+  avatar: "/assets/images/bio/default.jpg"
   date: "Sep 2020"
   alumni: false
   links:
@@ -49,7 +49,7 @@ nicholas:
 vaibhav:
   name: "Vaibhav Adlakha"
   role: "PhD"
-  avatar: "/assets/images/headshots/bio-photo.jpg"
+  avatar: "/assets/images/bio/default.jpg"
   date: "Sep 2020"
   alumni: false
   links:
@@ -60,7 +60,7 @@ vaibhav:
 zichao:
   name: "Zichao Li"
   role: "PhD"
-  avatar: "/assets/images/headshots/bio-photo.jpg"
+  avatar: "/assets/images/bio/default.jpg"
   date: "Sep 2020"
   note: "Co-advised with Jackie Cheung"
   alumni: false
@@ -71,7 +71,7 @@ zichao:
 benno:
   name: "Benno Krojer"
   role: "PhD"
-  avatar: "/assets/images/headshots/bio-photo.jpg"
+  avatar: "/assets/images/bio/default.jpg"
   alumni: false
   date: "Sep 2021"
   links:
@@ -81,7 +81,7 @@ benno:
 devang:
   name: "Devang Kulshreshtha"
   role: "Master"
-  avatar: "/assets/images/headshots/bio-photo.jpg"
+  avatar: "/assets/images/bio/default.jpg"
   alumni: false
   date: "Sep 2020"
   links:
@@ -91,7 +91,7 @@ devang:
 nathan:
   name: "Nathan Schucher"
   role: "Master"
-  avatar: "/assets/images/headshots/bio-photo.jpg"
+  avatar: "/assets/images/bio/default.jpg"
   alumni: false
   date: "Sep 2020"
   links:
@@ -101,7 +101,7 @@ nathan:
 amirhossein:
   name: "Amirhossein Kazemnejad"
   role: "Master"
-  avatar: "/assets/images/headshots/bio-photo.jpg"
+  avatar: "/assets/images/bio/default.jpg"
   alumni: false
   date: "Jan 2021"
   links:
@@ -111,7 +111,7 @@ amirhossein:
 aristides:
   name: "Aristides Milios"
   role: "Master"
-  avatar: "/assets/images/headshots/bio-photo.jpg"
+  avatar: "/assets/images/bio/default.jpg"
   alumni: false
   date: "Sep 2021"
   links:
@@ -121,7 +121,7 @@ aristides:
 parishad:
   name: "Parishad BehnamGhader"
   role: "Master"
-  avatar: "/assets/images/headshots/bio-photo.jpg"
+  avatar: "/assets/images/bio/default.jpg"
   alumni: false
   date: "Sep 2021"
   links:
@@ -131,7 +131,7 @@ parishad:
 xing:
   name: "Xing Han Lu"
   role: "Master"
-  avatar: "/assets/images/headshots/bio-photo.jpg"
+  avatar: "/assets/images/bio/default.jpg"
   alumni: false
   date: "Sep 2021"
   links:
@@ -141,14 +141,14 @@ xing:
 neshma:
   name: "Neshma Metri"
   role: "Undergraduate"
-  avatar: "/assets/images/headshots/bio-photo.jpg"
+  avatar: "/assets/images/bio/default.jpg"
   alumni: false
   date: "Fall 2021"
 
 sivan:
   name: "Sivan Milton"
   role: "Undergraduate"
-  avatar: "/assets/images/headshots/bio-photo.jpg"
+  avatar: "/assets/images/bio/default.jpg"
   alumni: false
   date: "Fall 2021"
 

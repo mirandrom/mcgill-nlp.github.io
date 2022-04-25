@@ -7,11 +7,13 @@ layout: single
 
 ### Faculty
 
-{% include list_authors_with_role.html authors=site.data.authors role="Faculty" alumni=false %}
+<!-- {% include list_authors_with_role.html authors=site.data.authors role="Faculty" alumni=false %} -->
+
+{% include card_authors_with_role.html authors=site.data.authors role="Faculty" alumni=false %}
 
 ### Postdocs
 
-{% include list_authors_with_role.html authors=site.data.authors role="Postdoc" alumni=false %}
+{% include card_authors_with_role.html authors=site.data.authors role="Postdoc" alumni=false %}
 
 ### PhD Students
 

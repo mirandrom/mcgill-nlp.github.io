@@ -1,0 +1,59 @@
+div.author-avatar {
+    aspect-ratio: 1;
+    float: left;
+    display: flex;
+    margin-right: 15px;
+
+    img {
+        border-radius: 50%;
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+    }
+
+    max-height: 150px;
+    max-width: 150px;
+    height: 33%;
+    width: 33%;
+
+}
+
+.author-info {
+    display: inline;
+
+    a {
+        text-decoration: none;
+    }
+}
+
+.author-date {
+    font-size: large;
+}
+
+.author-name {
+    font-size: x-large;
+    font-weight: bold;
+}
+
+.author-bio {
+    font-size: medium;
+    font-style: italic;
+}
+
+.author-note {
+    font-size: medium;
+}
+
+.author-card {
+    display: inline-block;
+    vertical-align: top;
+    padding: 15px 15px 0px 0px;
+
+    @media (max-width: 600px) {
+        width: 100%;
+    }
+
+    @media (min-width: 601px) {
+        width: 49%;
+    }
+}
