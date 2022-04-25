@@ -42,13 +42,33 @@ Replace `<username>` with your firstname or nickname. If someone already has the
 
 For any type of page or post (publication, blog post, course description), we use something called ["Front Matters"](https://jekyllrb.com/docs/front-matter/) to tell Jekyll about the purpose of the file. This is a block of YAML text at the beginning of the file. The rest of the file is regular [markdown](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet).
 
-## Modifying a page
+## Modify pages
 
 To modify a page, navigate to [_pages](_pages/) and update the desired file. If you add a new file, you will also need to edit the [_data/navigation.yml](./_data/navigation.yml) file with the correct relative URL.
 
+The following pages are mostly likely to be frequently updated:
+* [home](_pages/home.md)
+* [contact](_pages/contact.md)
+
+The following pages are not likely to be frequently updated:
+* [people](_pages/people.md) 
+* [publications](_pages/publications.md)
+* [blog](_pages/blog.md)
+* [teaching](_pages/teaching.md)
+
+Note: If you want to add new content to one of the pages above, please refer to the section on [creating a post](#creating-a-post).
+
+The following files are only meant to be modified by the site maintainer in rare cases:
+* [404](_pages/404.md)
+* [category-archive](_pages/category-archive.md)
+* [tag-archive](_pages/tag-archive.md)
+* [year-archive](_pages/year-archive.md)
+
+
+
 ## Creating a post
 
-### Publication link
+### Publication
 
 To add a link to a publication, create a new file called `<YYYY>-<MM>-<DD>-<shorthand>.md` in the [`_posts/papers` directory](https://github.com/McGill-NLP/group-webpage/tree/master/_posts/papers). Note that `<shorthand>` will determine the URL of the file, so choose carefully.
 
@@ -88,7 +108,7 @@ Then, it should be followed with the content in markdown:
 Note that `include display-publication-links.html` will display the icons and links to code, webpage, tweets, etc. `pub=page` refers to the page object, which is handled by Jekyll.
 
 
-### Blog post
+### Blog
 
 To write a blog post, create a new file called `<YYYY>-<MM>-<DD>-<shorthand>.md` in the [`_posts/blog` directory](_posts/blog). Note that `<shorthand>` will determine the URL of the file, so choose carefully.
 
@@ -120,7 +140,7 @@ Some starting statement
 More content.
 ```
 
-### Course description
+### Teaching
 To write a course description, create a new file called `<YYYY>-<MM>-<DD>-<shorthand>.md` in the [`_posts/teaching` directory](_posts/teaching). Note that `<shorthand>` will determine the URL of the file, so choose carefully.
 
 ```yaml
