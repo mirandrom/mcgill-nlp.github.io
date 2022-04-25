@@ -121,8 +121,9 @@ More content.
 ```
 
 ### Course description
+To write a course description, create a new file called `<YYYY>-<MM>-<DD>-<shorthand>.md` in the [`_posts/teaching` directory](_posts/teaching). Note that `<shorthand>` will determine the URL of the file, so choose carefully.
 
-```markdown
+```yaml
 ---
 title: "COMP XYZ - Semester YYYY"  # Add course code, followed by the semester it's taught
 author: siva  # Name of the instructor
@@ -132,9 +133,9 @@ tags:
   - Winter 2022  # Semester
 link: "https://docs.google.com/document/d/..." # Link to an external course description
 ---
-
-*Name of the course*
 ```
+
+Then, add content relevant to the course in markdown below.
 
 ## Advanced
 
