@@ -38,6 +38,8 @@ Navigate to [_data/authors.yml](./_data/authors.yml) and add the desired informa
 
 Replace `<username>` with your firstname or nickname. If someone already has the same name, you can append your lastname and/or start date, to your preference. This will be what you will use when writing a blog post or a publication abstract.
 
+Note that the `avatar` field links to an image located in `assets/images/bio`. You will need to upload the image to the repository before it shows up. Make sure you choose a picture in `jpg` (to save space), an aspect ratio of 1:1, resolution of about 300x300, and mainly centered around the face. In a hurry, you may use the default image.
+
 ## Front matters and YAML
 
 For any type of page or post (publication, blog post, course description), we use something called ["Front Matters"](https://jekyllrb.com/docs/front-matter/) to tell Jekyll about the purpose of the file. This is a block of YAML text at the beginning of the file. The rest of the file is regular [markdown](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet).
@@ -105,8 +107,14 @@ Then, it should be followed with the content in markdown:
 <!-- Your abstract here -->
 ```
 
-Note that `include display-publication-links.html` will display the icons and links to code, webpage, tweets, etc. `pub=page` refers to the page object, which is handled by Jekyll.
+Notes:
 
+* `include display-publication-links.html` will display the icons and links to code, webpage, tweets, etc. `pub=page` refers to the page object, which is handled by Jekyll.
+* `thumbnail` links to a image located in `assets/images/papers`. If you don't have one, remove that line. You will need to upload the image to the repository before it shows up. Make sure you choose a picture:
+  * in `jpg` (to save space), 
+  * an aspect ratio of 4:3 (A4 landscape), 
+  * resolution of about 800x600, 
+  * taken from your paper.
 
 ### Blog
 
@@ -159,9 +167,35 @@ Then, add content relevant to the course in markdown below.
 
 ## Advanced
 
-### Editing CSS
+### Editing SCSS
 
-If you need to modify some CSS attributes directly, you need to use sass. You can create a new file in [_sass/custom](_sass/custom) and import it inside [_sass/main.scss](_sass/main.scss).
+If you need to modify some CSS attributes directly, you need to use [sass](https://sass-lang.com/documentation/syntax), or directly write CSS (which is still valid). You can create a new file in [_sass/custom](_sass/custom) and import it inside [_sass/main.scss](_sass/main.scss). Note that all files in [_sass/custom](_sass/custom) were added by the maintainers of this repo, in addition to the original styling provided by minimal-mistakes.
+
+Here's a brief description:
+* [_sass/custom/display-publications.scss](_sass/custom/display-publications.scss): Some custom CSS for styling the publications on `/publications/`, which did not have the same format in the original minimal-mistakes theme.
+* [_sass/custom/no-sidebar.scss](_sass/custom/no-sidebar.scss): This adds an option to shift the page to the left side when there's no sidebar. Search for `no-sidebar` in [_config.yml](_config.yml) to see how to use it, or read [this post](https://mmistakes.github.io/minimal-mistakes/docs/layouts/#layout-based-and-user-defined-classes).
+* [_sass/custom/people-card.scss](_sass/custom/people-card.scss): This is a custom CSS for styling the "cards" for each member in `/people/`.
+* [_sass/custom/skin.scss](_sass/custom/skin.scss): This is a custom CSS for styling the skin of the website.
+
+### Custom `_includes/`
+
+`_includes/` contains HTML and MD files that can be called from any page. It's something specific to Jekyll. To use it in your page, simply do:
+
+```markdown
+{% include "my-file.html" %}
+```
+
+if you have a file at `_includes/my-file.html`. We have 5 custom `include` HTML files for this website. You may take a look at their usage by searching `include <name>.html` across the codebase.
+
+### Custom `_layouts/`
+
+You can create custom html layouts in `_layouts/`. To use them, simply specify, in the front matters of a page:
+```yaml
+layout: publication
+```
+
+where `my-layout.html` is the name of the layout in `_layouts/`. In our case, we have a custom `publications.html` layout for the `/publications/` page.
+
 
 ### Troubleshooting
 
