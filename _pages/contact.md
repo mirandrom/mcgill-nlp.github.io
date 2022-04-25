@@ -10,6 +10,7 @@ permalink: /contact/
 
 ## Prospective Students
 
+The following information is addressed to prospective students.
 
 ### Internships
 * [Apply directly through Mila](https://mila.quebec/en/admission-process-for-interns/) and specify a faculty's name as a supervisor in the text box.
