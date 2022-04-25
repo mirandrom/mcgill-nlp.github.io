@@ -3,7 +3,7 @@ permalink: /
 title: "McGill NLP Group"
 layout: splash
 header:
-    overlay_filter: rgba(158, 9, 24, 0.4)
+    overlay_filter: rgba(158, 9, 24, 0.2)
     overlay_image: /assets/images/trottier.jpg
     actions:
         - label: "GitHub"
