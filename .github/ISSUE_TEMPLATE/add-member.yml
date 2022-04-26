@@ -76,6 +76,42 @@ body:
       description: "Any special note"
       placeholder: "h-index: 9001"
 
+  - type: "input"
+    id: github
+    attributes:
+      label: "GitHub"
+      description: "Full URL of the new member's GitHub profile"
+      placeholder: "https://github.com/john-doe"
+    validations:
+      required: false
+  
+  - type: "input"
+    id: twitter
+    attributes:
+      label: "Twitter"
+      description: "Full URL of the new member's Twitter profile"
+      placeholder: "https://twitter.com/john-doe"
+    validations:
+      required: false
+    
+  - type: "input"
+    id: scholar
+    attributes:
+      label: "Scholar"
+      description: "Full URL of the new member's Google Scholar profile"
+      placeholder: "https://scholar.google.com/citations?user=<user_id>"
+    validations:
+      required: false
+
+  - type: "input"
+    id: website
+    attributes:
+      label: "Website"
+      description: "Full URL of the new member's website"
+      placeholder: "https://john-doe.github.io/"
+    validations:
+      required: false
+
   - type: checkboxes
     id: alumni
     attributes:
