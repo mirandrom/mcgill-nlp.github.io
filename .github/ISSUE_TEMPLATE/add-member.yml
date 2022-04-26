@@ -81,8 +81,7 @@ body:
     attributes:
       label: Status
       description: |
-        What's the status of the new member? If it's an alumni, please check the box. 
-        Otherwise, leave it blank.
+        What's the status of the new member? If it's an alumni, please check the box. Otherwise, leave it blank.
       options:
         - label: "Is Alumni"
           required: false
