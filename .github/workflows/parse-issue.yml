@@ -14,8 +14,8 @@ jobs:
           LABEL: "${{ github.event.label }}"
           ISSUES: "${{ github.event.issues }}"
         run: |
-          echo "LABEL: ${{ LABEL }}"
-          echo "ISSUES: ${{ ISSUES }}"
+          echo "LABEL: $LABEL"
+          echo "ISSUES: $ISSUES"
     
   parse-issue:
     if: contains(github.event.issues.labels.*.name, 'automatic')
