@@ -1,14 +1,19 @@
-name: "Parse and process issues"
+name: "Parse and process issue form"
 on:
   issues:
     types: [opened, reopened]
 
 jobs:
   parse-issue:
+    if: github.event.label.name == "automatic-*"
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v2
-      - name: Check issue title
-        env:
-          TITLE: "${{ github.event.issue.title }}"
-        run: echo "$TITLE"
+      - uses: actions/checkout@v3
+      - name: Set up Python
+        uses: actions/setup-python@v3
+        with:
+          python: "3.8"
+      - name: Foo
+        run: |
+          print("Foo bar")
+        shell: python
