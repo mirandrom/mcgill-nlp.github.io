@@ -45,13 +45,13 @@ body:
       required: false
 
   - type: "input"
-    id: date
+    id: advisor
     attributes:
       label: "Advisor(s) (for students)"
       description: "Who is/are the advisor(s) of the new member if they are a student?"
       placeholder: "Jan 2021"
     validations:
-      required: true
+      required: false
 
   - type: "input"
     id: date
