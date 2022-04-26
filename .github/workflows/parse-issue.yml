@@ -19,7 +19,7 @@ jobs:
           echo "BODY: $ISSUES"
     
   parse-issue:
-    if: contains(github.event.issues.labels.*.name, 'automatic')
+    if: startsWith(github.event.label.name, 'automatic-')
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
@@ -34,5 +34,5 @@ jobs:
           import os
           body = os.environ['BODY']
           print("Foo bar")
-          print(body)
+          print(body.replace('\n', '---'))
         shell: python

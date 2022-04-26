@@ -112,16 +112,18 @@ body:
     validations:
       required: false
 
-  - type: checkboxes
+  - type: dropdown
     id: alumni
     attributes:
-      label: Status
+      label: "Current Status"
       description: |
-        What's the status of the new member? If it's an alumni, please check the box. 
-        Otherwise, leave it blank.
+        What's the current status of the new member?
+      multiple: false
       options:
-        - label: "Is Alumni"
-          required: false
+        - "Alumni"
+        - "Current Member"
+    validations:
+      required: true
 
   - type: "input"
     id: new_role
