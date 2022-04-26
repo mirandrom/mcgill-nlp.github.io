@@ -49,7 +49,7 @@ body:
     attributes:
       label: "Advisor(s) (for students)"
       description: "Who is/are the advisor(s) of the new member if they are a student?"
-      placeholder: "Jan 2021"
+      placeholder: "John Doe Jr."
     validations:
       required: false
 
@@ -74,7 +74,7 @@ body:
     attributes:
       label: "Note"
       description: "Any special note"
-      placeholder: "Co-advised by Amasa L."
+      placeholder: "h-index: 9001"
 
   - type: checkboxes
     id: alumni
