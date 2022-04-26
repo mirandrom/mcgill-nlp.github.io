@@ -5,6 +5,13 @@ on:
 
 
 jobs:
+  show-labels:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - name: Show label
+        run: echo ${{ github.event.label }}
+    
   parse-issue:
     if: contains(github.event.issues.labels.*.name, 'automatic')
     runs-on: ubuntu-latest
