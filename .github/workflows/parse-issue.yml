@@ -10,7 +10,12 @@ jobs:
     steps:
       - uses: actions/checkout@v3
       - name: Show label
-        run: echo ${{ github.event.label }}
+        env:
+          LABEL: "${{ github.event.label }}"
+          ISSUES: "${{ github.event.issues }}"
+        run: |
+          echo "LABEL: ${{ LABEL }}"
+          echo "ISSUES: ${{ ISSUES }}"
     
   parse-issue:
     if: contains(github.event.issues.labels.*.name, 'automatic')
