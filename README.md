@@ -1,13 +1,13 @@
-# Group webpage
+# Group website
 
-This is the source code of the [group webpage](https://mcgill-nlp.github.io/), which was built using [Jekyll](https://github.com/jekyll/jekyll) and [Minimal Mistakes](https://github.com/mmistakes/minimal-mistakes).
+This is the source code of the [group website](https://mcgill-nlp.github.io/), which was built using [Jekyll](https://github.com/jekyll/jekyll) and [Minimal Mistakes](https://github.com/mmistakes/minimal-mistakes).
 
 ## Steps to contribute
 
 For any type of contribution, please follow these steps:
-1. [Fork](./fork) the repository.
+1. [Fork](https://github.com/McGill-NLP/group-website/fork) the repository.
 2. Add your contribution by editing the desired files.
-3. Create a pull request: Click on the [Pull Request](https://github.com/McGill-NLP/group-webpage/pulls) tab and select "New pull request". Select the repository you forked and modified.
+3. Create a pull request: Click on the [Pull Request](https://github.com/McGill-NLP/group-website/pulls) tab and select "New pull request". Select the repository you forked and modified.
 4. Wait for a team member to review and merge your pull request.
 
 ## Add new member
@@ -15,30 +15,36 @@ For any type of contribution, please follow these steps:
 Navigate to [_data/authors.yml](./_data/authors.yml) and add the desired information at the end of the file. It has to follow the following template:
 
 ```yaml
-<username>:
-  name: # Full Name
-  role: # One of: "Faculty", "Postdoc", "PhD", "Master", "Undergraduate", "Intern"
-  date: "Jan 2042" # When the new member joined the group. Must be in the "MMM YYYY" format, or "Fall"/"Winter" instead of month.
+john_jr:  # Your username
+  name: "John Doe"
+  role: "PhD"   # One of: "Faculty", "Postdoc", "PhD", "Master", "Undergraduate", "Intern"
+  avatar: "/assets/images/bio/default.jpg"
   alumni: false # Whether the new member is an alumni
-  avatar: "/assets/images/bio/default.jpg"  # Path to your image
-  bio: # Describe about the new member (optional)
-  links:  # optional
-    - name: "Website"
-      url: # Link to the new member's website
-    - name: "GitHub"
-      url: # Link to the new member's GitHub profile
-    - name: "LinkedIn"
-      url: # Link to the new member's LinkedIn profile
-    - name: "Twitter"
-      url: # Link to the new member's Twitter profile
-    - name: "Scholar"
-      url: # Link to the new member's Google Scholar profile
-      icon: "fas fa-fw fa-graduation-cap"  # A custom icon is needed here
+  advisor: "John Doe Sr." # The advisor or advisors of the new member
+  bio: "Just some cool student" # Describe the new member (optional)
+  date: "Sep 2030"  # Start date. Must be in the "MMM YYYY" format, or "Fall"/"Winter".
+  note: "Affiliation: Leland Junior S. University" # Additional notes (optional)
+  links:
+    - label: "Website"
+      url: "https://john-doe.github.io/" # Link to website
+    - label: "GitHub"
+      url: "https://github.com/john-doe" # Link to Github profile
+    - label: "Twitter"
+      url: "https://twitter.com/john-doe" # Link to Twitter profile
+    - label: "Scholar"
+      icon: "fas fa-fw fa-graduation-cap" # Font Awesome icon
+      url: "https://scholar.google.com/citations?user=<user_id>" # Link to Google Scholar profile
 ```
 
-Replace `<username>` with your firstname or nickname. If someone already has the same name, you can append your lastname and/or start date, to your preference. This will be what you will use when writing a blog post or a publication abstract.
+This will look like this:
 
-Note that the `avatar` field links to an image located in `assets/images/bio`. You will need to upload the image to the repository before it shows up. Make sure you choose a picture in `jpg` (to save space), an aspect ratio of 1:1, resolution of about 300x300, and mainly centered around the face. In a hurry, you may use the default image.
+![Demo of user profile](.github/images/demo-profile.jpg)
+
+`john_jr`: Replace `john_jr` with your firstname or nickname. If someone already has the same name, you can append your lastname and/or start date, to your preference. This will be what you will use when writing a blog post or a publication abstract.
+
+`avatar`: Note that the `avatar` field links to an image located in `assets/images/bio`. You will need to upload the image to the repository before it shows up. Make sure you choose a picture in `jpg` (to save space), an aspect ratio of 1:1, resolution of about 300x300, and mainly centered around the face. In a hurry, you may use the default image.
+
+`icon`: An icon that can be found in the [Font Awesome v5 free library](https://fontawesome.com/v5/search?m=free). V6 (most recent) will not work. In the HTML snippet, copy the string after `class=`. For example, if your string is `<i class="fab fa-accessible-icon"></i>`, then only copy `"fas fa-graduation-cap"` for the Google Scholar icon. This is optional only when `label` is "Website", "GitHub", "LinkedIn", or "Twitter". Otherwise, that link will not appear under your name in `/people/`.
 
 ## Front matters and YAML
 
@@ -46,7 +52,7 @@ For any type of page or post (publication, blog post, course description), we us
 
 ## Modify pages
 
-To modify a page, navigate to [_pages](_pages/) and update the desired file. If you add a new file, you will also need to edit the [_data/navigation.yml](./_data/navigation.yml) file with the correct relative URL.
+To modify a page, navigate to [_pages](_pages/) and update the desired file. If you add a new file, you will also need to edit the [_data/navigation.yml](_data/navigation.yml) file with the correct relative URL.
 
 The following pages are mostly likely to be frequently updated:
 * [home](_pages/home.md)
@@ -72,7 +78,7 @@ The following files are only meant to be modified by the site maintainer in rare
 
 ### Publication
 
-To add a link to a publication, create a new file called `<YYYY>-<MM>-<DD>-<shorthand>.md` in the [`_posts/papers` directory](https://github.com/McGill-NLP/group-webpage/tree/master/_posts/papers). Note that `<shorthand>` will determine the URL of the file, so choose carefully.
+To add a link to a publication, create a new file called `<YYYY>-<MM>-<DD>-<shorthand>.md` in the [`_posts/papers` directory](_posts/papers). Note that `<shorthand>` will determine the URL of the file, so choose carefully.
 
 Every file should start with the following:
 ```yaml

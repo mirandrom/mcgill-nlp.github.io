@@ -1,7 +1,7 @@
 ---
 title: "People"
 permalink: /people/
-layout: single
+layout: archive
 ---
 
 
@@ -17,7 +17,7 @@ layout: single
 
 ### PhD Students
 
-{% include list_authors_with_role.html authors=site.data.authors role="PhD" alumni=false %}
+{% include card_authors_with_role.html authors=site.data.authors role="PhD" alumni=false %}
 
 ### Masters Students
 

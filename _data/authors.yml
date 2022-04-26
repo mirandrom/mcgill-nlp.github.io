@@ -1,16 +1,38 @@
+# # To get started: Copy this template profile below and start editing.
+# john:
+#   name: "John Doe"
+#   role: "PhD"
+#   avatar: "/assets/images/bio/default.jpg"
+#   date: "Sep 2030"
+#   alumni: false
+#   advisor: "John Doe Sr."
+#   bio: "Just some cool student"
+#   note: "Affiliation: Leland Junior S. University"
+#   links:
+#     - label: "Website"
+#       url: "https://john-doe.github.io/"
+#     - label: "GitHub"
+#       url: "https://github.com/john-doe"
+#     - label: "Twitter"
+#       url: "https://twitter.com/john-doe"
+#     - label: "Scholar"
+#       icon: "fas fa-fw fa-graduation-cap"
+#       url: "https://scholar.google.com/citations?user=<user_id>"
+
+
 siva:
   name: "Siva Reddy"
-  bio: "Assistant Professor, Facebook CIFAR AI Chair"
+  bio: "Assistant Professor"
+  note: "Facebook CIFAR AI Chair"
   avatar: "/assets/images/bio/siva.jpg"
   date: "Jan 2020"
   role: "Faculty"
   links:
     - label: "Website"
-      icon: "fas fa-fw fa-link"
       url: "https://sivareddy.in"
     - label: "Twitter"
-      icon: "fab fa-fw fa-twitter"
       url: "https://twitter.com/sivareddyg"
+      icon: "fab fa-fw fa-twitter"
     - label: "GitHub"
       icon: "fab fa-fw fa-github"
       url: "https://github.com/sivareddyg"
@@ -24,26 +46,28 @@ edoardo:
   avatar: "/assets/images/bio/default.jpg"
   date: "Oct 2020"
   links:
-    - name: "Website"
+    - label: "Website"
       url: "https://ducdauge.github.io/"
 
 andreas:
   name: "Andreas Madsen"
   role: "PhD"
+  advisor: "Siva Reddy, co-advised with Sarath Chandar"
+  note: "PhD at Polytechnique Montréal"
   avatar: "/assets/images/bio/default.jpg"
-  note: "Co-advised with Sarath Chandar; Polytechnique Montréal"
   links:
-    - name: "Website"
+    - label: "Website"
       url: "https://andreasmadsen.github.io/"
 
 nicholas:
   name: "Nicholas Meade"
   role: "PhD"
   avatar: "/assets/images/bio/default.jpg"
+  advisor: "Siva Reddy"
   date: "Sep 2020"
   alumni: false
   links:
-    - name: "Website"
+    - label: "Website"
       url: "https://ncmeade.github.io/"
 
 vaibhav:
@@ -61,8 +85,8 @@ zichao:
   name: "Zichao Li"
   role: "PhD"
   avatar: "/assets/images/bio/default.jpg"
+  advisor: "Jackie Cheung, Siva Reddy"
   date: "Sep 2020"
-  note: "Co-advised with Jackie Cheung"
   alumni: false
   links:
     - name: "Website"
@@ -75,7 +99,7 @@ benno:
   alumni: false
   date: "Sep 2021"
   links:
-    - name: "Website"
+    - label: "Website"
       url: "https://www.bennokrojer.com/"
 
 devang:
@@ -85,7 +109,7 @@ devang:
   alumni: false
   date: "Sep 2020"
   links:
-    - name: "Website"
+    - label: "Website"
       url: "https://geekydevu.netlify.app/"
 
 nathan:
@@ -95,7 +119,7 @@ nathan:
   alumni: false
   date: "Sep 2020"
   links:
-    - name: "Website"
+    - label: "Website"
       url: "https://nathanschucher.com/"
 
 amirhossein:
@@ -105,7 +129,7 @@ amirhossein:
   alumni: false
   date: "Jan 2021"
   links:
-    - name: "Website"
+    - label: "Website"
       url: "https://kazemnejad.com/"
 
 aristides:
@@ -125,7 +149,7 @@ parishad:
   alumni: false
   date: "Sep 2021"
   links:
-    - name: "Website"
+    - label: "Website"
       url: "https://parishadbehnam.github.io/"
 
 xing:
@@ -135,7 +159,7 @@ xing:
   alumni: false
   date: "Sep 2021"
   links:
-    - name: "Website"
+    - label: "Website"
       url: "https://xinghanlu.com/"
 
 neshma:
@@ -192,7 +216,7 @@ emily:
   note: "Co-advised with Tim O'Donnell"
   alumni: true
   links:
-    - name: "Website"
+    - label: "Website"
       url: "https://emilygoodwin.github.io/"
 
 lucas:

@@ -8,7 +8,10 @@ header:
     actions:
         - label: "GitHub"
           url: "https://github.com/McGill-NLP"
-excerpt: "We are a research group within McGill University and Mila focusing on various topics of natural language processing."
+        - label: "Twitter"
+          url: "https://twitter.com/McGill_NLP"
+
+excerpt: "We are a research group within McGill University and Mila focusing on various topics in natural language processing."
 ---
 
 <!-- Based on: https://raw.githubusercontent.com/mmistakes/minimal-mistakes/master/docs/_pages/splash-page.md -->

@@ -25,28 +25,41 @@
             {{ author.name }}
             {% endif %}
         </b>
-        <div class="author-date">
-            {{ author.date }}
-        </div>
-        
-        {% if author.note %}
-        <div class="author-note">
-            {{ author.note }}
+
+        {% if author.advisor %}
+        <div class="author-advisor">
+            <b>Advised by:</b> {{ author.advisor }}
+            {% if author.date %}
+            <span>
+                ({{ author.date }})
+            </span>
+            {% endif %}
         </div>
         {% endif %}
+
         
         {% if author.bio %}
         <div class="author-bio">
             {{ author.bio }}
         </div>
         {% endif %}
+        
+        {% if author.note %}
+        <div class="author-note">
+            {{ author.note }}
+        </div>
+        {% endif %}
 
         {% if author.links %}
         <div class="author-links">
             {% for link in author.links %}
-            {% if link.icon %}
-            <a href="{{ link.url }}" class="{{ link.icon }}"></a>
+
+            {% include infer_icon.html link=link %}
+
+            {% if icon %}
+            <a href="{{ link.url }}" class="{{ icon }}"></a>
             {% endif %}
+
             {% endfor %}
         </div>
         {% endif %}
