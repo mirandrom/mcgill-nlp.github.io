@@ -3,9 +3,10 @@ on:
   issues:
     types: [opened, reopened]
 
+
 jobs:
   parse-issue:
-    if: startsWith(github.event.label.name, 'automatic-')
+    if: contains(github.event.issues.labels.*.name, 'automatic')
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
