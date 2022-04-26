@@ -47,6 +47,15 @@ body:
   - type: "input"
     id: date
     attributes:
+      label: "Advisor(s) (for students)"
+      description: "Who is/are the advisor(s) of the new member if they are a student?"
+      placeholder: "Jan 2021"
+    validations:
+      required: true
+
+  - type: "input"
+    id: date
+    attributes:
       label: "Date"
       description: "When did the new member join the lab? MMM-YYYY or {Fall, Winter} YYYY"
       placeholder: "Jan 2021"
@@ -72,7 +81,8 @@ body:
     attributes:
       label: Status
       description: |
-        "What's the status of the new member? If it's an alumni, please check the box. Otherwise, leave it blank."
+        What's the status of the new member? If it's an alumni, please check the box. 
+        Otherwise, leave it blank.
       options:
         - label: "Is Alumni"
           required: false
@@ -80,7 +90,7 @@ body:
   - type: "input"
     id: new_role
     attributes:
-      label: "New role"
+      label: "New role (if alumni)"
       description: "Only if the new member is an alumni, what's the new role?"
       placeholder: "Professing at Leland Junior S. University"
     validations:

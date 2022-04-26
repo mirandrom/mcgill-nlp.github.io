@@ -4,10 +4,11 @@
 #   role: "PhD"
 #   avatar: "/assets/images/bio/default.jpg"
 #   date: "Sep 2030"
-#   alumni: false
 #   advisor: "John Doe Sr."
 #   bio: "Just some cool student"
-#   note: "Affiliation: Leland Junior S. University"
+#   note: "Co-advised by Amasa L."
+#   alumni: true
+#   new_role: "Professing at Leland Junior S. University"
 #   links:
 #     - label: "Website"
 #       url: "https://john-doe.github.io/"
