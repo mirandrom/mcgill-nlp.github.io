@@ -5,7 +5,7 @@ on:
 
 jobs:
   parse-issue:
-    if: github.event.label.name == "automatic-*"
+    if: github.event.label.name.startsWith("automatic-")
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
@@ -14,6 +14,11 @@ jobs:
         with:
           python: "3.8"
       - name: Foo
+        env:
+          BODY: ${{ github.event.issue.body }}
         run: |
+          import os
+          body = os.environ['BODY']
           print("Foo bar")
+          print(body)
         shell: python
