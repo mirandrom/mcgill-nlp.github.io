@@ -1,0 +1,87 @@
+name: Add member
+description: Add a lab member
+title: "[Add member]: "
+labels: ["add-member"]
+assignees:
+  - octocat
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for taking the time to fill out this form!
+
+  - type: input
+    id: name
+    attributes:
+      label: Name
+      description: Full name of the new member
+      placeholder: "John Doe"
+    validations:
+      required: true
+
+  - type: dropdown
+    id: role
+    attributes:
+      label: "Role"
+      description: What's the role of the new member?
+      multiple: false
+      options:
+        - "Faculty"
+        - "Postdoc"
+        - "PhD"
+        - "Master"
+        - "Undergraduate"
+        - "Intern"
+    validations:
+      required: true
+
+  - type: "input"
+    id: avatar
+    attributes:
+      label: "Avatar"
+      description: "Link to the avatar of the new member"
+      placeholder: "https://example.com/avatar.png"
+    validations:
+      required: false
+
+  - type: "input"
+    id: date
+    attributes:
+      label: "Date"
+      description: "When did the new member join the lab? MMM-YYYY or {Fall, Winter} YYYY"
+      placeholder: "Jan 2021"
+    validations:
+      required: false
+
+  - type: "textarea"
+    id: bio
+    attributes:
+      label: "Bio"
+      description: "What's the bio of the new member?"
+      placeholder: "Just a cool student!"
+
+  - type: "input"
+    id: note
+    attributes:
+      label: "Note"
+      description: "Any special note"
+      placeholder: "Co-advised by Amasa L."
+
+  - type: checkboxes
+    id: alumni
+    attributes:
+      label: Status
+      description: |
+        "What's the status of the new member? If it's an alumni, please check the box. Otherwise, leave it blank."
+      options:
+        - label: "Is Alumni"
+          required: false
+
+  - type: "input"
+    id: new_role
+    attributes:
+      label: "New role"
+      description: "Only if the new member is an alumni, what's the new role?"
+      placeholder: "Professing at Leland Junior S. University"
+    validations:
+      required: false
