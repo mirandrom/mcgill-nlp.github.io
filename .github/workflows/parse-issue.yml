@@ -1,7 +1,7 @@
 name: "Parse and process issue form"
 on:
   issues:
-    types: [opened, reopened]
+    types: [labeled]
 
 
 jobs:
