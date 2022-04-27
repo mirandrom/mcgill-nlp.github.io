@@ -20,7 +20,7 @@ jobs:
         run: pip install -r src/python/requirements.txt
 
       - name: "Update _data/authors.yml with src/python/add_author.py"
-        if: github.event.label.name == 'automatic-add-author'
+        if: github.event.label.name == 'automatic-add-member'
         env:
           ISSUE_BODY: ${{ github.event.issue.body }}
         run: python src/python/add_author.py
