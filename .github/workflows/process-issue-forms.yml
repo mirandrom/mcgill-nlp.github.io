@@ -1,0 +1,34 @@
+name: "Parse and process issue forms"
+on:
+  issues:
+    types:
+      - labeled
+
+jobs:
+  main:
+    if: startsWith(github.event.label.name, 'automatic-')
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+
+      - name: Set up Python
+        uses: actions/setup-python@v3
+        with:
+          python: "3.9"
+
+      - name: Install Python requirements
+        run: pip install -r src/python/requirements.txt
+
+      - name: "Update _data/authors.yml with src/python/add_author.py"
+        if: github.event.label.name == 'automatic-add-author'
+        env:
+          ISSUE_BODY: ${{ github.event.issue.body }}
+        run: python src/python/add_author.py
+      
+      - name: Create pull request
+        uses: peter-evans/create-pull-request@v3
+        with:
+          delete-branch: true
+          branch-suffix: timestamp
+          commit-message: "[GH Actions] Add new member"
+          branch: "actions/add-new-member"
