@@ -1,6 +1,6 @@
 name: Add member
 description: Add a lab member
-title: "[Add member]: "
+title: "[Add member]"
 labels: ["automatic-add-member"]
 assignees:
   - octocat
