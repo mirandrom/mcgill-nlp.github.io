@@ -32,5 +32,5 @@ jobs:
           branch-suffix: timestamp
           commit-message: "[GH Actions] Add new member"
           title: "[GH Actions PR] ${{ github.event.issue.title }}"
-          body: "This pull request was automatically created through GitHub Actions. It adds a new member to the team. This closes {{ github.event.issue.number }}."
+          body: "This pull request was automatically created through GitHub Actions. It adds a new member to the team. This closes ${{ github.event.issue.number }}."
           branch: "actions/add-new-member"
