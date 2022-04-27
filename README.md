@@ -47,6 +47,15 @@ This will look like this:
 
 `icon`: An icon that can be found in the [Font Awesome v5 free library](https://fontawesome.com/v5/search?m=free). V6 (most recent) will not work. In the HTML snippet, copy the string after `class=`. For example, if your string is `<i class="fab fa-accessible-icon"></i>`, then only copy `"fas fa-graduation-cap"` for the Google Scholar icon. This is optional only when `label` is "Website", "GitHub", "LinkedIn", or "Twitter". Otherwise, that link will not appear under your name in `/people/`.
 
+### Modifying a member's profile
+
+Has a member graduated? Does a member wish to have a new profile picture or bio? You can modify the profile of a member by editing the `_data/authors.yml` file.
+
+### Deleting a member
+
+If you wish to delete a member (e.g. added by mistake, duplicates, etc.) you can directly delete their "block" (everything indented after their name) in the `_data/authors.yml` file.
+
+
 ## Front matters and YAML
 
 For any type of page or post (publication, blog post, course description), we use something called ["Front Matters"](https://jekyllrb.com/docs/front-matter/) to tell Jekyll about the purpose of the file. This is a block of YAML text at the beginning of the file. The rest of the file is regular [markdown](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet).
@@ -73,9 +82,13 @@ The following files are only meant to be modified by the site maintainer in rare
 * [tag-archive](_pages/tag-archive.md)
 * [year-archive](_pages/year-archive.md)
 
+### Removing a page
 
+To remove a page, delete the desired file in `_pages/` and delete the corresponding entry in [_data/navigation.yml](_data/navigation.yml).
 
 ## Creating a post
+
+You may want to add new content: blog post, a new publication with its abstract and perhaps other information, or a course description. These are called *posts*. Anything that isn't a page is a post. This section will cover how to create work with posts.
 
 ### Publication
 
@@ -175,6 +188,10 @@ Then, add content relevant to the course using markdown below the `---`, e.g.:
 ```markdown
 *summary here*
 
+### Deleting a post
+
+You may want to delete posts forever. Then, delete the file in `_posts/`. If you simply want to hide it, you can prepend the file name with `hide`. For example, to hide the file `2016-03-09-COMP-XYZ.md`, you can rename it to `hide-2016-03-09-COMP-XYZ.md`.
+
 ## Syllabus
 
 Content of syllabus here
@@ -228,6 +245,20 @@ layout: publication
 
 where `my-layout.html` is the name of the layout in `_layouts/`. In our case, we have a custom `publications.html` layout for the `/publications/` page.
 
+### Github Actions
+
+We use Github Actions to automate processes. You can find the files in [`.github/workflows/`](.github/workflows/), and see their status in the "Actions" tab. This requires you to use YAML.
+
+### Python scripts
+
+Some Python scripts are ran inside the actions. You can find them in [`src/python/`](src/python). If you want to run them locally, you can use the following command:
+
+```bash
+pip install -r src/python/requirements.txt
+python src/python/<script>.py
+```
+
+Replace `<script>` with the name of the script. If you want to add some library, you can add it to the requirements.txt file. Make sure to include the full version: `<library>==<version>`, or else it might break automation. For example, if you want to use the `requests` library, you can add it to the requirements.txt file as `requests==2.18.4`.
 
 ### Troubleshooting
 
@@ -236,3 +267,10 @@ If you have a question about using Jekyll, start a discussion on the [Jekyll For
 - [Ruby 101](https://jekyllrb.com/docs/ruby-101/)
 - [Setting up a Jekyll site with GitHub Pages](https://jekyllrb.com/docs/github-pages/)
 - [Configuring GitHub Metadata](https://github.com/jekyll/github-metadata/blob/master/docs/configuration.md#configuration) to work properly when developing locally and avoid `No GitHub API authentication could be found. Some fields may be missing or have incorrect data.` warnings.
+
+
+## FAQ
+
+> I created a post but it doesn't show up. What's wrong?
+
+Make sure it is in the right directory, and that the file name is correct. The file name should be `<YYYY>-<MM>-<DD>-<shorthand>.md`; this is not a convention or a preference, it is actually **needed** to render that file.
