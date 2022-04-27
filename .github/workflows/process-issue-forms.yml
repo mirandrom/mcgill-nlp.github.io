@@ -5,7 +5,7 @@ on:
       - labeled
 
 jobs:
-  main:
+  process-issue-forms:
     if: startsWith(github.event.label.name, 'automatic-')
     runs-on: ubuntu-latest
     steps:
@@ -14,7 +14,7 @@ jobs:
       - name: Set up Python
         uses: actions/setup-python@v3
         with:
-          python-version: "3.9"
+          python-version: "3.10"
 
       - name: Install Python requirements
         run: pip install -r src/python/requirements.txt
@@ -31,6 +31,6 @@ jobs:
           delete-branch: true
           branch-suffix: timestamp
           commit-message: "[GH Actions] Add new member"
-          title: "[GH Actions PR] {{ github.event.issue.title }}"
+          title: "[GH Actions PR] ${{ github.event.issue.title }}"
           body: "This pull request was automatically created through GitHub Actions. It adds a new member to the team. This closes {{ github.event.issue.number }}."
           branch: "actions/add-new-member"
