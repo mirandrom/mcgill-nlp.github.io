@@ -15,7 +15,7 @@ For any type of contribution, please follow these steps:
 Navigate to [_data/authors.yml](./_data/authors.yml) and add the desired information at the end of the file. It has to follow the following template:
 
 ```yaml
-john_jr:  # Your username
+John Doe:  # Your full name; this will be used for post `author`
   name: "John Doe"
   role: "PhD"   # One of: "Faculty", "Postdoc", "PhD", "Master", "Undergraduate", "Intern"
   avatar: "/assets/images/bio/default.jpg"  # Path to your avatar image (place them in assets/images/bio)
@@ -41,7 +41,7 @@ This will look like this:
 
 ![Demo of user profile](.github/images/demo-profile.jpg)
 
-`john_jr`: Replace `john_jr` with your firstname or nickname. If someone already has the same name, you can append your lastname and/or start date, to your preference. This will be what you will use when writing a blog post or a publication abstract.
+`John Doe`: Replace `John Doe` with your full name. This will be what you will use when writing a blog post or a publication abstract, and is required for certain automatic forms. Note that if someone already has the same name, you can append your start date, but that might break some automations.
 
 `avatar`: Note that the `avatar` field links to an image located in `assets/images/bio`. You will need to upload the image to the repository before it shows up. Make sure you choose a picture in `jpg` (to save space), an aspect ratio of 1:1, resolution of about 300x300, and mainly centered around the face. In a hurry, you may use the default image.
 
@@ -85,7 +85,7 @@ Every file should start with the following:
 ```yaml
 ---
 title: "My cool paper" # Add official title
-author: <username> # Add name to show profile in sidebar
+author: <full name> # Add name to show profile in sidebar
 categories: Publications # Used to list all posts about publications in /publications/
 names: "Firstname lastname, Firstname lastname, ..." # names of all authors
 link: https://arxiv.org/abs/1234.5678 # link to paper
@@ -161,7 +161,7 @@ To write a course description, create a new file called `<YYYY>-<MM>-<DD>-<short
 ```yaml
 ---
 title: "COMP XYZ - Semester YYYY"  # Add course code, followed by the semester it's taught
-author: siva  # Name of the instructor
+author: Siva Reddy  # Name of the instructor
 categories:
   - Teaching  # Used to list all posts describing a course in /teaching/
 tags:

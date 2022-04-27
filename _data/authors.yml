@@ -1,5 +1,5 @@
 # # To get started: Copy this template profile below and start editing.
-# john:
+# John Doe:
 #   name: "John Doe"
 #   role: "PhD"
 #   avatar: "/assets/images/bio/default.jpg"
@@ -21,7 +21,7 @@
 #       url: "https://scholar.google.com/citations?user=<user_id>"
 
 
-siva:
+Siva Reddy:
   name: "Siva Reddy"
   bio: "Assistant Professor"
   note: "Facebook CIFAR AI Chair"
@@ -41,7 +41,7 @@ siva:
       icon: "fas fa-fw fa-graduation-cap"
       url: "https://scholar.google.com/citations?user=LZZAAtoAAAAJ&hl=en&oi=ao"
 
-edoardo:
+Edoardo Ponti:
   name: "Edoardo Ponti"
   role: "Postdoc"
   avatar: "/assets/images/bio/default.jpg"
@@ -50,7 +50,7 @@ edoardo:
     - label: "Website"
       url: "https://ducdauge.github.io/"
 
-andreas:
+Andreas Madsen:
   name: "Andreas Madsen"
   role: "PhD"
   advisor: "Siva Reddy, co-advised with Sarath Chandar"
@@ -60,7 +60,7 @@ andreas:
     - label: "Website"
       url: "https://andreasmadsen.github.io/"
 
-nicholas:
+Nicholas Meade:
   name: "Nicholas Meade"
   role: "PhD"
   avatar: "/assets/images/bio/default.jpg"
@@ -71,7 +71,7 @@ nicholas:
     - label: "Website"
       url: "https://ncmeade.github.io/"
 
-vaibhav:
+Vaibhav Adlakha:
   name: "Vaibhav Adlakha"
   role: "PhD"
   avatar: "/assets/images/bio/default.jpg"
@@ -82,7 +82,7 @@ vaibhav:
       icon: "fas fa-fw fa-graduation-cap"
       url: "https://scholar.google.com/citations?user=0qmIfUoAAAAJ&hl=en"
 
-zichao:
+Zichao Li:
   name: "Zichao Li"
   role: "PhD"
   avatar: "/assets/images/bio/default.jpg"
@@ -93,7 +93,7 @@ zichao:
     - name: "Website"
       url: "https://aclanthology.org/people/z/zichao-li/"
 
-benno:
+Benno Krojer:
   name: "Benno Krojer"
   role: "PhD"
   avatar: "/assets/images/bio/default.jpg"
@@ -103,7 +103,7 @@ benno:
     - label: "Website"
       url: "https://www.bennokrojer.com/"
 
-devang:
+Devang Kulshreshtha:
   name: "Devang Kulshreshtha"
   role: "Master"
   avatar: "/assets/images/bio/default.jpg"
@@ -113,7 +113,7 @@ devang:
     - label: "Website"
       url: "https://geekydevu.netlify.app/"
 
-nathan:
+Nathan Schucher:
   name: "Nathan Schucher"
   role: "Master"
   avatar: "/assets/images/bio/default.jpg"
@@ -123,7 +123,7 @@ nathan:
     - label: "Website"
       url: "https://nathanschucher.com/"
 
-amirhossein:
+Amirhossein Kazemnejad:
   name: "Amirhossein Kazemnejad"
   role: "Master"
   avatar: "/assets/images/bio/default.jpg"
@@ -133,7 +133,7 @@ amirhossein:
     - label: "Website"
       url: "https://kazemnejad.com/"
 
-aristides:
+Aristides Milios:
   name: "Aristides Milios"
   role: "Master"
   avatar: "/assets/images/bio/default.jpg"
@@ -143,7 +143,7 @@ aristides:
     - name: "Website"
       url: "http://atmilios.com/"
 
-parishad:
+Parishad BehnamGhader:
   name: "Parishad BehnamGhader"
   role: "Master"
   avatar: "/assets/images/bio/default.jpg"
@@ -153,7 +153,7 @@ parishad:
     - label: "Website"
       url: "https://parishadbehnam.github.io/"
 
-xing:
+Xing Han Lu:
   name: "Xing Han Lu"
   role: "Master"
   avatar: "/assets/images/bio/default.jpg"
@@ -163,21 +163,21 @@ xing:
     - label: "Website"
       url: "https://xinghanlu.com/"
 
-neshma:
+Neshma Metri:
   name: "Neshma Metri"
   role: "Undergraduate"
   avatar: "/assets/images/bio/default.jpg"
   alumni: false
   date: "Fall 2021"
 
-sivan:
+Sivan Milton:
   name: "Sivan Milton"
   role: "Undergraduate"
   avatar: "/assets/images/bio/default.jpg"
   alumni: false
   date: "Fall 2021"
 
-nouha:
+Nouha Dziri:
   name: "Nouha Dziri"
   role: "Intern"
   avatar: "/assets/images/bio/default.jpg"
@@ -186,7 +186,7 @@ nouha:
     - label: "Website"
       url: "https://webdocs.cs.ualberta.ca/~dziri/"
 
-emanuele:
+Emanuele Bugliarello:
   name: "Emanuele Bugliarello"
   role: "Intern"
   avatar: "/assets/images/bio/default.jpg"
@@ -194,21 +194,21 @@ emanuele:
     - name: "Website"
       url: "https://e-bug.github.io/"
 
-michelle:
+Michelle Yang:
   name: "Michelle Yang"
   role: "Undergraduate"
   date: "Fall 2021"
   avatar: "/assets/images/bio/default.jpg"
   alumni: true
 
-elinor:
+Elinor Poole-Dayan:
   name: "Elinor Poole-Dayan"
   role: "Undergraduate"
   date: "Winter 2021"
   avatar: "/assets/images/bio/default.jpg"
   alumni: true
 
-emily:
+Emily Goodwin:
   name: "Emily Goodwin"
   role: "Master"
   new_role: "PhD at Stanford Linguistics"
@@ -220,7 +220,7 @@ emily:
     - label: "Website"
       url: "https://emilygoodwin.github.io/"
 
-lucas:
+Lucas Torroba Hennigen:
   name: "Lucas Torroba Hennigen"
   role: "Intern"
   new_role: "PhD at MIT Computer Science"
@@ -228,7 +228,7 @@ lucas:
   date: "Fall 2021"
   alumni: true
 
-victor:
+Victor Prokhorov:
   name: "Victor Prokhorov"
   role: "Intern"
   avatar: "/assets/images/bio/default.jpg"
