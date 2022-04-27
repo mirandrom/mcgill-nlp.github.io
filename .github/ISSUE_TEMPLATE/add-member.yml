@@ -47,8 +47,8 @@ body:
   - type: "input"
     id: advisor
     attributes:
-      label: "Advisor(s) (for students)"
-      description: "Who is/are the advisor(s) of the new member if they are a student?"
+      label: "Advisor"
+      description: "For students only, who is/are the advisor(s) of the new member?"
       placeholder: "John Doe Jr."
     validations:
       required: false
@@ -113,9 +113,9 @@ body:
       required: false
 
   - type: dropdown
-    id: alumni
+    id: status
     attributes:
-      label: "Current Status"
+      label: "Status"
       description: |
         What's the current status of the new member?
       multiple: false
@@ -128,7 +128,7 @@ body:
   - type: "input"
     id: new_role
     attributes:
-      label: "New role (if alumni)"
+      label: "New Role"
       description: "Only if the new member is an alumni, what's the new role?"
       placeholder: "Professing at Leland Junior S. University"
     validations:
