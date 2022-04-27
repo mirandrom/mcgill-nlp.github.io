@@ -38,12 +38,12 @@ def format_parsed_content(parsed):
     parsed["links"] = [
         {"label": format_site_label(key), "url": parsed[key]}
         for key in ["website", "twitter", "github", "scholar"]
-        if parsed[key] != ""
+        if parsed[key] != "_No response_"
     ]
 
     keys_removed = ["status", "website", "twitter", "github", "scholar"]
 
-    return {k: v for k, v in parsed.items() if v != "" and k not in keys_removed}
+    return {k: v for k, v in parsed.items() if v != "_No response_" and k not in keys_removed}
 
 if __name__ == "__main__":
     test_body = """
@@ -77,7 +77,7 @@ if __name__ == "__main__":
 
     ### GitHub
 
-
+    _No response_
 
     ### Twitter
 
