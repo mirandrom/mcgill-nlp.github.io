@@ -1,0 +1,129 @@
+name: Add publication
+description: Add a publication
+title: "[Add publication]"
+labels: ["automatic-add-publication"]
+assignees:
+  - octocat
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for taking the time to fill out this form!
+
+  - type: input
+    id: title
+    attributes:
+      label: Title
+      description: The title of the paper
+      placeholder: "Recursive RRIAYN is all you need"
+    validations:
+      required: true
+
+  - type: input
+    id: author
+    attributes:
+      label: Author
+      description: What's the name of the author? Must be one in `_data/authors.yml`.
+    validations:
+      required: true
+
+  - type: input
+    id: names
+    attributes:
+      label: Names
+      description: The names of all the authors, separated by commas.
+      placeholder: "John Doe, John Doe Sr, Leland DeWitt"
+    validations:
+      required: true
+
+  - type: input
+    id: venue
+    attributes:
+      label: Venue
+      description: The venue where the paper was published.
+      placeholder: "ACL 2022"
+    validations:
+      required: true
+
+  - type: textarea
+    id: abstract
+    attributes:
+      label: Abstract
+      description: The abstract of the paper.
+      placeholder: "Our paper is about recursion. Really. It's all you need."
+    validations:
+      required: true
+
+  - type: input
+    id: link
+    attributes:
+      label: Link
+      description: The link to the paper.
+      placeholder: "https://arxiv.org/abs/1901.01234"
+    validations:
+      required: true
+
+  - type: input
+    id: tags
+    attributes:
+      label: Tags
+      description: Relevant tags, including the abbreviation of the venue name.
+      placeholder: "ACL, Recursion, Transformers"
+    validations:
+      required: false
+
+  - type: input
+    id: code
+    attributes:
+      label: Code
+      description: Link to the code.
+      placeholder: "https://github.com/McGill-NLP/project-name"
+    validations:
+      required: false
+
+  - type: input
+    id: webpage
+    attributes:
+      label: Webpage
+      description: Link to the webpage.
+      placeholder: "https://mcgill-nlp.github.io/project-name"
+    validations:
+      required: false
+
+  - type: input
+    id: video
+    attributes:
+      label: Video
+      description: Link to the video.
+      placeholder: "https://www.youtube.com/watch?v=dQw4w9WgXcQ"
+    validations:
+      required: false
+
+  - type: input
+    id: twitter
+    attributes:
+      label: Twitter
+      description: Link to the twitter account.
+      placeholder: "https://twitter.com/McGillNLP"
+    validations:
+      required: false
+
+  - type: input
+    id: demo
+    attributes:
+      label: Demo
+      description: Link to a demo showcasing the paper.
+      placeholder: "https://project-demo.com"
+    validations:
+      required: false
+
+  - type: "input"
+    id: thumbnail
+    attributes:
+      label: "Thumbnail"
+      description: |
+        Path to an image of your paper, such as a figure. Must be a jpg, and will be cropped to be 4:3 (landscape). 
+        You must first upload the image to `/assets/images/papers/` before adding the path here.
+      placeholder: "/assets/images/papers/project-thumbnail.jpg"
+    validations:
+      required: false
