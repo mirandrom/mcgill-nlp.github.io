@@ -21,15 +21,15 @@ layout: archive
 
 ### Masters Students
 
-{% include list_authors_with_role.html authors=site.data.authors role="Master" alumni=false %}
+{% include card_authors_with_role.html authors=site.data.authors role="Master" alumni=false %}
 
 ### Undergraduate Students
 
-{% include list_authors_with_role.html authors=site.data.authors role="Undergraduate" alumni=false %}
+{% include card_authors_with_role.html authors=site.data.authors role="Undergraduate" alumni=false %}
 
 ### Interns
 
-{% include list_authors_with_role.html authors=site.data.authors role="Intern" alumni=false %}
+{% include card_authors_with_role.html authors=site.data.authors role="Intern" alumni=false %}
 
 ## Alumni
 
