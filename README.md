@@ -10,7 +10,7 @@ For certain contributions, it is possible to fill forms and a PR will be automat
   * With manual information entry
   * With a URL (for limited number of websites)
 
-To get started, [create a new issue](https://github.com/McGill-NLP/mcgill-nlp.github.io/issues/new/choose).
+To get started, [create a new issue](https://github.com/McGill-NLP/mcgill-nlp.github.io/issues/new/choose). If you made a mistake, please see how to correct it in [FAQ](#FAQ).
 
 ## Steps to contribute
 
@@ -301,3 +301,7 @@ If you have a question about using Jekyll, start a discussion on the [Jekyll For
 > I created a post but it doesn't show up. What's wrong?
 
 Make sure it is in the right directory, and that the file name is correct. The file name should be `<YYYY>-<MM>-<DD>-<shorthand>.md`; this is not a convention or a preference, it is actually **needed** to render that file.
+
+> I made a mistake when filling the form. How can I fix it?
+
+After you fill the form, an issue is created with an appropriate *tag*. Then, a pull request (which is a "proposal" to make a change) is automatically created from that *tag*, based on the content of the issue. But if you made a mistake, then that PR is incorrect. So you should try to close it, or request the PR to be closed in a reply. Then, all you need to do is to modify the issue's content (makes sure the formatting stays the same, that's very important!). Once it's updated, you can remove the *tag*, refresh the page, then add back the same *tag*. This will create a new pull request, and a maintainer will review it.
