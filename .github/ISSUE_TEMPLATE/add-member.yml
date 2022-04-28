@@ -1,5 +1,7 @@
 name: Add member
-description: Add a lab member
+description: |
+  Fill this form to add a (new) lab member to the website. 
+  This will automatically generate a PR that will be reviewed by the maintainers.
 title: "[Add member]"
 labels: ["automatic-add-member"]
 assignees:
