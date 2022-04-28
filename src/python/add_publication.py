@@ -80,6 +80,6 @@ if __name__ == "__main__":
     parsed = parse_issue_body(issue_body)
     formatted = format_parsed_content(parsed)
     save_url_image(
-        fname=formatted["filename"], profile=parsed, key="thumbnail", path="assets/images/thumbnail"
+        fname=formatted["filename"], profile=parsed, key="thumbnail", path="assets/images/papers"
     )
     write_content_to_file(formatted)
