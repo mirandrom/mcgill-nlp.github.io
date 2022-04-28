@@ -96,11 +96,11 @@ To remove a page, delete the desired file in `_pages/` and delete the correspond
 
 ## Creating a post
 
-You may want to add new content: blog post, a new publication with its abstract and perhaps other information, or a course description. These are called *posts*. Anything that isn't a page is a post. This section will cover how to create work with posts.
+You may want to add new content: blog post, a new publication (abstract/more information), or a course description. These are all grouped under *posts* (in fact, anything that isn't a page is a post). This section will cover how to work with them.
 
 ### Publication
 
-To add a link to a publication, create a new file called `<YYYY>-<MM>-<DD>-<shorthand>.md` in the [`_posts/papers` directory](_posts/papers). Note that `<shorthand>` will determine the URL of the file, so choose carefully.
+To add a *publication*, create a new file called `<YYYY>-<MM>-<DD>-<shorthand>.md` in the [`_posts/papers` directory](_posts/papers). Note that `<shorthand>` will determine the URL of the file, so choose carefully.
 
 Every file should start with the following:
 ```yaml
@@ -132,11 +132,23 @@ Then, it should be followed with the content in markdown:
 {% include display-publication-links.html pub=page %}
 
 ## Abstract
-<!-- Your abstract here -->
+
+In our cool paper, we propose a new state-of-the-art method to detect if an image is a hotdot or...
 ```
 
-Notes:
+It will look like this in `/publications/`:
 
+![Showing new post in the publication page](.github/images/demo-publication.jpg)
+
+
+
+
+
+
+Notes:
+* `author`: This links to one of the authors in `_data/authors.yml`. If the author is missing, this will not work.
+* `{{ page.names }}` is a Jekyll snippet that will display the names of all authors (which was defined right above). This will save you from repeating yourself.
+* `{{ page.venue }}` is a Jekyll snippet, just like `{{ page.names }}`.
 * `include display-publication-links.html` will display the icons and links to code, webpage, tweets, etc. `pub=page` refers to the page object, which is handled by Jekyll.
 * `thumbnail` links to a image located in `assets/images/papers`. If you don't have one, remove that line. You will need to upload the image to the repository before it shows up. Make sure you choose a picture:
   * in `jpg` (to save space), 
