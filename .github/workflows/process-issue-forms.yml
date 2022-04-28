@@ -25,6 +25,12 @@ jobs:
           ISSUE_BODY: ${{ github.event.issue.body }}
         run: python src/python/add_author.py
       
+      - name: "Create post in _posts/papers with src/python/add_publication.py"
+        if: github.event.label.name == 'automatic-add-publication'
+        env:
+          ISSUE_BODY: ${{ github.event.issue.body }}
+        run: python src/python/add_publication.py
+
       - name: Create pull request
         uses: peter-evans/create-pull-request@v4
         with:
@@ -32,5 +38,7 @@ jobs:
           branch-suffix: timestamp
           commit-message: "[GH Actions] Add new member"
           title: "[Automatic PR] ${{ github.event.issue.title }}"
-          body: "Closes issue #${{ github.event.issue.number }}. This pull request was automatically created through GitHub Actions."
+          body: |
+            Closes issue #${{ github.event.issue.number }}. This pull request was 
+            automatically created through GitHub Actions.
           branch: "gh-actions/process-form-issue-${{ github.event.issue.number }}"

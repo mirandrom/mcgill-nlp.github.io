@@ -65,83 +65,8 @@ def write_content_to_file(formatted):
         f.write(formatted['content'])
 
 
-issue_body = """
-### Title
-
-Test paper
-
-### Author
-
-John Doe
-
-### Names
-
-John Doe, John Doe Sr
-
-### Venue
-
-ACL 2022
-
-### Abstract
-
-test test
-
-### URL
-
-https://github.com/McGill-NLP/group-website
-
-### Year
-
-2022
-
-### Month
-
-06
-
-### Day
-
-08
-
-### Link
-
-https://github.com/McGill-NLP/group-website
-
-### Tags
-
-ACL, Recursion
-
-### Code
-
-https://github.com/McGill-NLP/group-website
-
-### Webpage
-
-https://github.com/McGill-NLP/group-website
-
-### Video
-
-_No response_
-
-### Twitter
-
-_No response_
-
-### Demo
-
-_No response_
-
-### Thumbnail
-
-_No response_
-
-### Shorthand
-
-cool-paper
-
-"""
-
 if __name__ == "__main__":
-    # issue_body = os.environ['ISSUE_BODY']
+    issue_body = os.environ['ISSUE_BODY']
 
     parsed = parse_issue_body(issue_body)
     formatted = format_parsed_content(parsed)
