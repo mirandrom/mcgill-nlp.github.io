@@ -2,6 +2,14 @@
 
 This is the source code of the [group website](https://mcgill-nlp.github.io/), which was built using [Jekyll](https://github.com/jekyll/jekyll) and [Minimal Mistakes](https://github.com/mmistakes/minimal-mistakes).
 
+## Simple & quick contributions
+
+For certain contributions, it is possible to fill forms and a PR will be automatically created for you; without having to fork or modify the codebase. This currently works for:
+* Adding a new member
+* Adding a new paper
+
+To get started, [create a new issue](https://github.com/McGill-NLP/group-website/issues/new/choose).
+
 ## Steps to contribute
 
 For any type of contribution, please follow these steps:
