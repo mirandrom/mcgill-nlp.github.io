@@ -8,14 +8,14 @@ For certain contributions, it is possible to fill forms and a PR will be automat
 * Adding a new member
 * Adding a new paper
 
-To get started, [create a new issue](https://github.com/McGill-NLP/group-website/issues/new/choose).
+To get started, [create a new issue](https://github.com/McGill-NLP/mcgill-nlp.github.io/issues/new/choose).
 
 ## Steps to contribute
 
 For any type of contribution, please follow these steps:
-1. [Fork](https://github.com/McGill-NLP/group-website/fork) the repository.
+1. [Fork](https://github.com/McGill-NLP/mcgill-nlp.github.io/fork) the repository.
 2. Add your contribution by editing the desired files.
-3. Create a pull request: Click on the [Pull Request](https://github.com/McGill-NLP/group-website/pulls) tab and select "New pull request". Select the repository you forked and modified.
+3. Create a pull request: Click on the [Pull Request](https://github.com/McGill-NLP/mcgill-nlp.github.io/pulls) tab and select "New pull request". Select the repository you forked and modified.
 4. Wait for a team member to review and merge your pull request.
 
 ## Add new member
