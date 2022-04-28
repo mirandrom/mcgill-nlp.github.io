@@ -1,0 +1,100 @@
+name: Add publication by URL or DOI
+description:  |
+  Fill this form to add a publication to the website.
+  This will automatically generate a PR that will be reviewed by the maintainers.
+title: "[Add publication]"
+labels: ["automatic-add-publication"]
+assignees:
+  - octocat
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for taking the time to fill out this form!
+
+  - type: dropdown
+    id: method
+    attributes:
+      label: Method
+      description: Whether to use DOI or URL to add the publication.
+      options:
+        - DOI
+        - URL
+    validations:
+      required: true
+
+  - type: input
+    id: identifier
+    attributes:
+      label: Identifier
+      description: |
+        The identifier of the publication.
+        For DOI, it should be for example "10.1038/nphys1170".
+        For URL, it should be the URL of the publication. Only the following are accepted: 
+        semanticscholar.org, arxiv.org, aclweb.org, acm.org, biorxiv.org
+      placeholder: "https://arxiv.org/abs/1904.1234"
+    validations:
+      required: true
+
+  - type: dropdown
+    id: month
+    attributes:
+      label: Month
+      description: The month the paper was published.
+      multiple: false
+      options:
+        - "01"
+        - "02"
+        - "03"
+        - "04"
+        - "05"
+        - "06"
+        - "07"
+        - "08"
+        - "09"
+        - "10"
+        - "11"
+        - "12"
+    validations:
+      required: true
+
+  - type: dropdown
+    id: day
+    attributes:
+      label: Day
+      description: The day the paper was published.
+      multiple: false
+      options:
+        - "01"
+        - "02"
+        - "03"
+        - "04"
+        - "05"
+        - "06"
+        - "07"
+        - "08"
+        - "09"
+        - "10"
+        - "11"
+        - "12"
+        - "13"
+        - "14"
+        - "15"
+        - "16"
+        - "17"
+        - "18"
+        - "19"
+        - "20"
+        - "21"
+        - "22"
+        - "23"
+        - "24"
+        - "25"
+        - "26"
+        - "27"
+        - "28"
+        - "29"
+        - "30"
+        - "31"
+    validations:
+      required: true
