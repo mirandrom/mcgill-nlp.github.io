@@ -23,13 +23,13 @@ jobs:
         if: github.event.label.name == 'automatic-add-member'
         env:
           ISSUE_BODY: ${{ github.event.issue.body }}
-        run: python src/python/add_author.py
+        run: python -m src.python.add_author
       
       - name: "Create post in _posts/papers with src/python/add_publication.py"
         if: github.event.label.name == 'automatic-add-publication'
         env:
           ISSUE_BODY: ${{ github.event.issue.body }}
-        run: python src/python/add_publication.py
+        run: python -m src.python.add_publication
 
       - name: Create pull request
         uses: peter-evans/create-pull-request@v4

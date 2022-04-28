@@ -2,7 +2,11 @@ import os
 from io import StringIO
 from textwrap import dedent
 
+
 import yaml
+
+
+from . import save_url_image
 
 
 def parse_issue_body(body):
@@ -27,23 +31,26 @@ def format_parsed_content(parsed):
     """
     Format the parsed content into a string.
     """
-    keys_removed = ["year", "month", "day", 'shorthand', 'abstract']
+    keys_removed = ["year", "month", "day", "shorthand", "abstract"]
 
-    parsed['tags'] = [x.strip() for x in parsed['tags'].split(',')]
+    parsed["tags"] = [x.strip() for x in parsed["tags"].split(",")]
 
     file_object = StringIO()
     yaml.dump(
-        {k: v for k, v in parsed.items() if v != "_No response_" and k not in keys_removed},
+        {
+            k: v
+            for k, v in parsed.items()
+            if v != "_No response_" and k not in keys_removed
+        },
         file_object,
     )
 
     front_matter = file_object.getvalue()
 
-
-
     top = dedent(f"---\n{front_matter}\n---\n")
 
-    bottom = dedent("""
+    bottom = dedent(
+        """
     *{{ page.names }}*
 
     **{{ page.venue }}**
@@ -52,22 +59,27 @@ def format_parsed_content(parsed):
 
     ## Abstract
     
-    """)
+    """
+    )
 
     return {
-        'filename': "-".join([parsed[k] for k in ["year", "month", "day", "shorthand"]]) + ".md",
-        'content': top + bottom + parsed['abstract']
+        "filename": "-".join([parsed[k] for k in ["year", "month", "day", "shorthand"]])
+        + ".md",
+        "content": top + bottom + parsed["abstract"],
     }
 
 
 def write_content_to_file(formatted):
-    with open(os.path.join("_posts", "papers", formatted['filename']), "w") as f:
-        f.write(formatted['content'])
+    with open(os.path.join("_posts", "papers", formatted["filename"]), "w") as f:
+        f.write(formatted["content"])
 
 
 if __name__ == "__main__":
-    issue_body = os.environ['ISSUE_BODY']
+    issue_body = os.environ["ISSUE_BODY"]
 
     parsed = parse_issue_body(issue_body)
     formatted = format_parsed_content(parsed)
+    save_url_image(
+        fname=formatted["filename"], profile=parsed, key="thumbnail", path="assets/images/thumbnail"
+    )
     write_content_to_file(formatted)

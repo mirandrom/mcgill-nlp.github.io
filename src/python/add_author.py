@@ -2,6 +2,8 @@ import os
 
 import yaml
 
+from . import save_url_image
+
 
 def parse_issue_body(body):
     """
@@ -46,60 +48,6 @@ def format_parsed_content(parsed):
     return {k: v for k, v in parsed.items() if v != "_No response_" and k not in keys_removed}
 
 if __name__ == "__main__":
-    test_body = """
-    ### Name
-
-    test
-
-    ### Role
-
-    PhD
-
-    ### Avatar
-
-    test
-
-    ### Advisor
-
-    test
-
-    ### Date
-
-    test
-
-    ### Bio
-
-    test
-
-    ### Note
-
-
-
-    ### GitHub
-
-    _No response_
-
-    ### Twitter
-
-    test
-
-    ### Scholar
-
-    test
-
-    ### Website
-
-    test
-
-    ### Status
-
-    Current Member
-
-    ### New role
-
-    test
-    """
-
     issue_body = os.environ['ISSUE_BODY']
 
     parsed = parse_issue_body(issue_body)
@@ -114,6 +62,8 @@ if __name__ == "__main__":
         while (k := f'{profile["name"]} {n}') in authors:
             n += 1
         key = k
+
+    save_url_image(fname=key, profile=profile, key="avatar", path='assets/images/bio')
 
     with open("_data/authors.yml", "a") as f:
         f.write("\n")
