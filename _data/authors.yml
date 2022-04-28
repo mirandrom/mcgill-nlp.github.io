@@ -29,6 +29,9 @@ Siva Reddy:
   date: "Jan 2020"
   role: "Faculty"
   links:
+    - label: "Page"
+      url: "siva"
+      icon: "fas fa-fw fa-user"
     - label: "Website"
       url: "https://sivareddy.in"
     - label: "Twitter"

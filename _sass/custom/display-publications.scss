@@ -1,4 +1,7 @@
-
+div.publication-card {
+    display: inline-block;
+    width: 100%;
+}
 
 div.publication-thumbnail>img {
     float: left;
@@ -14,8 +17,12 @@ div.publication-thumbnail>img {
     }
 }
 
-.publication-title>a {
-    text-decoration: none;
+.publication-title{
+    margin-top: 10px;
+    margin-bottom: 5px;
+    >a {
+        text-decoration: none;
+    }
 }
 
 .publication-ext-link {

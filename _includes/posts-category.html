@@ -2,11 +2,11 @@
   {%- for post in site.categories[include.taxonomy] -%}
     {%- unless post.hidden -%}
       {% if include.author %}
-        {% if post.names contains include.author %}
-          {%- include display-publications.html %}
+        {% if post.author == include.author %}
+        {% include archive-single.html %}
         {%- endif %}
       {%- else %}
-        {%- include display-publications.html %}
+      {% include archive-single.html %}
       {%- endif %}
     {%- endunless -%}
   {%- endfor -%}
