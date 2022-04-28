@@ -20,11 +20,22 @@ body:
       required: true
 
   - type: input
+    id: shorthand
+    attributes:
+      label: Shorthand
+      description: |
+        A shorthand of the paper's name, which will be used in the URL. For example, "recursive-rriayn",
+        or "1904.1234" (for an arxiv paper).
+      placeholder: "1904.1234"
+    validations:
+      required: true
+
+  - type: input
     id: author
     attributes:
       label: Author
       placeholder: "John Doe 2"
-      description: What's the name of the author? Must be one in `_data/authors.yml`.
+      description: What's the name of the first McGill-NLP affiliated author? Must be one in `_data/authors.yml`.
     validations:
       required: true
 
@@ -50,7 +61,7 @@ body:
     id: abstract
     attributes:
       label: Abstract
-      description: The abstract of the paper. You may use markdown, but DO NOT USE `###` ANYWHERE!
+      description: The abstract of the paper. Do not use new lines or markdown. If you need them, please edit the markdown file directly after it's created.
       placeholder: "Our paper is about recursion. Really. It's all you need."
     validations:
       required: true
