@@ -33,5 +33,4 @@ jobs:
           commit-message: "[GH Actions] Add new member"
           title: "[Automatic PR] ${{ github.event.issue.title }}"
           body: "Closes issue #${{ github.event.issue.number }}. This pull request was automatically created through GitHub Actions."
-          token: ${{ secrets.MCGILL_NLP_BOT_PAT }}
-          push-to-fork: mcgill-nlp-bot/group-website
+          branch: "gh-actions/process-form-issue-${{ github.event.issue.number }}"
