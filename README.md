@@ -210,15 +210,17 @@ Then, add content relevant to the course using markdown below the `---`, e.g.:
 ```markdown
 *summary here*
 
-### Deleting a post
-
-You may want to delete posts forever. Then, delete the file in `_posts/`. If you simply want to hide it, you can prepend the file name with `hide`. For example, to hide the file `2016-03-09-COMP-XYZ.md`, you can rename it to `hide-2016-03-09-COMP-XYZ.md`.
-
 ## Syllabus
 
 Content of syllabus here
 
 ```
+
+
+### Deleting a post
+
+You may want to delete posts forever. Then, delete the file in `_posts/`. If you simply want to hide it, you can prepend the file name with `hide`. For example, to hide the file `2016-03-09-COMP-XYZ.md`, you can rename it to `hide-2016-03-09-COMP-XYZ.md`.
+
 
 ## Advanced
 
