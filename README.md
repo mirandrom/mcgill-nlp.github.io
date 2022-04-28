@@ -245,6 +245,7 @@ layout: publication
 
 where `my-layout.html` is the name of the layout in `_layouts/`. In our case, we have a custom `publications.html` layout for the `/publications/` page.
 
+
 ### Github Actions
 
 We use Github Actions to automate processes. You can find the files in [`.github/workflows/`](.github/workflows/), and see their status in the "Actions" tab. This requires you to use YAML.
@@ -259,6 +260,10 @@ python src/python/<script>.py
 ```
 
 Replace `<script>` with the name of the script. If you want to add some library, you can add it to the requirements.txt file. Make sure to include the full version: `<library>==<version>`, or else it might break automation. For example, if you want to use the `requests` library, you can add it to the requirements.txt file as `requests==2.18.4`.
+
+### Issue forms
+
+To modify an issue form, simply edit the corresponding form in [`.github/ISSUE_TEMPLATE`](.github/ISSUE_TEMPLATE). Note that if you make some major change, you might need to modify the python scripts. Thus, it is recommended to test that on a fork in order to avoid breaking the automation on the main repo.
 
 ### Troubleshooting
 
