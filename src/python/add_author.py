@@ -100,7 +100,7 @@ if __name__ == "__main__":
     test
     """
 
-    issue_body = os.getenv('ISSUE_BODY', test_body)
+    issue_body = os.environ['ISSUE_BODY']
 
     parsed = parse_issue_body(issue_body)
     profile = format_parsed_content(parsed)
