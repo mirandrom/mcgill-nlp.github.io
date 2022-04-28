@@ -252,22 +252,38 @@ Here's a brief description:
 
 ### Custom `_includes/`
 
-`_includes/` contains HTML and MD files that can be called from any page. It's something specific to Jekyll. To use it in your page, simply do:
+`_includes/` contains HTML and MD files that can be called from any page. It's something specific to Jekyll. To use it in your page, simply create an HTML file at  `_includes/my-file.html` and add the following to the front matter of your page:
 
-```markdown
+```
 {% include "my-file.html" %}
 ```
 
-if you have a file at `_includes/my-file.html`. We have 5 custom `include` HTML files for this website. You may take a look at their usage by searching `include <name>.html` across the codebase.
+We have 5 custom `include` HTML files for this website. You may take a look at their usage by searching `include <name>.html` across the codebase.
 
 ### Custom `_layouts/`
 
-You can create custom html layouts in `_layouts/`. To use them, simply specify, in the front matters of a page:
-```yaml
-layout: publication
+You can create custom html layouts in `_layouts/`. For example, you can create a file called `my-layout.html`. It should contain a front matter block, followed by the HTML content:
+
+```html
+---
+layout: archive
+---
+
+{{ content }}
+
+<div>
+  {% include ... %}
+</div>
 ```
 
-where `my-layout.html` is the name of the layout in `_layouts/`. In our case, we have a custom `publications.html` layout for the `/publications/` page.
+To use them, simply specify, in the front matters of a page in `_page/`:
+```yaml
+---
+layout: publication
+---
+```
+
+Example: In our case, we have a custom `publications.html` layout for the `/publications/` page.
 
 
 ### Github Actions
