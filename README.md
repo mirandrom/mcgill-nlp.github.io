@@ -7,6 +7,8 @@ This is the source code of the [group website](https://mcgill-nlp.github.io/), w
 For certain contributions, it is possible to fill forms and a PR will be automatically created for you; without having to fork or modify the codebase. This currently works for:
 * Adding a new member
 * Adding a new paper
+  * With manual information entry
+  * With a URL (for limited number of websites)
 
 To get started, [create a new issue](https://github.com/McGill-NLP/mcgill-nlp.github.io/issues/new/choose).
 
