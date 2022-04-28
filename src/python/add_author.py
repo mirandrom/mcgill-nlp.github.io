@@ -35,6 +35,7 @@ def format_parsed_content(parsed):
     """
     Format the parsed content into a string.
     """
+    parsed['categories'] = 'Publications'
     parsed["alumni"] = parsed["status"] == "Alumni"
 
     parsed["links"] = [
