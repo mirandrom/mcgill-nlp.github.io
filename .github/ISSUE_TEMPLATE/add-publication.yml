@@ -234,8 +234,8 @@ body:
     attributes:
       label: "Thumbnail"
       description: |
-        Path to an image of your paper, such as a figure. Must be a jpg, and will be cropped to be 4:3 (landscape). 
-        You must first upload the image to `/assets/images/papers/` before adding the path here.
+        Path or URL to an image (such as a figure). It will be downloaded to `/assets/images/papers`.
+        Please use a 4:3 (landscape) JPG at most 400x300 px.
       placeholder: "/assets/images/papers/project-thumbnail.jpg"
     validations:
       required: false

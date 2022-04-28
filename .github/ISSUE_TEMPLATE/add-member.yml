@@ -39,8 +39,10 @@ body:
     id: avatar
     attributes:
       label: "Avatar"
-      description: "Link to the avatar of the new member"
-      placeholder: "https://example.com/avatar.png"
+      description: |
+        Path or URL or image of the avatar of the new member. Please use a square JPG with at most 300x300 pixels.
+        If it's a URL, it will be downloaded to `/assets/images/bio`.
+      placeholder: "https://example.com/avatar.jpg"
     validations:
       required: false
 
