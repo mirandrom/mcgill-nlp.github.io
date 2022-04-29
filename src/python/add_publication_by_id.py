@@ -48,26 +48,8 @@ def fetch_content(di):
     return data
 
 if __name__ == "__main__":
-    # issue_body = os.environ['ISSUE_BODY']
+    issue_body = os.environ['ISSUE_BODY']
 
-    issue_body = """
-### Method
-
-URL
-
-### Identifier
-
-https://arxiv.org/pdf/2106.05346.pdf
-
-### Month
-
-01
-
-### Day
-
-01
-
-    """
     parsed = parse_issue_body(issue_body)
     fetched = fetch_content(parsed)
     formatted = format_parsed_content(fetched)
