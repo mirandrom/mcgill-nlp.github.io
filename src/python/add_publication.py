@@ -70,7 +70,7 @@ def format_parsed_content(parsed):
 
 
 def write_content_to_file(formatted):
-    with open(os.path.join("_posts", "papers", formatted["filename"]), "w") as f:
+    with open(os.path.join("_posts", "publications", formatted["filename"]), "w") as f:
         f.write(formatted["content"])
 
 
