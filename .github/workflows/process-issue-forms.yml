@@ -30,6 +30,12 @@ jobs:
         env:
           ISSUE_BODY: ${{ github.event.issue.body }}
         run: python -m src.python.add_publication
+      
+      - name: "Create post in _posts/papers with src/python/add_publication_by_id.py"
+        if: github.event.label.name == 'automatic-add-publication-by-id'
+        env:
+          ISSUE_BODY: ${{ github.event.issue.body }}
+        run: python -m src.python.add_publication_by_id
 
       - name: Create pull request
         uses: peter-evans/create-pull-request@v4

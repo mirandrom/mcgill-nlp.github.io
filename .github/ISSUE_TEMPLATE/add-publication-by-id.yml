@@ -3,7 +3,7 @@ description:  |
   Fill this form to add a publication to the website.
   This will automatically generate a PR that will be reviewed by the maintainers.
 title: "[Add publication]"
-labels: ["automatic-add-publication"]
+labels: ["automatic-add-publication-by-id"]
 assignees:
   - octocat
 body:
