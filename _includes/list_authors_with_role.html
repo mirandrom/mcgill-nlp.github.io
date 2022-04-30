@@ -20,6 +20,10 @@
         {% if author.date %}
         ({{ author.date }})
         {% endif %}
+        
+        {% if author.advisor -%}
+        - Advised by {{ author.advisor }}
+        {% endif %}
 
         {% if author.note %}
         - {{ author.note }}

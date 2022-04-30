@@ -141,6 +141,7 @@ Michelle Yang:
   name: "Michelle Yang"
   role: "Undergraduate"
   date: "Fall 2021"
+  advisor: "Siva Reddy"
   avatar: "/assets/images/bio/default.jpg"
   alumni: true
 
@@ -148,6 +149,7 @@ Elinor Poole-Dayan:
   name: "Elinor Poole-Dayan"
   role: "Undergraduate"
   date: "Winter 2021"
+  advisor: "Siva Reddy"
   avatar: "/assets/images/bio/default.jpg"
   alumni: true
 
@@ -157,7 +159,8 @@ Emily Goodwin:
   new_role: "PhD at Stanford Linguistics"
   avatar: "/assets/images/bio/default.jpg"
   date: "Jan 2020"
-  note: "Co-advised with Tim O'Donnell"
+  advisor: "Siva Reddy, Tim O'Donnell"
+  note: "Co-advised by Dzmitry Bahdanau"
   alumni: true
   links:
     - label: "Website"
@@ -166,6 +169,7 @@ Emily Goodwin:
 Lucas Torroba Hennigen:
   name: "Lucas Torroba Hennigen"
   role: "Intern"
+  advisor: "Siva Reddy"
   new_role: "PhD at MIT Computer Science"
   avatar: "/assets/images/bio/default.jpg"
   date: "Fall 2021"
@@ -174,6 +178,7 @@ Lucas Torroba Hennigen:
 Victor Prokhorov:
   name: "Victor Prokhorov"
   role: "Intern"
+  advisor: "Siva Reddy"
   avatar: "/assets/images/bio/default.jpg"
   date: "Fall 2021"
   alumni: true
