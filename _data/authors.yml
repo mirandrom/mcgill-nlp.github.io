@@ -30,7 +30,7 @@ Siva Reddy:
   role: "Faculty"
   links:
     - label: "Page"
-      url: "siva"
+      url: "/people/siva"
       icon: "fas fa-fw fa-user"
     - label: "Website"
       url: "https://sivareddy.in"
