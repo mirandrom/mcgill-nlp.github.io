@@ -43,7 +43,7 @@ def fetch_content(di):
             data['author'] = author['name']
             break
 
-    del data['externalIds'], data['paperId'], data['url']
+    del data['externalIds'], data['paperId'], data['url'], data['authors']
 
     return data
 

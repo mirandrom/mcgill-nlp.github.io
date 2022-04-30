@@ -31,10 +31,14 @@ def format_parsed_content(parsed):
     """
     Format the parsed content into a string.
     """
-    keys_removed = ["year", "month", "day", "shorthand", "abstract"]
+    # First need to add some keys
+    parsed['categories'] = 'Publications'
 
+    # Then, modify some keys
     parsed["tags"] = [x.strip() for x in parsed["tags"].split(",")]
 
+    # Remove keys and create the front matter
+    keys_removed = ["year", "month", "day", "shorthand", "abstract"]
     file_object = StringIO()
     yaml.dump(
         {
@@ -44,7 +48,6 @@ def format_parsed_content(parsed):
         },
         file_object,
     )
-
     front_matter = file_object.getvalue()
 
     top = dedent(f"---\n{front_matter}\n---\n")
@@ -70,7 +73,7 @@ def format_parsed_content(parsed):
 
 
 def write_content_to_file(formatted):
-    with open(os.path.join("_posts", "publication", formatted["filename"]), "w") as f:
+    with open(os.path.join("_posts", "papers", formatted["filename"]), "w") as f:
         f.write(formatted["content"])
 
 
