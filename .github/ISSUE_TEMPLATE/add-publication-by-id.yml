@@ -1,7 +1,7 @@
 name: Add publication by URL or DOI
 description:  |
   Fill this form to add a publication to the website.
-  This will automatically generate a PR that will be reviewed by the maintainers.
+  
 title: "[Add publication]"
 labels: ["automatic-add-publication-by-id"]
 assignees:
@@ -10,7 +10,7 @@ body:
   - type: markdown
     attributes:
       value: |
-        Thanks for taking the time to fill out this form!
+        This form will automatically generate a PR that will be reviewed by the maintainers.
 
   - type: dropdown
     id: method
