@@ -38,7 +38,11 @@
         return false;
     }
 
-    const theme = sessionStorage.getItem('theme', 'light');
+    if (sessionStorage.getItem('theme') === null) {
+        sessionStorage.setItem('theme', "light");
+    }
+
+    const theme = sessionStorage.getItem('theme');
     updateNodesRel(theme);
 </script>
 {% endif %}
