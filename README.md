@@ -20,7 +20,7 @@ For any type of contribution, please follow these steps:
 3. Create a pull request: Click on the [Pull Request](https://github.com/McGill-NLP/mcgill-nlp.github.io/pulls) tab and select "New pull request". Select the repository you forked and modified.
 4. Wait for a team member to review and merge your pull request.
 
-## Add new member
+## Add new member profile
 
 Navigate to [_data/authors.yml](./_data/authors.yml) and add the desired information at the end of the file. It has to follow the following template:
 
@@ -143,10 +143,6 @@ It will look like this in `/publications/`:
 ![Showing new post in the publication page](.github/images/demo-publication.jpg)
 
 
-
-
-
-
 Notes:
 * `author`: This links to one of the authors in `_data/authors.yml`. If the author is missing, this will not work.
 * `{{ page.names }}` is a Jekyll snippet that will display the names of all authors (which was defined right above). This will save you from repeating yourself.
@@ -220,6 +216,51 @@ Content of syllabus here
 ### Deleting a post
 
 You may want to delete posts forever. Then, delete the file in `_posts/`. If you simply want to hide it, you can prepend the file name with `hide`. For example, to hide the file `2016-03-09-COMP-XYZ.md`, you can rename it to `hide-2016-03-09-COMP-XYZ.md`.
+
+
+## Create a profile page
+
+To have your own profile, you can create a new file called `<username>.md` in the [`_pages_/profiles` directory](_pages_/profiles). Note that `<username>` will determine the URL of the file, so choose carefully. You will need to add the following at the top:
+```yaml
+---
+title: John Doe  # Add your name
+permalink: /people/john/  # Add your username
+layout: archive
+classes:
+    - wide
+    - no-sidebar
+---
+```
+Then, you can add any content you like using markdown:
+
+```markdown
+Welcome to John Doe's personal profile!
+
+## Publications
+
+<div>
+  {% include posts-publication.html taxonomy="Publications" author="John Doe" %}
+</div>
+
+## Teaching
+
+<div>
+  {% include posts-category.html taxonomy="Teaching" author="John Doe" %}
+</div>
+
+## Blog posts
+
+<div>
+  {% include posts-category.html taxonomy="Blog" author="John Doe" %}
+</div>
+
+## Contact
+
+Here's how to contact John Doe: ...
+```
+
+Note that by using `{% include posts-publication.html taxonomy="Publications" author="John Doe" %}`, you can display all posts about publications by filtering for "John Doe" in the `names` field of each publication. If you choose `{% include posts-category.html taxonomy="Teaching" author="John Doe" %}`, you can display all posts about teaching instead, and `taxonomy="Blog"` will display all posts about blog posts. Note that `posts-publication.html` and `posts-category.html` are special html files in `_includes/` that generate a list of post following a specific format. That's a Jekyll feature and is considered as an advanced feature, so you don't have to worry and can just directly use it like above.
+
 
 
 ## Advanced
