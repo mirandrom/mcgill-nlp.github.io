@@ -1,0 +1,203 @@
+{
+  "Siva Reddy": {
+    "name": "Siva Reddy",
+    "bio": "Assistant Professor",
+    "note": "Facebook CIFAR AI Chair",
+    "avatar": "/assets/images/bio/siva.jpg",
+    "date": "Jan 2020",
+    "role": "Faculty",
+    "links": [
+      {
+        "label": "Page",
+        "url": "/people/siva",
+        "icon": "fas fa-fw fa-user"
+      },
+      {
+        "label": "Website",
+        "url": "https://sivareddy.in"
+      },
+      {
+        "label": "Twitter",
+        "url": "https://twitter.com/sivareddyg",
+        "icon": "fab fa-fw fa-twitter"
+      },
+      {
+        "label": "GitHub",
+        "icon": "fab fa-fw fa-github",
+        "url": "https://github.com/sivareddyg"
+      },
+      {
+        "label": "Scholar",
+        "icon": "fas fa-fw fa-graduation-cap",
+        "url": "https://scholar.google.com/citations?user=LZZAAtoAAAAJ&hl=en&oi=ao"
+      }
+    ]
+  },
+  "Edoardo Ponti": {
+    "name": "Edoardo Ponti",
+    "role": "Postdoc",
+    "avatar": "/assets/images/bio/default.jpg",
+    "date": "Oct 2020",
+    "links": [
+      {
+        "label": "Website",
+        "url": "https://ducdauge.github.io/"
+      }
+    ]
+  },
+  "Andreas Madsen": {
+    "name": "Andreas Madsen",
+    "role": "PhD",
+    "advisor": "Siva Reddy, co-advised with Sarath Chandar",
+    "note": "PhD at Polytechnique Montr\u00e9al",
+    "avatar": "/assets/images/bio/default.jpg",
+    "links": [
+      {
+        "label": "Website",
+        "url": "https://andreasmadsen.github.io/"
+      }
+    ]
+  },
+  "Nicholas Meade": {
+    "name": "Nicholas Meade",
+    "role": "PhD",
+    "avatar": "/assets/images/bio/Nicholas Meade.png",
+    "advisor": "Siva Reddy",
+    "date": "Sep 2020",
+    "alumni": false,
+    "links": [
+      {
+        "label": "Website",
+        "url": "https://ncmeade.github.io/"
+      }
+    ],
+    "categories": "Publications"
+  },
+  "Vaibhav Adlakha": {
+    "name": "Vaibhav Adlakha",
+    "role": "PhD",
+    "avatar": "/assets/images/bio/default.jpg",
+    "date": "Sep 2020",
+    "alumni": false,
+    "links": [
+      {
+        "label": "Scholar",
+        "icon": "fas fa-fw fa-graduation-cap",
+        "url": "https://scholar.google.com/citations?user=0qmIfUoAAAAJ&hl=en"
+      }
+    ]
+  },
+  "Zichao Li": {
+    "name": "Zichao Li",
+    "role": "PhD",
+    "avatar": "/assets/images/bio/default.jpg",
+    "advisor": "Jackie Cheung, Siva Reddy",
+    "date": "Sep 2020",
+    "alumni": false,
+    "links": [
+      {
+        "name": "Website",
+        "url": "https://aclanthology.org/people/z/zichao-li/"
+      }
+    ]
+  },
+  "Benno Krojer": {
+    "name": "Benno Krojer",
+    "role": "PhD",
+    "avatar": "/assets/images/bio/default.jpg",
+    "alumni": false,
+    "date": "Sep 2021",
+    "links": [
+      {
+        "label": "Website",
+        "url": "https://www.bennokrojer.com/"
+      }
+    ]
+  },
+  "Neshma Metri": {
+    "name": "Neshma Metri",
+    "role": "Undergraduate",
+    "avatar": "/assets/images/bio/default.jpg",
+    "alumni": false,
+    "date": "Fall 2021"
+  },
+  "Sivan Milton": {
+    "name": "Sivan Milton",
+    "role": "Undergraduate",
+    "avatar": "/assets/images/bio/default.jpg",
+    "alumni": false,
+    "date": "Fall 2021"
+  },
+  "Nouha Dziri": {
+    "name": "Nouha Dziri",
+    "role": "Intern",
+    "avatar": "/assets/images/bio/default.jpg",
+    "alumni": false,
+    "links": [
+      {
+        "label": "Website",
+        "url": "https://webdocs.cs.ualberta.ca/~dziri/"
+      }
+    ]
+  },
+  "Emanuele Bugliarello": {
+    "name": "Emanuele Bugliarello",
+    "role": "Intern",
+    "avatar": "/assets/images/bio/default.jpg",
+    "links": [
+      {
+        "name": "Website",
+        "url": "https://e-bug.github.io/"
+      }
+    ]
+  },
+  "Michelle Yang": {
+    "name": "Michelle Yang",
+    "role": "Undergraduate",
+    "date": "Fall 2021",
+    "advisor": "Siva Reddy",
+    "avatar": "/assets/images/bio/default.jpg",
+    "alumni": true
+  },
+  "Elinor Poole-Dayan": {
+    "name": "Elinor Poole-Dayan",
+    "role": "Undergraduate",
+    "date": "Winter 2021",
+    "advisor": "Siva Reddy",
+    "avatar": "/assets/images/bio/default.jpg",
+    "alumni": true
+  },
+  "Emily Goodwin": {
+    "name": "Emily Goodwin",
+    "role": "Master",
+    "new_role": "PhD at Stanford Linguistics",
+    "avatar": "/assets/images/bio/default.jpg",
+    "date": "Jan 2020",
+    "advisor": "Siva Reddy, Tim O'Donnell",
+    "note": "Co-advised by Dzmitry Bahdanau",
+    "alumni": true,
+    "links": [
+      {
+        "label": "Website",
+        "url": "https://emilygoodwin.github.io/"
+      }
+    ]
+  },
+  "Lucas Torroba Hennigen": {
+    "name": "Lucas Torroba Hennigen",
+    "role": "Intern",
+    "advisor": "Siva Reddy",
+    "new_role": "PhD at MIT Computer Science",
+    "avatar": "/assets/images/bio/default.jpg",
+    "date": "Fall 2021",
+    "alumni": true
+  },
+  "Victor Prokhorov": {
+    "name": "Victor Prokhorov",
+    "role": "Intern",
+    "advisor": "Siva Reddy",
+    "avatar": "/assets/images/bio/default.jpg",
+    "date": "Fall 2021",
+    "alumni": true
+  }
+}
