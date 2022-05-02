@@ -40,7 +40,7 @@ body:
     id: month
     attributes:
       label: Month
-      description: The month the paper was published.
+      description: The month the paper was published (Default is January).
       multiple: false
       options:
         - "01"
@@ -56,13 +56,13 @@ body:
         - "11"
         - "12"
     validations:
-      required: true
+      required: false
 
   - type: dropdown
     id: day
     attributes:
       label: Day
-      description: The day the paper was published.
+      description: The day the paper was published (Default is 01).
       multiple: false
       options:
         - "01"
@@ -97,4 +97,4 @@ body:
         - "30"
         - "31"
     validations:
-      required: true
+      required: false
