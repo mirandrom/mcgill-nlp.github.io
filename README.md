@@ -31,12 +31,12 @@ Navigate to [_data/authors.yml](./_data/authors.yml) and add the desired informa
 John Doe:  # Your full name; this will be used for post `author`
   name: "John Doe"
   role: "PhD"   # One of: "Faculty", "Postdoc", "PhD", "Master", "Undergraduate", "Intern"
-  avatar: "/assets/images/bio/default.jpg"  # Path to your avatar image (place them in assets/images/bio)
+  avatar: "/assets/images/bio/default.jpg"  # Path to image of you (place in assets/images/bio)
   advisor: "John Doe Sr." # The advisor or advisors of the new member
   date: "Sep 2030"  # Start date. Must be in the "MMM YYYY" format, or "Fall"/"Winter".
   bio: "Just some cool student" # Describe the new member (optional)
   note: "Co-advised by Amasa L." # Additional notes (optional)
-  alumni: true # Whether the new member is an alumni
+  alumni: false # Whether the new member is an alumni
   new_role: "Professing at Leland Junior S. University" # If an alumni, their new role
   links:
     - label: "Website"
