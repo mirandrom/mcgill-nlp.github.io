@@ -1,7 +1,6 @@
 name: Add member
 description: |
-  Fill this form to add a (new) lab member to the website. 
-  This will automatically generate a PR that will be reviewed by the maintainers.
+  Fill this form to add a (new) lab member's profile to the website. 
 title: "[Add member]"
 labels: ["automatic-add-member"]
 assignees:
@@ -10,7 +9,7 @@ body:
   - type: markdown
     attributes:
       value: |
-        Thanks for taking the time to fill out this form!
+        This form will automatically generate a PR that will be reviewed by the maintainers.
 
   - type: input
     id: name
@@ -34,6 +33,19 @@ body:
         - "Master"
         - "Undergraduate"
         - "Intern"
+    validations:
+      required: true
+
+  - type: dropdown
+    id: status
+    attributes:
+      label: "Status"
+      description: |
+        What's the current status of the new member?
+      multiple: false
+      options:
+        - "Alumni"
+        - "Current Member"
     validations:
       required: true
 
@@ -115,19 +127,6 @@ body:
       placeholder: "https://john-doe.github.io/"
     validations:
       required: false
-
-  - type: dropdown
-    id: status
-    attributes:
-      label: "Status"
-      description: |
-        What's the current status of the new member?
-      multiple: false
-      options:
-        - "Alumni"
-        - "Current Member"
-    validations:
-      required: true
 
   - type: "input"
     id: new_role

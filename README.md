@@ -9,8 +9,11 @@ For certain contributions, it is possible to fill forms and a PR will be automat
 * Adding a new paper
   * With manual information entry
   * With a URL (for limited number of websites)
+* Adding all papers by a certain author within a time frame
 
-To get started, [create a new issue](https://github.com/McGill-NLP/mcgill-nlp.github.io/issues/new/choose). If you made a mistake, please see how to correct it in [FAQ](#FAQ).
+To get started, [click here to open the issue forms](https://github.com/McGill-NLP/mcgill-nlp.github.io/issues/new/choose).
+
+Note: if you made a mistake but already submitted the form, please see how to correct it in [FAQ](#FAQ).
 
 ## Steps to contribute
 
