@@ -2,9 +2,9 @@
 
 This is the source code of the [group website](https://mcgill-nlp.github.io/), which was built using [Jekyll](https://github.com/jekyll/jekyll) and [Minimal Mistakes](https://github.com/mmistakes/minimal-mistakes).
 
-## Simple & quick contributions
+## Quickstart
 
-For certain contributions, it is possible to fill forms and a PR will be automatically created for you; without having to fork or modify the codebase. This currently works for:
+For certain contributions, it is possible to fill GitHub forms and everything will be automated without requiring to fork or modify the codebase. This currently works for:
 * Adding a new member
 * Adding a new paper
   * With manual information entry
