@@ -1,7 +1,7 @@
 import unittest
 from textwrap import dedent
 
-import src.python.add_publications_by_author as mod
+import src.python.add_publication_by_id as mod
 
 expected_content = """---
 author: Siva Reddy
@@ -49,6 +49,10 @@ class TestAddPublicationById(unittest.TestCase):
         )
         mod.main(issue_body)
 
+        with open("_posts/papers/2020-08-01-2004.09456.md", "r") as f:
+            content = f.read()
+
+        self.assertEqual(content, expected_content)
 
 if __name__ == "__main__":
     unittest.main()
