@@ -23,7 +23,7 @@ def fetch_content(parsed):
 
 def wrangle_fetched_content(parsed, paper_json):
     with open("_data/authors.yml") as f:
-        lab_members = YAML().safe_load(f)
+        lab_members = YAML().load(f)
 
     paper_json["month"] = parsed.get("month", "01")
     paper_json["day"] = parsed.get("day", "01")

@@ -41,7 +41,7 @@ def main(issue_body):
     profile = format_parsed_content(parsed)
 
     yaml = YAML()
-    authors = yaml.safe_load(open("_data/authors.yml"))
+    authors = yaml.load(open("_data/authors.yml"))
     name_to_username = {authors[username]["name"]: username for username in authors}
 
     if parsed['action'] == 'Add member':
