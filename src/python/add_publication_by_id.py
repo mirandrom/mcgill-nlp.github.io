@@ -4,7 +4,8 @@ from urllib.request import urlopen
 
 import yaml
 
-from .add_publication import parse_issue_body, format_parsed_content, write_content_to_file
+from . import parse_issue_body
+from .add_publication import format_parsed_content, write_content_to_file
 
 
 

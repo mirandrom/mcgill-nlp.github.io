@@ -2,25 +2,7 @@ import os
 
 import yaml
 
-from . import save_url_image
-
-
-def parse_issue_body(body):
-    """
-    Parse the body of the issue and return a dictionary of the parsed data.
-    """
-    parsed = {}
-    k = None
-
-    for line in body.split("\n"):
-        if line.startswith("###"):
-            k = line.removeprefix("###").strip().lower().replace(" ", "_")
-            parsed[k] = ""
-        else:
-            if k is not None:
-                parsed[k] += line.strip()
-
-    return parsed
+from . import save_url_image, parse_issue_body
 
 
 def format_site_label(name):

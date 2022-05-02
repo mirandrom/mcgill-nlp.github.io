@@ -2,29 +2,9 @@ import os
 from io import StringIO
 from textwrap import dedent
 
-
 import yaml
 
-
-from . import save_url_image
-
-
-def parse_issue_body(body):
-    """
-    Parse the body of the issue and return a dictionary of the parsed data.
-    """
-    parsed = {}
-    k = None
-
-    for line in body.split("\n"):
-        if line.startswith("### "):
-            k = line.removeprefix("### ").strip().lower().replace(" ", "_")
-            parsed[k] = ""
-        else:
-            if k is not None:
-                parsed[k] += line.strip()
-
-    return parsed
+from . import save_url_image, parse_issue_body
 
 
 def format_parsed_content(parsed):
@@ -32,7 +12,7 @@ def format_parsed_content(parsed):
     Format the parsed content into a string.
     """
     # First need to add some keys
-    parsed['categories'] = 'Publications'
+    parsed["categories"] = "Publications"
 
     # Then, modify some keys
     parsed["tags"] = [x.strip() for x in parsed["tags"].split(",")]
@@ -82,7 +62,10 @@ if __name__ == "__main__":
 
     parsed = parse_issue_body(issue_body)
     save_url_image(
-        fname=parsed["shorthand"], profile=parsed, key="thumbnail", path="assets/images/papers"
+        fname=parsed["shorthand"],
+        profile=parsed,
+        key="thumbnail",
+        path="assets/images/papers",
     )
     formatted = format_parsed_content(parsed)
     write_content_to_file(formatted)
