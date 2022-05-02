@@ -8,8 +8,8 @@ import src.python.add_publications_by_author as mod
 class TestAddPublicationsByAuthor(unittest.TestCase):
     @classmethod
     def setUpClass(cls):
-        # with open('tests/data/add_publications_by_author.json') as f:
-        #     cls.expected = json.load(f)
+        with open('tests/data/add_publications_by_author.json') as f:
+            cls.expected = json.load(f)
 
         issue_body = dedent(
             """
@@ -29,11 +29,9 @@ class TestAddPublicationsByAuthor(unittest.TestCase):
         )
 
         cls.out = mod.main(issue_body)
-        with open('tests/data/add_publications_by_author.json', 'w') as f:
-            json.dump(cls.out['cleaned'], f, indent=2)
         
-    # def test_main(self):
-    #     self.assertEqual(self.out['cleaned'], self.expected)
+    def test_main(self):
+        self.assertEqual(self.out['cleaned'], self.expected)
 
     def test_added_to_ignore(self):
         with open('ignored/semantic_scholar_paper_ids.json') as f:
