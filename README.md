@@ -261,7 +261,19 @@ Here's how to contact John Doe: ...
 
 Note that by using `{% include posts-publication.html taxonomy="Publications" author="John Doe" %}`, you can display all posts about publications by filtering for "John Doe" in the `names` field of each publication. If you choose `{% include posts-category.html taxonomy="Teaching" author="John Doe" %}`, you can display all posts about teaching instead, and `taxonomy="Blog"` will display all posts about blog posts. Note that `posts-publication.html` and `posts-category.html` are special html files in `_includes/` that generate a list of post following a specific format. That's a Jekyll feature and is considered as an advanced feature, so you don't have to worry and can just directly use it like above.
 
-
+Then, you can update `_data/authors.yml` to include a link to your profile page, e.g.:
+```yaml
+John Doe:
+  name: "John Doe"
+  # ...
+  links:
+    - label: "Page"
+      url: "/people/siva"
+      icon: "fas fa-fw fa-user"
+    - label: "Github"
+      url: "..."
+    #...
+```
 
 ## Advanced
 
