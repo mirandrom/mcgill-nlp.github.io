@@ -1,7 +1,7 @@
 import unittest
 from textwrap import dedent
 
-import src.python.add_publications_by_author as mod
+import src.python.add_publication_by_id as mod
 
 expected_content = """---
 author: Siva Reddy
@@ -30,24 +30,29 @@ class TestAddPublicationById(unittest.TestCase):
     def test_add_publication_by_id(self):
         issue_body = dedent(
             """
-            ### Method
+            ### Start
 
-            DOI
+            2020
 
-            ### Identifier
+            ### End
 
-            10.18653/v1/2021.acl-long.416
+            2020
 
-            ### Month
+            ### Author ID
 
-            08
-
-            ### Day
-
-            01    
-        """
+            145732771
+            """
         )
-        mod.main(issue_body)
+        parsed = mod.parse_issue_body(issue_body)
+        paper_json = mod.fetch_content(parsed)
+        paper_json = mod.wrangle_fetched_content(parsed, paper_json)  # in-place
+        formatted = mod.format_parsed_content(paper_json)
+        mod.write_content_to_file(formatted)
+
+        with open("_posts/papers/2020-08-01-2004.09456.md", "r") as f:
+            content = f.read()
+
+        self.assertEqual(content, expected_content)
 
 
 if __name__ == "__main__":
