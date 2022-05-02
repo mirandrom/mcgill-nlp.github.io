@@ -89,8 +89,8 @@ body:
     id: note
     attributes:
       label: "Note"
-      description: "Any special note"
-      placeholder: "h-index: 9001"
+      description: "Any special note you want to include"
+      placeholder: "CIFAR Chair"
 
   - type: "input"
     id: github
@@ -133,6 +133,6 @@ body:
     attributes:
       label: "New Role"
       description: "Only if the new member is an alumni, what's the new role?"
-      placeholder: "Professing at Leland Junior S. University"
+      placeholder: "Professing at Leland S. Junior University"
     validations:
       required: false
