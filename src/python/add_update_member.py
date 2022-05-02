@@ -68,7 +68,7 @@ def main(issue_body):
         save_url_image(fname=username, profile=authors[username], key="avatar", path="assets/images/bio")
         
         with open("_data/authors.yml", "w") as f:
-            yaml.safe_dump(authors, f, sort_keys=False)
+            yaml.dump(authors, f, sort_keys=False)
 
 
 if __name__ == "__main__":
