@@ -18,7 +18,6 @@ def format_parsed_content(parsed):
     """
     Format the parsed content into a string.
     """
-    parsed["categories"] = "Publications"
     parsed["alumni"] = parsed["status"] == "Alumni"
 
     parsed["links"] = [
@@ -74,7 +73,6 @@ def main(issue_body):
             raise ValueError(f'{profile["name"]} not in authors')
         
         username = name_to_username[profile['name']]
-        print(authors[username]['links'])
         profile['links'] = merge_links(authors[username].get('links', []), profile.get('links', []))
         authors[username].update(profile)
         
