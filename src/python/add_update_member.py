@@ -35,12 +35,23 @@ def format_parsed_content(parsed):
         if v != "_No response_" and k not in keys_removed
     }
 
+def merge_links(old_links, new_links):
+    new_labels = {link["label"] for link in new_links}
+    out_links = [
+        link for link in old_links
+        if link["label"] not in new_labels
+    ]
+
+    out_links.extend(new_links)
+
+    return out_links
 
 def main(issue_body):
     parsed = parse_issue_body(issue_body)
     profile = format_parsed_content(parsed)
 
     yaml = YAML()
+    yaml.preserve_quotes = True
     authors = yaml.load(open("_data/authors.yml"))
     name_to_username = {authors[username]["name"]: username for username in authors}
 
@@ -63,12 +74,16 @@ def main(issue_body):
             raise ValueError(f'{profile["name"]} not in authors')
         
         username = name_to_username[profile['name']]
+        print(authors[username]['links'])
+        profile['links'] = merge_links(authors[username].get('links', []), profile.get('links', []))
         authors[username].update(profile)
         
         save_url_image(fname=username, profile=authors[username], key="avatar", path="assets/images/bio")
         
         with open("_data/authors.yml", "w") as f:
-            yaml.dump(authors, f, sort_keys=False)
+            yaml.dump(authors, f)
+
+        return authors
 
 
 if __name__ == "__main__":

@@ -21,6 +21,7 @@ def format_parsed_content(parsed):
     keys_removed = ["year", "month", "day", "shorthand", "abstract"]
     file_object = StringIO()
     yaml = YAML()
+    yaml.preserve_quotes = True
     yaml.dump(
         {
             k: v
