@@ -9,6 +9,12 @@ body:
   - type: markdown
     attributes:
       value: |
+        If you choose to *add* a member's profile, fill out as many fields as possible (including a few required ones).
+
+        If you choose to *update* a member's profile, *only* fill out the fields that you want to modify. Leave everything else blank (except for the required sections).
+        
+        Note that when updating a profile, it will match the profile with the same full `name`. If multiple people have the same full name, it will match the first one encountered. It is recommended in this case to either make the change manually by editing the YAML file, or to move an older profile down (by editing the YAML file).
+
         This form will automatically generate a PR that will be reviewed by the maintainers.
 
   - type: dropdown
