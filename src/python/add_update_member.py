@@ -1,6 +1,6 @@
 import os
 
-import yaml
+from ruamel.yaml import YAML
 
 from . import save_url_image, parse_issue_body
 
@@ -40,6 +40,7 @@ def main(issue_body):
     parsed = parse_issue_body(issue_body)
     profile = format_parsed_content(parsed)
 
+    yaml = YAML()
     authors = yaml.safe_load(open("_data/authors.yml"))
     name_to_username = {authors[username]["name"]: username for username in authors}
 
@@ -67,7 +68,7 @@ def main(issue_body):
         save_url_image(fname=username, profile=authors[username], key="avatar", path="assets/images/bio")
         
         with open("_data/authors.yml", "w") as f:
-            yaml.dump(authors, f)
+            yaml.safe_dump(authors, f, sort_keys=False)
 
 
 if __name__ == "__main__":

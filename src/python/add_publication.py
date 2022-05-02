@@ -2,7 +2,7 @@ import os
 from io import StringIO
 from textwrap import dedent
 
-import yaml
+from ruamel.yaml import YAML
 
 from . import save_url_image, parse_issue_body
 
@@ -20,6 +20,7 @@ def format_parsed_content(parsed):
     # Remove keys and create the front matter
     keys_removed = ["year", "month", "day", "shorthand", "abstract"]
     file_object = StringIO()
+    yaml = YAML()
     yaml.dump(
         {
             k: v
