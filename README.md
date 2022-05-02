@@ -5,8 +5,8 @@ This is the source code of the [group website](https://mcgill-nlp.github.io/), w
 ## Quickstart
 
 For certain contributions, it is possible to fill GitHub forms and everything will be automated without requiring to fork or modify the codebase. This currently works for:
-* Adding a new member
-* Adding a new paper
+* Adding or updating the profile of a lab member
+* Adding a paper written by a lab member
   * With manual information entry
   * With a URL (for limited number of websites)
 * Adding all papers by a certain author within a time frame
