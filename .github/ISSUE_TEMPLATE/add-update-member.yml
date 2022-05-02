@@ -71,8 +71,9 @@ body:
     attributes:
       label: "Avatar"
       description: |
-        Path or URL or image of the avatar of the lab member. Please use a square JPG with at most 300x300 pixels.
-        If it's a URL, it will be downloaded to `/assets/images/bio`.
+        Path or URL or image of the avatar of the lab member. If it's a URL, it will be automatically resized and converted to JPG and saved to `/assets/images/bio`.
+
+        Tip: If you want to upload an image, click in the "Bio" field below, drag-and-drop your picture in that textarea, and GitHub will generate a URL. Copy only that URL into this field (ignore the `![](...)`) and delete that line in "Bio".
       placeholder: "https://example.com/avatar.jpg"
     validations:
       required: false

@@ -226,8 +226,10 @@ body:
     attributes:
       label: "Thumbnail"
       description: |
-        Path or URL to an image (such as a figure). It will be downloaded to `/assets/images/papers`.
-        Please use a 4:3 (landscape) JPG at most 400x300 px.
+        Path or URL to an image (such as a figure). If it's an URL, it will be resized, convert to JPG and saved to `/assets/images/papers`. Please use an image with aspect ratio of 4:3.
+
+        Tip: If you want to upload an image, click in the "Abstract" field above, drag-and-drop your picture in that textarea, and GitHub will generate a URL. Copy only that URL into this field (ignore the `![](...)`) and delete that line in "Abstract."
+      
       placeholder: "/assets/images/papers/project-thumbnail.jpg"
     validations:
       required: false
