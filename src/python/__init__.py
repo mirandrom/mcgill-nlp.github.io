@@ -1,5 +1,6 @@
-import urllib.request
+from urllib.request import urlopen
 
+from PIL import Image
 
 def parse_issue_body(body):
     """
@@ -18,9 +19,10 @@ def parse_issue_body(body):
 
     return parsed
 
-def save_url_image(fname, profile, key, path):
+def save_url_image(fname, profile, key, path, ext='jpg', size=(700, 700)):
     if key in profile and profile[key].startswith("http"):
-        ext = profile[key].split(".")[-1]
         file_path = f"{path}/{fname}.{ext}"
-        urllib.request.urlretrieve(profile[key], file_path)
+        im = Image.open(urlopen(profile[key]))
+        im.thumbnail(size)
+        im.save(file_path)
         profile[key] = "/" + file_path
