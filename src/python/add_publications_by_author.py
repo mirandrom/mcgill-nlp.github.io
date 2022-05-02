@@ -28,13 +28,18 @@ url = urlopen(
     f"https://api.semanticscholar.org/graph/v1/author/{parsed['author_id']}?fields=papers.title,papers.venue,papers.year,papers.authors,papers.externalIds,papers.url,papers.abstract,papers.externalIds"
 )
 data = json.loads(url.read())
+ignored_ids = set(json.loads(open("ignored/semantic_scholar_paper_ids.json").read()))
 
 for paper_json in data['papers']:
     start = int(parsed['start'])
     end = int(parsed['end'])
     year = int(paper_json['year'])
 
-    if year >= start and year <= end:
+    if year >= start and year <= end and paper_json['paperId'] not in ignored_ids:
+        ignored_ids.add(paper_json['paperId'])
         paper_json = wrangle_fetched_content(parsed, paper_json) # in-place
         formatted = format_parsed_content(paper_json)
         write_content_to_file(formatted)
+    
+with open("ignored/semantic_scholar_paper_ids.json", "w") as f:
+    json.dump(list(ignored_ids), f, indent=2)

@@ -1,0 +1,1 @@
+This contains files that tell the scripts what we should ignore.

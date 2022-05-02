@@ -376,3 +376,7 @@ Make sure it is in the right directory, and that the file name is correct. The f
 > I made a mistake when filling the form. How can I fix it?
 
 After you fill the form, an issue is created with an appropriate *tag*. Then, a pull request (which is a "proposal" to make a change) is automatically created from that *tag*, based on the content of the issue. But if you made a mistake, then that PR is incorrect. So you should try to close it, or request the PR to be closed in a reply. Then, all you need to do is to modify the issue's content (makes sure the formatting stays the same, that's very important!). Once it's updated, you can remove the *tag*, refresh the page, then add back the same *tag*. This will create a new pull request, and a maintainer will review it.
+
+> When using `src/python/add_publications_by_author.py`, it keeps adding a paper I already added (or I want to ignore). How can I make it stop doing that?
+
+Add the semantic scholar paper ID to the list in `ignored/semantic_scholar_paper_ids.json`.
