@@ -48,7 +48,7 @@ jobs:
         with:
           delete-branch: true
           branch-suffix: timestamp
-          commit-message: "[GH Actions] {{ github.event.label.name }}"
+          commit-message: "[GH Actions] ${{ github.event.label.name }}"
           title: "[Automatic PR] ${{ github.event.issue.title }}"
           body: |
             Closes #${{ github.event.issue.number }}. This pull request was 
