@@ -4,7 +4,7 @@
  * Licensed under MIT (https://github.com/mmistakes/minimal-mistakes/blob/master/LICENSE)
 */
 // skin
-@import "custom/skin.scss"; 
+@import "skins/light.scss";
 
 /* Variables */
 @import "minimal-mistakes/variables";
@@ -46,3 +46,4 @@
 @import "custom/display-publications.scss";
 @import "custom/people-card.scss";
 @import "custom/header-footer.scss";
+@import "custom/masthead.scss";
