@@ -7,7 +7,8 @@
     <div class="masthead__menu">
       <nav id="site-nav" class="greedy-nav">
         {% unless logo_path == empty %}
-          <a class="site-logo" href="{{ '/' | relative_url }}"><img src="{{ logo_path | relative_url }}" alt="{{ site.masthead_title | default: site.title }}"></a>
+        <a class="site-logo" href="{{ '/' | relative_url }}"><img src="{{ logo_path | relative_url }}"
+            alt="{{ site.masthead_title | default: site.title }}"></a>
         {% endunless %}
         <a class="site-title" href="{{ '/' | relative_url }}">
           {{ site.masthead_title | default: site.title }}
@@ -19,16 +20,20 @@
             <a onclick="changeTheme()"><i class="fas fa-fw fa-sun"></i></a>
           </li>
           {% endif %}
+
           {%- for link in site.data.navigation.main -%}
-            <li class="masthead__menu-item">
-              <a href="{{ link.url | relative_url }}"{% if link.description %} title="{{ link.description }}"{% endif %}>{{ link.title }}</a>
-            </li>
+          <!-- Added a toggle for light/dark mode: -->
+          <li class="masthead__menu-item">
+            <a href="{{ link.url | relative_url }}" {% if link.description %} title="{{ link.description }}" {% endif
+              %}>{{ link.title }}</a>
+          </li>
           {%- endfor -%}
+
         </ul>
-        <!-- Added a toggle for light/dark mode: -->
         {% if site.search == true %}
         <button class="search__toggle" type="button">
-          <span class="visually-hidden">{{ site.data.ui-text[site.locale].search_label | default: "Toggle search" }}</span>
+          <span class="visually-hidden">{{ site.data.ui-text[site.locale].search_label | default: "Toggle search"
+            }}</span>
           <i class="fas fa-search search-button"></i>
         </button>
         {% endif %}
