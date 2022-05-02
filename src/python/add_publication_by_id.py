@@ -2,7 +2,7 @@ import os
 import json
 from urllib.request import urlopen
 
-import yaml
+from ruamel.yaml import YAML
 
 from . import parse_issue_body
 from .add_publication import format_parsed_content, write_content_to_file
@@ -23,7 +23,7 @@ def fetch_content(parsed):
 
 def wrangle_fetched_content(parsed, paper_json):
     with open("_data/authors.yml") as f:
-        lab_members = yaml.safe_load(f)
+        lab_members = YAML().safe_load(f)
 
     paper_json["month"] = parsed.get("month", "01")
     paper_json["day"] = parsed.get("day", "01")

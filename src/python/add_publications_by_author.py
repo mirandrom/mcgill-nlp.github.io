@@ -2,8 +2,6 @@ import os
 import json
 from urllib.request import urlopen
 
-import yaml
-
 from . import parse_issue_body
 from .add_publication import format_parsed_content, write_content_to_file
 from .add_publication_by_id import wrangle_fetched_content
