@@ -9,11 +9,9 @@ body:
   - type: markdown
     attributes:
       value: |
-        If you choose to *add* a member's profile, fill out as many fields as possible (including a few required ones).
-
-        If you choose to *update* a member's profile, *only* fill out the fields that you want to modify. Leave everything else blank (except for the required sections).
+        If you choose to *add* a member's profile, fill out as many fields as possible. If you choose to *update* a member's profile, *only* fill out the required and the fields that you want to modify. Leave everything else blank.
         
-        Note that when updating a profile, it will match the profile with the same full `name`. If multiple people have the same full name, it will match the first one encountered. It is recommended in this case to either make the change manually by editing the YAML file, or to move an older profile down (by editing the YAML file).
+        When updating a profile, it will match the profile with the same full `name`. If multiple people have the same full name, it will match the first one encountered. In this case, you might want to to either make the change manually or move an older profile to the bottom (both require editing the YAML file).
 
         This form will automatically generate a PR that will be reviewed by the maintainers.
 
@@ -73,7 +71,7 @@ body:
       description: |
         Path or URL or image of the avatar of the lab member. If it's a URL, it will be automatically resized and converted to JPG and saved to `/assets/images/bio`.
 
-        Tip: If you want to upload an image, click in the "Bio" field below, drag-and-drop your picture in that textarea, and GitHub will generate a URL. Copy only that URL into this field (ignore the `![](...)`) and delete that line in "Bio".
+        Tip: If you want to upload an image, you can use imgur, or upload with GitHub. For the latter, see tip in the FAQ.
       placeholder: "https://example.com/avatar.jpg"
     validations:
       required: false
@@ -96,11 +94,11 @@ body:
     validations:
       required: false
 
-  - type: "textarea"
+  - type: "input"
     id: bio
     attributes:
       label: "Bio"
-      description: "What's the bio of the lab member?"
+      description: "A description of the lab member in one sentence (or less than 10 words)."
       placeholder: "Just a cool student!"
 
   - type: "input"

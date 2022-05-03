@@ -389,3 +389,12 @@ After you fill the form, an issue is created with an appropriate *tag*. Then, a 
 > When using `src/python/add_publications_by_author.py`, it keeps adding a paper I already added (or I want to ignore). How can I make it stop doing that?
 
 Add the semantic scholar paper ID to the list in `ignored/semantic_scholar_paper_ids.json`.
+
+
+> When filling out the form, how do I upload my profile picture or a thumbnail without having to use an external source, like imgur?
+
+1. Open a [new blank issue](https://github.com/McGill-NLP/mcgill-nlp.github.io/issues/new). 
+2. Click on "Attach files by dragging & dropping, selecting, or pasting them".
+3. Upload your picture. 
+4. Copy only the URL link (i.e. `https://user-images.githubusercontent.com/...png` only). Ignore the rest (i.e. `![text]()`).
+5. Keep the link, but cancel the new issue. Paste that link in the form.
