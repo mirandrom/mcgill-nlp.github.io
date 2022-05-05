@@ -4,8 +4,6 @@ author: John Doe
 names: John Doe, John Doe Sr, Leland DeWitt
 venue: ABC 1234
 link: https://example.com/paper
-tags:
-- _No response_
 code: https://github.com/McGill-NLP
 categories: Publications
 
