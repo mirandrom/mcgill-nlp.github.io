@@ -9,7 +9,7 @@ body:
   - type: markdown
     attributes:
       value: |
-        If you choose to *add* a member's profile, fill out as many fields as possible. If you choose to *update* a member's profile, *only* fill out the required and the fields that you want to modify. Leave everything else blank.
+        If you choose to *add* a member's profile, fill out as many fields as possible. If you choose to *update* a member's profile, *only* fill out the required fields and the fields that you want to modify. Leave everything else blank.
         
         When updating a profile, it will match the profile with the same full `name`. If multiple people have the same full name, it will match the first one encountered. In this case, you might want to to either make the change manually or move an older profile to the bottom (both require editing the YAML file).
 

@@ -1,4 +1,4 @@
-name: Add/update publication manually 📝
+name: Add or update publication manually 📝
 description:  |
   Fill this form to add or update a publication on the website.
   
@@ -10,9 +10,9 @@ body:
   - type: markdown
     attributes:
       value: |
-        If you are adding a new publication, you can add it manually by filling out as many fields as you like, and it will create a new file.
+        If you choose to add a publication, fill out as many fields as possible. If you choose to update an existing publication, only fill out the required and the fields that you want to modify. Leave everything else blank.
 
-        If you are updating an existing publication, we will try to find a file at `_posts/papers/<year>-<month>-<day>-<shorthand>.md``, and update that. Thus, make sure you are entering all 4 fields correctly.
+        When updating an existing publication, the automated script will try to find a file at `_posts/papers/<year>-<month>-<day>-<shorthand>.md` and update that. Thus, make sure you are entering all 4 fields correctly.
 
         This form will automatically generate a PR that will be reviewed by the maintainers.
 
@@ -97,7 +97,7 @@ body:
     id: month
     attributes:
       label: Month
-      description: The month the paper was published (default is January).
+      description: The month the paper was published. If left blank, it will be set to `01`.
       multiple: false
       options:
         - "01"
@@ -119,7 +119,7 @@ body:
     id: day
     attributes:
       label: Day
-      description: The day the paper was published (default is 01).
+      description: The day the paper was published. If left blank, it will be set to `01`.
       multiple: false
       options:
         - "01"
