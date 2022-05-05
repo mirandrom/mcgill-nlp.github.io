@@ -4,11 +4,11 @@ author: John Doe
 names: John Doe, John Doe Sr, Leland DeWitt
 venue: ABC 1234
 link: https://example.com/paper
+code: https://github.com/McGill-NLP
+categories: Publications
 tags:
 - Pytorch
 - Dataset
-code: https://github.com/McGill-NLP
-categories: Publications
 webpage: https://example.com/project
 video: https://github.com/McGill-NLP
 twitter: https://twitter.com/McGill_NLP
