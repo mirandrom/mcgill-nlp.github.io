@@ -56,18 +56,15 @@ def main(issue_body):
 
     if parsed['action'] == 'Add member':
         if profile["name"] not in authors:
-            key = profile["name"]
+            username = profile["name"]
         else:
             n = 2
             while (k := f'{profile["name"]} {n}') in authors:
                 n += 1
-            key = k
+            username = k
 
-        save_url_image(fname=key, profile=profile, key="avatar", path="assets/images/bio")
-
-        with open("_data/authors.yml", "a") as f:
-            f.write("\n")
-            yaml.dump({key: profile}, f)
+        authors[username] = profile
+    
     else:
         if profile['name'] not in name_to_username:
             raise ValueError(f'{profile["name"]} not in authors')
@@ -75,13 +72,13 @@ def main(issue_body):
         username = name_to_username[profile['name']]
         profile['links'] = merge_links(authors[username].get('links', []), profile.get('links', []))
         authors[username].update(profile)
-        
-        save_url_image(fname=username, profile=authors[username], key="avatar", path="assets/images/bio")
-        
-        with open("_data/authors.yml", "w") as f:
-            yaml.dump(authors, f)
+    
+    save_url_image(fname=username, profile=authors[username], key="avatar", path="assets/images/bio")
 
-        return authors
+    with open("_data/authors.yml", "w") as f:
+        yaml.dump(authors, f)
+
+    return authors
 
 
 if __name__ == "__main__":

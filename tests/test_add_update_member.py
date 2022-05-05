@@ -1,76 +1,41 @@
 import unittest
-from textwrap import dedent
+import json
+from ruamel.yaml import YAML
 
 import src.python.add_update_member as mod
 
 
 class TestAddUpdateMember(unittest.TestCase):
-    # @classmethod
-    # def setUpClass(cls):
-    #     with open('tests/data/expected_post.md') as f:
-    #         cls.expected = f.read()
+    @classmethod
+    def setUpClass(cls):
+        yaml = YAML()
+        yaml.preserve_quotes = True
+        cls.authors = yaml.load(open("_data/authors.yml"))
+
+    def test_add_member(self):
+        with open("tests/data/add_member_issue_body.md") as f:
+            issue_body = f.read()
+
+        out = mod.main(issue_body)
+
+        with open("tests/data/add_member_expected.json") as f:
+            expected = json.load(f)
+        
+        output = json.loads(json.dumps(out['John Doe']))
+        self.assertEqual(output, expected)
 
     def test_update_member(self):
-        issue_body = dedent(
-            """
-            ### Action
+        with open("tests/data/update_member_issue_body.md") as f:
+            issue_body = f.read()
 
-            Update member
-
-            ### Name
-
-            Nicholas Meade
-
-            ### Role
-
-            PhD
-
-            ### Status
-
-            Current Member
-
-            ### Avatar
-
-            https://ncmeade.github.io/images/profile.png
-
-            ### Advisor
-
-            _No response_
-
-            ### Date
-
-            _No response_
-
-            ### Bio
-
-            _No response_
-
-            ### Note
-
-            _No response_
-
-            ### GitHub
-
-            _No response_
-
-            ### Twitter
-
-            _No response_
-
-            ### Scholar
-
-            _No response_
-
-            ### Website
-
-            _No response_
-
-            ### New Role
-
-            _No response_
-            """
-        )
         out = mod.main(issue_body)
-        import json
-        with open('tests/data/add_update_member_expected.json', 'w') as f:
-            json.dump(out, f, indent=2)
+        print(out['John Doe'])
+
+        with open("tests/data/update_member_expected.json") as f:
+            expected = json.load(f)
+        
+        
+        output = json.loads(json.dumps(out['John Doe']))
+
+        self.assertEqual(output, expected)
+    
