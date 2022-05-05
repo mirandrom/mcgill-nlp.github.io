@@ -5,7 +5,7 @@ from urllib.request import urlopen
 from ruamel.yaml import YAML
 
 from . import parse_issue_body
-from .add_publication import format_parsed_content, write_content_to_file
+from .add_update_publication import format_parsed_content, write_content_to_file
 
 
 def fetch_content(parsed):
