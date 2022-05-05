@@ -1,14 +1,19 @@
-name: Add publication manually 📝
+name: Add/update publication manually 📝
 description:  |
-  Fill this form to add a publication to the website.
-title: "[Add publication]"
-labels: ["automatic-add-publication"]
+  Fill this form to add or update a publication on the website.
+  
+title: "[Add/update publication]"
+labels: ["automatic-add-update-publication"]
 assignees:
   - octocat
 body:
   - type: markdown
     attributes:
       value: |
+        If you are adding a new publication, you can add it manually by filling out as many fields as you like, and it will create a new file.
+
+        If you are updating an existing publication, we will try to find a file at `_posts/papers/<year>-<month>-<day>-<shorthand>.md``, and update that. Thus, make sure you are entering all 4 fields correctly.
+
         This form will automatically generate a PR that will be reviewed by the maintainers.
 
   - type: dropdown
@@ -36,8 +41,9 @@ body:
     attributes:
       label: Shorthand
       description: |
-        A shorthand of the paper's name, which will be used in the URL. For example, "<author>-<year>-<first word>",
-        or its Arxiv ID or DOI code.
+        A shorthand of the paper's name, which will be used in the URL. For example, "<author>-<year>-<first word>", or its Arxiv ID or DOI code. 
+
+        If you are updating an existing publication, this, along with the exact date, will be used to find the existing publication.
       placeholder: "1904.1234"
     validations:
       required: true
@@ -155,8 +161,9 @@ body:
     attributes:
       label: Abstract
       description: |
-        The abstract of the paper. Do not use new lines or markdown. If you need them, please edit the 
-        markdown file directly after it's created.
+        The abstract of the paper. Do not use new lines or markdown. If you need them, please edit the  markdown file directly after it's created.
+
+        This field is ignored during updates.
       placeholder: |
         Our paper introduces recursion. We show it achieves state-of-the-art results on MNIST. We 
         believe it is all you need because...
