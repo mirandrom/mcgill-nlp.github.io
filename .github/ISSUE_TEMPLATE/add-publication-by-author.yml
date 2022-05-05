@@ -1,4 +1,4 @@
-name: Add publications by author ID
+name: Add publications by author ID ✔️
 description:  |
   Fill this form to add all publications by an author within a time frame (using their Semantic Scholar ID).
 title: "[Add publications by an author]"

@@ -1,4 +1,4 @@
-name: Add publication manually
+name: Add publication manually 📝
 description:  |
   Fill this form to add a publication to the website.
 title: "[Add publication]"
@@ -69,7 +69,7 @@ body:
         Our paper introduces recursion. We show it achieves state-of-the-art results on MNIST. We 
         believe it is all you need because...
     validations:
-      required: true
+      required: false
 
   - type: input
     id: link
