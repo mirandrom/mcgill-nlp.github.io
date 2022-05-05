@@ -44,58 +44,6 @@ Siva Reddy:
     icon: "fas fa-fw fa-graduation-cap"
     url: "https://scholar.google.com/citations?user=LZZAAtoAAAAJ&hl=en&oi=ao"
 
-Edoardo Ponti:
-  name: "Edoardo Ponti"
-  role: "Postdoc"
-  avatar: "/assets/images/bio/default.jpg"
-  date: "Oct 2020"
-  links:
-  - label: "Website"
-    url: "https://ducdauge.github.io/"
-
-Andreas Madsen:
-  name: "Andreas Madsen"
-  role: "PhD"
-  advisor: "Siva Reddy, co-advised with Sarath Chandar"
-  note: "PhD at Polytechnique Montréal"
-  avatar: "/assets/images/bio/default.jpg"
-  links:
-  - label: "Website"
-    url: "https://andreasmadsen.github.io/"
-
-Nicholas Meade:
-  name: "Nicholas Meade"
-  role: "PhD"
-  avatar: "/assets/images/bio/default.jpg"
-  advisor: "Siva Reddy"
-  date: "Sep 2020"
-  alumni: false
-  links:
-  - label: "Website"
-    url: "https://ncmeade.github.io/"
-
-Vaibhav Adlakha:
-  name: "Vaibhav Adlakha"
-  role: "PhD"
-  avatar: "/assets/images/bio/default.jpg"
-  date: "Sep 2020"
-  alumni: false
-  links:
-  - label: "Scholar"
-    icon: "fas fa-fw fa-graduation-cap"
-    url: "https://scholar.google.com/citations?user=0qmIfUoAAAAJ&hl=en"
-
-Zichao Li:
-  name: "Zichao Li"
-  role: "PhD"
-  avatar: "/assets/images/bio/default.jpg"
-  advisor: "Jackie Cheung, Siva Reddy"
-  date: "Sep 2020"
-  alumni: false
-  links:
-  - name: "Website"
-    url: "https://aclanthology.org/people/z/zichao-li/"
-
 Benno Krojer:
   name: "Benno Krojer"
   role: "PhD"
@@ -113,36 +61,6 @@ Benno Krojer:
     url: https://scholar.google.com/citations?user=D5eyaLwAAAAJ&hl=en
   advisor: Siva Reddy
   bio: I work on language grounding and like Ultimate Frisbee
-Neshma Metri:
-  name: "Neshma Metri"
-  role: "Undergraduate"
-  avatar: "/assets/images/bio/default.jpg"
-  alumni: false
-  date: "Fall 2021"
-
-Sivan Milton:
-  name: "Sivan Milton"
-  role: "Undergraduate"
-  avatar: "/assets/images/bio/default.jpg"
-  alumni: false
-  date: "Fall 2021"
-
-Nouha Dziri:
-  name: "Nouha Dziri"
-  role: "Intern"
-  avatar: "/assets/images/bio/default.jpg"
-  alumni: false
-  links:
-  - label: "Website"
-    url: "https://webdocs.cs.ualberta.ca/~dziri/"
-
-Emanuele Bugliarello:
-  name: "Emanuele Bugliarello"
-  role: "Intern"
-  avatar: "/assets/images/bio/default.jpg"
-  links:
-  - name: "Website"
-    url: "https://e-bug.github.io/"
 
 Michelle Yang:
   name: "Michelle Yang"
