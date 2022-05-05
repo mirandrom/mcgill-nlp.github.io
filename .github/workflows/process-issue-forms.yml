@@ -54,3 +54,5 @@ jobs:
             Closes #${{ github.event.issue.number }}. This pull request was 
             automatically created through GitHub Actions.
           branch: "gh-actions/process-form-issue-${{ github.event.issue.number }}"
+          team-reviewers: |
+            maintainers
