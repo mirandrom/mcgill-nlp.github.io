@@ -42,7 +42,7 @@ def preprocess_parsed(parsed, keys_removed):
     parsed["categories"] = "Publications"
 
     # Sanitize some keys
-    parsed["shorthand"] = parsed["title"].replace("/", "-").lower()
+    parsed["shorthand"] = parsed["shorthand"].replace("/", "-")
 
     # Then, modify some keys
     if parsed["tags"] != "_No response_":
