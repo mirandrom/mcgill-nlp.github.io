@@ -21,6 +21,19 @@ def fetch_content(parsed):
     return data
 
 
+def create_attr_to_username_map(lab_members, attribute):
+    """
+    Given a dictionary where key is a lab member's username, and the values are
+    a dictionary containing their information (see _posts/authors.yml), create
+    a dictionary mapping the value of the given attribute to the username.
+    """
+    return {
+        member_info[attribute]: username
+        for username, member_info in lab_members.items()
+        if attribute in member_info
+    }
+
+
 def wrangle_fetched_content(parsed, paper_json):
     with open("_data/authors.yml") as f:
         yaml = YAML()
@@ -52,16 +65,18 @@ def wrangle_fetched_content(parsed, paper_json):
     for key in ["title", "names", "tags", "venue", "shorthand", "link"]:
         paper_json[key] = paper_json[key].replace("\n", " ")
 
-    lab_members_names = {parsed["name"] for parsed in lab_members.values()}
-    lab_members_ids = {
-        parsed["semantic_scholar_id"]
-        for parsed in lab_members.values()
-        if "semantic_scholar_id" in parsed
-    }
+    fullname_to_username = create_attr_to_username_map(lab_members, "name")
+    member_id_to_username = create_attr_to_username_map(
+        lab_members, "semantic_scholar_id"
+    )
 
     for author in paper_json["authors"]:
-        if author["authorId"] in lab_members_ids or author["name"] in lab_members_names:
-            paper_json["author"] = author["name"]
+        if author["authorId"] in member_id_to_username:
+            paper_json["author"] = member_id_to_username[author["authorId"]]
+            break
+
+        if author["name"] in fullname_to_username:
+            paper_json["author"] = fullname_to_username[author["name"]]
             break
 
     del (

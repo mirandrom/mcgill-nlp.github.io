@@ -11,7 +11,9 @@ body:
       value: |
         This will add all publications by the author within the specified time frame using the Semantic Scholar API. To do this, a Semantic Scholar author ID is needed, which can be found by searching for the author in Semantic Scholar.
         
-        Note: Since the API can only find the year of a publication, the month and day will be automatically set to January 1st.
+        Notes: 
+          - Since the API can only find the year of a publication, the month and day will be automatically set to January 1st.
+          - If you wish to be correctly attributed as the author, please add your Semantic Scholar ID to your member profile. To do this, fill the [issue form to update your member profile](/issues/new/choose).
 
         This form will automatically generate a PR that will be reviewed by the maintainers.
   - type: input
