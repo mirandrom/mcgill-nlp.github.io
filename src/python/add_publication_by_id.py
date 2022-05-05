@@ -5,7 +5,7 @@ from urllib.request import urlopen
 from ruamel.yaml import YAML
 
 from . import parse_issue_body
-from .add_update_publication import format_parsed_content, write_content_to_file
+from .add_update_publication import generate_publication_post, write_content_to_file
 
 
 def fetch_content(parsed):
@@ -78,7 +78,7 @@ def main(issue_body):
     parsed = parse_issue_body(issue_body)
     paper_json = fetch_content(parsed)
     paper_json = wrangle_fetched_content(parsed, paper_json)  # in-place
-    formatted = format_parsed_content(paper_json)
+    formatted = generate_publication_post(paper_json)
     write_content_to_file(formatted)
 
 

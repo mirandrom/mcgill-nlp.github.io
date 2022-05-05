@@ -3,7 +3,7 @@ import json
 from urllib.request import urlopen
 
 from . import parse_issue_body
-from .add_update_publication import format_parsed_content, write_content_to_file
+from .add_update_publication import generate_publication_post, write_content_to_file
 from .add_publication_by_id import wrangle_fetched_content
 
 
@@ -33,7 +33,7 @@ def main(issue_body):
         if year >= start and year <= end:
             ignored_ids.add(paper_json["paperId"])
             paper_json = wrangle_fetched_content(parsed, paper_json)  # in-place
-            formatted = format_parsed_content(paper_json)
+            formatted = generate_publication_post(paper_json)
             cleaned.append(formatted)
             write_content_to_file(formatted)
 
