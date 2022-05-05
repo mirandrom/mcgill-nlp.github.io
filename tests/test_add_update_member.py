@@ -30,7 +30,6 @@ class TestAddUpdateMember(unittest.TestCase):
             issue_body = f.read()
 
         out = mod.main(issue_body)
-        print(out['John Doe'])
 
         with open("tests/data/update_member_expected.json") as f:
             expected = json.load(f)
