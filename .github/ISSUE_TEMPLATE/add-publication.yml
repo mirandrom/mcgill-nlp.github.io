@@ -35,7 +35,7 @@ body:
     id: author
     attributes:
       label: Author
-      placeholder: "John Doe 2"
+      placeholder: "John Doe"
       description: What's the name of the first McGill-NLP affiliated author? Must be one in `_data/authors.yml`.
     validations:
       required: true
@@ -71,27 +71,21 @@ body:
     validations:
       required: true
 
-  - type: dropdown
+  - type: input
+    id: link
+    attributes:
+      label: Link
+      description: The link to the paper.
+      placeholder: "https://arxiv.org/abs/1901.01234"
+    validations:
+      required: true
+
+  - type: input
     id: year
     attributes:
       label: Year
-      description: The year the paper was published. Must be a four-digit number.
-      multiple: false
-      options:
-        - "2019"
-        - "2020"
-        - "2021"
-        - "2022"
-        - "2023"
-        - "2024"
-        - "2025"
-        - "2026"
-        - "2027"
-        - "2028"
-        - "2029"
-        - "2030"
-        - "2031"
-        - "2032"
+      description: The year the paper was published. Must be a four-digit number (or else the article might not show up).
+      placeholder: "2022"
     validations:
       required: true
 
@@ -157,15 +151,6 @@ body:
         - "31"
     validations:
       required: false
-
-  - type: input
-    id: link
-    attributes:
-      label: Link
-      description: The link to the paper.
-      placeholder: "https://arxiv.org/abs/1901.01234"
-    validations:
-      required: true
 
   - type: input
     id: tags

@@ -1,6 +1,6 @@
 name: Add publication by URL or DOI
 description:  |
-  Fill this form to add a publication to the website.
+  Paste a URL or a DOI to add a publication to the website automatically.
   
 title: "[Add publication]"
 labels: ["automatic-add-publication-by-id"]
