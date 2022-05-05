@@ -11,6 +11,17 @@ body:
       value: |
         This form will automatically generate a PR that will be reviewed by the maintainers.
 
+  - type: dropdown
+    id: action
+    attributes:
+      label: Action
+      description: What do you want to do?
+      options:
+        - "Add publication"
+        - "Update publication"
+    validations:
+      required: true
+  
   - type: input
     id: title
     attributes:
