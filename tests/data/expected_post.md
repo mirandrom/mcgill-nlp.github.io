@@ -14,7 +14,7 @@ categories: Publications
 
 **{{ page.venue }}**
 
-{% include display-publication-links.html pub=page%}
+{% include display-publication-links.html pub=page %}
 
 ## Abstract
 

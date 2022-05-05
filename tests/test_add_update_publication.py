@@ -5,7 +5,7 @@ from ruamel.yaml import YAML
 import src.python.add_update_publication as mod
 
 
-class TestAddUpdateMember(unittest.TestCase):
+class TestAddUpdatePublication(unittest.TestCase):
     @classmethod
     def setUpClass(cls):
         yaml = YAML()
