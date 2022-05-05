@@ -50,7 +50,7 @@ def format_parsed_content(parsed):
     return {
         "filename": "-".join([parsed[k] for k in ["year", "month", "day", "shorthand"]])
         + ".md",
-        "content": top + bottom + parsed["abstract"],
+        "content": top + bottom + parsed.get("abstract", ""),
     }
 
 
