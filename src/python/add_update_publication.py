@@ -40,7 +40,8 @@ def preprocess_parsed(parsed, keys_removed):
     parsed["categories"] = "Publications"
 
     # Then, modify some keys
-    parsed["tags"] = [x.strip() for x in parsed["tags"].split(",")]
+    if parsed["tags"] != "_No response_":
+        parsed["tags"] = [x.strip() for x in parsed["tags"].split(",")]
 
     if parsed["abstract"] == "_No response_":
         parsed["abstract"] = "_Unavailable_"
