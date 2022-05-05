@@ -10,7 +10,8 @@ class TestAddUpdateMember(unittest.TestCase):
     def setUpClass(cls):
         yaml = YAML()
         yaml.preserve_quotes = True
-        cls.authors = yaml.load(open("_data/authors.yml"))
+        with open("_data/authors.yml") as f:
+            cls.authors = yaml.load(f)
 
     def test_add_member(self):
         with open("tests/data/add_member_issue_body.md") as f:

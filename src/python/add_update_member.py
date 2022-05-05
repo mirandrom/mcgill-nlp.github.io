@@ -51,7 +51,8 @@ def main(issue_body):
 
     yaml = YAML()
     yaml.preserve_quotes = True
-    authors = yaml.load(open("_data/authors.yml"))
+    with open("_data/authors.yml") as f:
+        authors = yaml.load(f)
     name_to_username = {authors[username]["name"]: username for username in authors}
 
     if parsed['action'] == 'Add member':
