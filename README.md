@@ -153,7 +153,7 @@ Notes:
 * `include display-publication-links.html` will display the icons and links to code, webpage, tweets, etc. `pub=page` refers to the page object, which is handled by Jekyll.
 * `thumbnail` links to a image located in `assets/images/papers`. If you don't have one, remove that line. You will need to upload the image to the repository before it shows up. Make sure you choose a picture:
   * in `jpg` (to save space), 
-  * an aspect ratio of 4:3 (A4 landscape), 
+  * an aspect ratio of 4:3 (landscape), 
   * resolution of about 800x600, 
   * taken from your paper.
 
