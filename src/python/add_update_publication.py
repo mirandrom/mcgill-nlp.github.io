@@ -1,3 +1,4 @@
+import json
 import os
 from io import StringIO
 from textwrap import dedent
@@ -8,6 +9,9 @@ from . import save_url_image, parse_issue_body
 
 
 def front_matters_from_dict(d):
+    # Convert to dict
+    d = json.loads(json.dumps(d))
+
     file_object = StringIO()
     yaml = YAML()
     yaml.preserve_quotes = True
@@ -16,12 +20,17 @@ def front_matters_from_dict(d):
 
     return front_matter
 
+
 def front_matters_to_dict(front_matter):
     file_object = StringIO(front_matter)
     yaml = YAML()
     yaml.preserve_quotes = True
     d = yaml.load(file_object)
     return d
+
+
+def get_filename(parsed):
+    return "-".join([parsed[k] for k in ["year", "month", "day", "shorthand"]])
 
 def preprocess_parsed(parsed, keys_removed):
     """
@@ -33,8 +42,8 @@ def preprocess_parsed(parsed, keys_removed):
     # Then, modify some keys
     parsed["tags"] = [x.strip() for x in parsed["tags"].split(",")]
 
-    if parsed['abstract'] == '_No response_':
-        parsed['abstract'] = '_Unavailable_'
+    if parsed["abstract"] == "_No response_":
+        parsed["abstract"] = "_Unavailable_"
 
     # Then, remove keys
     return {
@@ -70,29 +79,30 @@ def generate_publication_post(parsed):
     )
 
     return {
-        "filename": "-".join([parsed[k] for k in ["year", "month", "day", "shorthand"]])
-        + ".md",
+        "filename": get_filename(parsed),
         "content": top + bottom + parsed.get("abstract", ""),
     }
 
 
-def update_publication_post(parsed):   
+def update_publication_post(parsed):
     new_data = preprocess_parsed(
         parsed, keys_removed=["year", "month", "day", "shorthand", "abstract", "action"]
     )
 
-    filename = "-".join([parsed[k] for k in ["year", "month", "day", "shorthand"]])
+    filename = get_filename(parsed)
 
-    with open(os.path.join("_posts", "papers", filename), "r") as f:
-        lines = f.readlines()
+    with open(os.path.join("_posts", "papers", filename + ".md"), "r") as f:
+        lines = f.read()
     
-    _, front_matter, __, bottom = lines.split("---", 2)
+    print(lines.split('---'))
+
+    _, front_matter, bottom = lines.split("---", 2)
 
     old_data = front_matters_to_dict(front_matter)
     old_data.update(new_data)
 
     front_matter = front_matters_from_dict(old_data)
-    top = dedent(f"---\n{front_matter}\n---\n")
+    top = f"---\n{front_matter}\n---\n"
 
     return {
         "filename": filename,
@@ -101,7 +111,7 @@ def update_publication_post(parsed):
 
 
 def write_content_to_file(formatted):
-    with open(os.path.join("_posts", "papers", formatted["filename"]), "w") as f:
+    with open(os.path.join("_posts", "papers", formatted["filename"] + '.md'), "w") as f:
         f.write(formatted["content"])
 
 
@@ -113,13 +123,14 @@ def main(issue_body):
         key="thumbnail",
         path="assets/images/papers",
     )
-    if parsed['action'] == 'Add publication':
+    if parsed["action"] == "Add publication":
         formatted = generate_publication_post(parsed)
     else:
         formatted = update_publication_post(parsed)
     write_content_to_file(formatted)
 
     return formatted
+
 
 if __name__ == "__main__":
     issue_body = os.environ["ISSUE_BODY"]
