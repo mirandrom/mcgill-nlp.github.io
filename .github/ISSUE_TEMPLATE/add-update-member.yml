@@ -64,6 +64,16 @@ body:
     validations:
       required: true
 
+  - type: input
+    id: semantic_scholar_id
+    attributes:
+      label: "Semantic Scholar ID"
+      description: |
+        If you have a [Semantic Scholar](https://www.semanticscholar.org) ID, enter it here. This is highly recommend becasue it is used to automatically attribute a paper to the correct author.
+      placeholder: "145113126"
+    validations:
+      required: false
+
   - type: "input"
     id: avatar
     attributes:

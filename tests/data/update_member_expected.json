@@ -1,6 +1,7 @@
 {
     "name": "John Doe",
     "role": "PhD",
+    "semantic_scholar_id": "145113126",
     "avatar": "/assets/images/bio/John Doe.jpg",
     "alumni": false,
     "links": [

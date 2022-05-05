@@ -14,6 +14,10 @@ PhD
 
 Current Member
 
+### Semantic Scholar ID
+
+145113126
+
 ### Avatar
 
 _No response_
