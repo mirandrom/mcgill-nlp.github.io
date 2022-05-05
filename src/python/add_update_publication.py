@@ -30,7 +30,7 @@ def front_matters_to_dict(front_matter):
 
 
 def get_filename(parsed):
-    return "-".join([parsed[k] for k in ["year", "month", "day", "shorthand"]])
+    return "-".join([parsed[k] for k in ["year", "month", "day", "shorthand"]]) + '.md'
 
 def preprocess_parsed(parsed, keys_removed):
     """
@@ -91,7 +91,7 @@ def update_publication_post(parsed):
 
     filename = get_filename(parsed)
 
-    with open(os.path.join("_posts", "papers", filename + ".md"), "r") as f:
+    with open(os.path.join("_posts", "papers", filename), "r") as f:
         lines = f.read()
 
     _, front_matter, bottom = lines.split("---", 2)
@@ -109,7 +109,7 @@ def update_publication_post(parsed):
 
 
 def write_content_to_file(formatted):
-    with open(os.path.join("_posts", "papers", formatted["filename"] + '.md'), "w") as f:
+    with open(os.path.join("_posts", "papers", formatted["filename"]), "w") as f:
         f.write(formatted["content"])
 
 
