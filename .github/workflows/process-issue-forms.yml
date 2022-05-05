@@ -29,7 +29,7 @@ jobs:
         if: github.event.label.name == 'automatic-add-update-publication'
         env:
           ISSUE_BODY: ${{ github.event.issue.body }}
-        run: python -m src.python.add_publication
+        run: python -m src.python.add_update_publication
       
       - name: "Create post in _posts/papers with src/python/add_publication_by_id.py"
         if: github.event.label.name == 'automatic-add-publication-by-id'
