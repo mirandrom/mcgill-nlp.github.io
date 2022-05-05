@@ -93,8 +93,6 @@ def update_publication_post(parsed):
 
     with open(os.path.join("_posts", "papers", filename + ".md"), "r") as f:
         lines = f.read()
-    
-    print(lines.split('---'))
 
     _, front_matter, bottom = lines.split("---", 2)
 

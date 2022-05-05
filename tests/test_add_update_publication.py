@@ -10,7 +10,8 @@ class TestAddUpdateMember(unittest.TestCase):
     def setUpClass(cls):
         yaml = YAML()
         yaml.preserve_quotes = True
-        cls.authors = yaml.load(open("_data/authors.yml"))
+        with open("_data/authors.yml") as f:
+            cls.authors = yaml.load(f)
 
     def test_add_publication(self):
         with open("tests/data/add_publication_issue_body.md") as f:
@@ -28,12 +29,9 @@ class TestAddUpdateMember(unittest.TestCase):
         with open("tests/data/update_publication_issue_body.md") as f:
             issue_body = f.read()
 
-        # with open("tests/data/update_publication_expected.md") as f:
-        #     expected = f.read()
+        with open("tests/data/update_publication_expected.md") as f:
+            expected = f.read()
 
         formatted = mod.main(issue_body)
         
-        with open("tests/data/update_publication_expected.md", "w") as f:
-            f.write(formatted['content'])
-
-        # self.assertEqual(formatted['content'], expected)
+        self.assertEqual(formatted['content'], expected)
