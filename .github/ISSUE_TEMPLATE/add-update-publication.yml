@@ -156,20 +156,6 @@ body:
     validations:
       required: false
 
-  - type: textarea
-    id: abstract
-    attributes:
-      label: Abstract
-      description: |
-        The abstract of the paper. Do not use new lines or markdown. If you need them, please edit the  markdown file directly after it's created.
-
-        This field is ignored during updates.
-      placeholder: |
-        Our paper introduces recursion. We show it achieves state-of-the-art results on MNIST. We 
-        believe it is all you need because...
-    validations:
-      required: false
-
   - type: input
     id: tags
     attributes:
@@ -231,8 +217,21 @@ body:
       description: |
         Path or URL to an image (such as a figure). If it's an URL, it will be resized, convert to JPG and saved to `/assets/images/papers`. Please use an image with aspect ratio of 4:3.
 
-        Tip: If you want to upload an image, click in the "Abstract" field above, drag-and-drop your picture in that textarea, and GitHub will generate a URL. Copy only that URL into this field (ignore the `![](...)`) and delete that line in "Abstract."
+        Tip: Please see FAQ if you want to upload an image to GitHub.
       
       placeholder: "/assets/images/papers/project-thumbnail.jpg"
+    validations:
+      required: false
+
+  - type: textarea
+    id: abstract
+    attributes:
+      label: Abstract
+      description: |
+        The abstract of the paper. Please do not use `###`.
+
+        Note: If you select "Update publication", this field is completely ignored.
+      placeholder: |
+        Our paper introduces recursion. We show it achieves state-of-the-art results on MNIST. We  believe it is all you need because...
     validations:
       required: false
