@@ -7,7 +7,7 @@ layout: archive
 
 ### Faculty
 
-<!-- {% include list_authors-with-role.html authors=site.data.authors role="Faculty" alumni=false %} -->
+<!-- {% include list-authors-with-role.html authors=site.data.authors role="Faculty" alumni=false %} -->
 
 {% include card_authors-with-role.html authors=site.data.authors role="Faculty" alumni=false %}
 
@@ -36,20 +36,20 @@ layout: archive
 
 ### Postdocs
 
-{% include list_authors-with-role.html authors=site.data.authors role="Postdoc" alumni=true %}
+{% include list-authors-with-role.html authors=site.data.authors role="Postdoc" alumni=true %}
 
 ### PhD Students
 
-{% include list_authors-with-role.html authors=site.data.authors role="PhD" alumni=true %}
+{% include list-authors-with-role.html authors=site.data.authors role="PhD" alumni=true %}
 
 ### Masters Students
 
-{% include list_authors-with-role.html authors=site.data.authors role="Master" alumni=true %}
+{% include list-authors-with-role.html authors=site.data.authors role="Master" alumni=true %}
 
 ### Undergraduate Students
 
-{% include list_authors-with-role.html authors=site.data.authors role="Undergraduate" alumni=true %}
+{% include list-authors-with-role.html authors=site.data.authors role="Undergraduate" alumni=true %}
 
 ### Interns
 
-{% include list_authors-with-role.html authors=site.data.authors role="Intern" alumni=true %}
+{% include list-authors-with-role.html authors=site.data.authors role="Intern" alumni=true %}
