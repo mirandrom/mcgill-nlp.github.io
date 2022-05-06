@@ -20,7 +20,7 @@ John Doe, John Doe Sr, Leland DeWitt
 
 ### Venue
 
-ABC 1234
+ABC
 
 ### Link
 
