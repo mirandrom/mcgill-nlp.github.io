@@ -31,7 +31,7 @@ layout: archive
 
 {% include card_authors-with-role.html authors=site.data.authors role="Intern" alumni=false %}
 
-## Alumni
+# Alumni
 
 
 ### Postdocs
