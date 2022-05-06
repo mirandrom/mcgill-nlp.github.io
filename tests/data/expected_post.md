@@ -1,6 +1,6 @@
 ---
 title: 'StereoSet: Measuring stereotypical bias in pretrained language models'
-venue: ACL 2020
+venue: ACL
 names: Moin Nadeem, Anna Bethke, Siva Reddy
 tags:
 - ACL

@@ -2,7 +2,7 @@
 title: My cool paper
 author: John Doe
 names: John Doe, John Doe Sr, Leland DeWitt
-venue: ABC 1234
+venue: ABC
 link: https://example.com/paper
 code: https://github.com/McGill-NLP
 categories: Publications
