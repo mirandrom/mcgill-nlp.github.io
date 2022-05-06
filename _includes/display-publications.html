@@ -17,11 +17,12 @@
         </div>
         {% endif %}
 
-        {% if post.venue %}
         <div>
+            {% if post.venue %}
             <b> {{ post.venue }} </b>
+            {% endif %}
+            <b> ({{ post.date | date: "%Y" }}) </b>
         </div>
-        {% endif %}
 
         {% include display-publication-links.html pub=post%}
     </article>
