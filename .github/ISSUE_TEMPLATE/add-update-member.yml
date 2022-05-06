@@ -81,7 +81,7 @@ body:
       description: |
         Path or URL or image of the avatar of the lab member. If it's a URL, it will be automatically resized and converted to JPG and saved to `/assets/images/bio`.
 
-        Tip: If you want to upload an image, you can use imgur, or upload with GitHub. For the latter, see tip in the FAQ.
+        Tip: A simple way to upload a picture is through GitHub; an example is in the FAQ. Otherwise, you can use imgur and give the **direct** link (e.g. https://i.imgur.com/{id}.png).
       placeholder: "https://example.com/avatar.jpg"
     validations:
       required: false
