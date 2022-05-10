@@ -50,8 +50,12 @@ There's no need to contact us. Apply either to McGill Computer Science or McGill
   {% include posts-publication.html taxonomy="Publications" author="Siva Reddy" %}
 </div>
 
+
 <!-- ## Blog posts
 
 <div>
   {% include posts-category.html taxonomy="Blog" author="Siva Reddy" %}
-</div> -->
+</div> 
+
+-->
+
