@@ -2,8 +2,8 @@ import os
 import json
 from urllib.request import urlopen
 
-from . import parse_issue_body
-from .add_update_publication import generate_publication_post, write_content_to_file
+from . import parse_issue_body, write_content_to_file
+from .add_update_publication import generate_publication_post
 from .add_publication_by_id import wrangle_fetched_content
 
 
@@ -17,7 +17,7 @@ def fetch_content(parsed):
     return data
 
 
-def main(issue_body):
+def main(issue_body, save_dir="_posts/papers"):
     with open("ignored/semantic_scholar_paper_ids.json") as f:
         ignored_ids = set(json.loads(f.read()))
 
@@ -35,7 +35,7 @@ def main(issue_body):
             paper_json = wrangle_fetched_content(parsed, paper_json)  # in-place
             formatted = generate_publication_post(paper_json)
             cleaned.append(formatted)
-            write_content_to_file(formatted)
+            write_content_to_file(formatted, save_dir)
 
     with open("ignored/semantic_scholar_paper_ids.json", "w") as f:
         json.dump(list(ignored_ids), f, indent=2)

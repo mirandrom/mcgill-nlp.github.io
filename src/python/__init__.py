@@ -28,3 +28,9 @@ def save_url_image(fname, profile, key, path, ext='jpg', size=(700, 700)):
         im.thumbnail(size)
         im.save(file_path)
         profile[key] = "/" + file_path
+
+
+def write_content_to_file(formatted, save_dir):
+    os.makedirs(save_dir, exist_ok=True)
+    with open(os.path.join(save_dir, formatted["filename"]), "w") as f:
+        f.write(formatted["content"])

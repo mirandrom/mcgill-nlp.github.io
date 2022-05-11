@@ -4,8 +4,8 @@ from urllib.request import urlopen
 
 from ruamel.yaml import YAML
 
-from . import parse_issue_body
-from .add_update_publication import generate_publication_post, write_content_to_file
+from . import parse_issue_body, write_content_to_file
+from .add_update_publication import generate_publication_post
 
 
 def fetch_content(parsed):
@@ -51,9 +51,8 @@ def wrangle_fetched_content(parsed, paper_json):
     paper_json["link"] = paper_json["url"]
 
     if "ArXiv" in paper_json["externalIds"]:
-        paper_json[
-            "link"
-        ] = f"https://arxiv.org/abs/{paper_json['externalIds']['ArXiv']}"
+        link = f"https://arxiv.org/abs/{paper_json['externalIds']['ArXiv']}"
+        paper_json["link"] = link
         paper_json["shorthand"] = paper_json["externalIds"]["ArXiv"]
     elif "DOI" in paper_json["externalIds"]:
         paper_json["link"] = f"https://doi.org/{paper_json['externalIds']['DOI']}"
@@ -88,12 +87,12 @@ def wrangle_fetched_content(parsed, paper_json):
     return paper_json
 
 
-def main(issue_body):
+def main(issue_body, save_dir="_posts/papers"):
     parsed = parse_issue_body(issue_body)
     paper_json = fetch_content(parsed)
     paper_json = wrangle_fetched_content(parsed, paper_json)  # in-place
     formatted = generate_publication_post(paper_json)
-    write_content_to_file(formatted)
+    write_content_to_file(formatted, save_dir)
 
 
 if __name__ == "__main__":

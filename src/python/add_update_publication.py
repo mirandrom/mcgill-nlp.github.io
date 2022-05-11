@@ -5,8 +5,7 @@ from textwrap import dedent
 
 from ruamel.yaml import YAML
 
-from . import save_url_image, parse_issue_body
-
+from . import save_url_image, parse_issue_body, write_content_to_file
 
 def front_matters_from_dict(d):
     # Convert to dict
@@ -84,9 +83,14 @@ def generate_publication_post(parsed):
     """
     )
 
+    try:
+        content = top + bottom + str(parsed.get("abstract"))
+    except TypeError as e:
+        raise Exception(f"{e}\n{top=}\n{bottom=}\n{parsed=}") 
+
     return {
         "filename": get_filename(parsed),
-        "content": top + bottom + parsed.get("abstract", ""),
+        "content": content,
     }
 
 
@@ -113,13 +117,7 @@ def update_publication_post(parsed):
         "content": top + bottom,
     }
 
-
-def write_content_to_file(formatted):
-    with open(os.path.join("_posts", "papers", formatted["filename"]), "w") as f:
-        f.write(formatted["content"])
-
-
-def main(issue_body):
+def main(issue_body, save_dir="_posts/papers"):
     parsed = parse_issue_body(issue_body)
     save_url_image(
         fname=parsed["shorthand"],
@@ -131,7 +129,7 @@ def main(issue_body):
         formatted = generate_publication_post(parsed)
     else:
         formatted = update_publication_post(parsed)
-    write_content_to_file(formatted)
+    write_content_to_file(formatted, save_dir)
 
     return formatted
 
