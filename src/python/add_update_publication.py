@@ -117,13 +117,13 @@ def update_publication_post(parsed):
         "content": top + bottom,
     }
 
-def main(issue_body, save_dir="_posts/papers"):
+def main(issue_body, save_dir="_posts/papers", image_dir="assets/images/papers"):
     parsed = parse_issue_body(issue_body)
     save_url_image(
         fname=parsed["shorthand"],
         profile=parsed,
         key="thumbnail",
-        path="assets/images/papers",
+        image_dir=image_dir,
     )
     if parsed["action"] == "Add publication":
         formatted = generate_publication_post(parsed)

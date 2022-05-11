@@ -1,8 +1,10 @@
+from genericpath import exists
 import unittest
 import os
 import json
 import shutil
 from ruamel.yaml import YAML
+import pathlib as pl
 
 import src.python.add_update_publication as mod
 
@@ -15,9 +17,19 @@ class TestAddUpdatePublication(unittest.TestCase):
         with open("_data/authors.yml") as f:
             cls.authors = yaml.load(f)
 
-    def tearDown(self) -> None:
-        if os.path.exists('tests/scratch/_posts/papers'):
-            shutil.rmtree('tests/scratch/_posts/papers')
+        os.makedirs("tests/scratch/assets/images/papers/", exist_ok=True)
+
+        cls.save_dir = "tests/scratch/_posts/papers/"
+        cls.image_dir = "tests/scratch/assets/images/papers/"
+
+    @classmethod
+    def tearDownClass(cls) -> None:
+        for path in [
+            cls.save_dir,
+            cls.image_dir,
+        ]:
+            if os.path.exists(path):
+                shutil.rmtree(path)
 
     def test_add_publication(self):
         with open("tests/data/add_publication/in.md") as f:
@@ -26,10 +38,14 @@ class TestAddUpdatePublication(unittest.TestCase):
         with open("tests/data/add_publication/out.md") as f:
             expected = f.read()
 
-        formatted = mod.main(issue_body, save_dir='tests/scratch/_posts/papers/')
+        formatted = mod.main(
+            issue_body, save_dir=self.save_dir, image_dir=self.image_dir,
+        )
 
-        self.assertEqual(formatted['content'], expected)
-
+        self.assertEqual(formatted["content"], expected)
+        self.assertTrue(
+            pl.Path("tests/scratch/assets/images/papers/1904.1234.jpg").is_file()
+        )
 
     def test_update_publication(self):
         with open("tests/data/update_publication/in.md") as f:
@@ -38,6 +54,9 @@ class TestAddUpdatePublication(unittest.TestCase):
         with open("tests/data/update_publication/out.md") as f:
             expected = f.read()
 
-        formatted = mod.main(issue_body, save_dir='tests/scratch/_posts/papers/')
-        
-        self.assertEqual(formatted['content'], expected)
+        formatted = mod.main(
+            issue_body, save_dir=self.save_dir, image_dir=self.image_dir
+        )
+
+        self.assertEqual(formatted["content"], expected)
+

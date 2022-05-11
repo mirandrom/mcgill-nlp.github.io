@@ -45,7 +45,7 @@ def merge_links(old_links, new_links):
 
     return out_links
 
-def main(issue_body):
+def main(issue_body, image_dir="assets/images/bio"):
     parsed = parse_issue_body(issue_body)
     profile = format_parsed_content(parsed)
 
@@ -74,7 +74,7 @@ def main(issue_body):
         profile['links'] = merge_links(authors[username].get('links', []), profile.get('links', []))
         authors[username].update(profile)
     
-    save_url_image(fname=username, profile=authors[username], key="avatar", path="assets/images/bio")
+    save_url_image(fname=username, profile=authors[username], key="avatar", image_dir=image_dir)
 
     with open("_data/authors.yml", "w") as f:
         yaml.dump(authors, f)
