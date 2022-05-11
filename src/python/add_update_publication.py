@@ -94,14 +94,14 @@ def generate_publication_post(parsed):
     }
 
 
-def update_publication_post(parsed):
+def update_publication_post(parsed, load_dir="_posts/papers"):
     new_data = preprocess_parsed(
         parsed, keys_removed=["year", "month", "day", "shorthand", "abstract", "action"]
     )
 
     filename = get_filename(parsed)
 
-    with open(os.path.join("_posts", "papers", filename), "r") as f:
+    with open(os.path.join(load_dir, filename), "r") as f:
         lines = f.read()
 
     _, front_matter, bottom = lines.split("---", 2)
@@ -128,7 +128,7 @@ def main(issue_body, save_dir="_posts/papers", image_dir="assets/images/papers")
     if parsed["action"] == "Add publication":
         formatted = generate_publication_post(parsed)
     else:
-        formatted = update_publication_post(parsed)
+        formatted = update_publication_post(parsed, load_dir=save_dir)
     write_content_to_file(formatted, save_dir)
 
     return formatted

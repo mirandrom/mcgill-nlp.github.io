@@ -13,7 +13,7 @@ webpage: https://example.com/project
 video: https://github.com/McGill-NLP
 twitter: https://twitter.com/McGill_NLP
 demo: https://demo.com
-thumbnail: /assets/images/papers/1904.1234.jpg
+thumbnail: /tests/scratch/assets/images/papers/1904.1234.jpg
 
 ---
 
