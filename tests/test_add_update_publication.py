@@ -4,7 +4,6 @@ import os
 import json
 import shutil
 from ruamel.yaml import YAML
-import pathlib as pl
 
 import src.python.add_update_publication as mod
 
@@ -22,14 +21,14 @@ class TestAddUpdatePublication(unittest.TestCase):
         cls.save_dir = "tests/scratch/_posts/papers/"
         cls.image_dir = "tests/scratch/assets/images/papers/"
 
-    @classmethod
-    def tearDownClass(cls) -> None:
-        for path in [
-            cls.save_dir,
-            cls.image_dir,
-        ]:
-            if os.path.exists(path):
-                shutil.rmtree(path)
+    # @classmethod
+    # def tearDownClass(cls) -> None:
+    #     for path in [
+    #         cls.save_dir,
+    #         cls.image_dir,
+    #     ]:
+    #         if os.path.exists(path):
+    #             shutil.rmtree(path)
 
     def test_add_publication(self):
         with open("tests/data/add_publication/in.md") as f:
@@ -39,12 +38,12 @@ class TestAddUpdatePublication(unittest.TestCase):
             expected = f.read()
 
         formatted = mod.main(
-            issue_body, save_dir=self.save_dir, image_dir=self.image_dir,
+            issue_body, save_dir=self.save_dir, image_dir=self.image_dir
         )
 
         self.assertEqual(formatted["content"], expected)
         self.assertTrue(
-            pl.Path("tests/scratch/assets/images/papers/1904.1234.jpg").is_file()
+            os.path.isfile("tests/scratch/assets/images/papers/1904.1234.jpg")
         )
 
     def test_update_publication(self):

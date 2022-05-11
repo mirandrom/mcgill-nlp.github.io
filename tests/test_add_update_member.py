@@ -19,7 +19,7 @@ class TestAddUpdateMember(unittest.TestCase):
         with open("tests/data/add_member/in.md") as f:
             issue_body = f.read()
 
-        out = mod.main(issue_body)
+        out = mod.main(issue_body, image_dir=self.image_dir)
 
         with open("tests/data/add_member/out.json") as f:
             expected = json.load(f)
