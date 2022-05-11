@@ -42,11 +42,6 @@ class TestAddUpdatePublication(unittest.TestCase):
         )
 
         self.assertEqual(formatted["content"], expected)
-        path = os.path.join(self.image_dir, "1904.1234.jpg")
-        self.assertTrue(
-            os.path.isfile(path),
-            msg=f"Expected a file to find a file at {path}, but only the following files were there: {os.listdir(self.image_dir)}"
-        )
 
     def test_update_publication(self):
         with open("tests/data/update_publication/in.md") as f:
@@ -61,3 +56,8 @@ class TestAddUpdatePublication(unittest.TestCase):
 
         self.assertEqual(formatted["content"], expected)
 
+        path = os.path.join(self.image_dir, "1904.1234.jpg")
+        self.assertTrue(
+            os.path.isfile(path),
+            msg=f"Expected a file to find a file at {path}, but only the following files were there: {os.listdir(self.image_dir)}",
+        )
