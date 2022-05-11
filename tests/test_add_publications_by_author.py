@@ -9,16 +9,18 @@ import src.python.add_publications_by_author as mod
 
 class TestAddPublicationsByAuthor(unittest.TestCase):
     @classmethod
+    def setUpClass(cls):
+        cls.save_dir = "tests/scratch/_posts/papers"    
+
     def tearDown(self) -> None:
-        out_dir = "tests/scratch/_posts/papers"
-        if os.path.exists(out_dir):
-            shutil.rmtree(out_dir)
+        if os.path.exists(self.save_dir):
+            shutil.rmtree(self.save_dir)
 
     def add_publication_and_verify_all(self, author):
         with open(f"tests/data/add_publications_by_author/{author}/in.md") as f:
             issue_body = f.read()
 
-        out = mod.main(issue_body, save_dir="tests/scratch/_posts/papers")
+        out = mod.main(issue_body, save_dir=self.save_dir)
         papers = out["cleaned"]
         file2paper = {x["filename"]: x for x in papers}
 

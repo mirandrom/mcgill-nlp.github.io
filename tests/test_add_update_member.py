@@ -13,8 +13,7 @@ class TestAddUpdateMember(unittest.TestCase):
         with open("_data/authors.yml") as f:
             cls.authors = yaml.load(f)
 
-        cls.save_dir = "tests/scratch/_posts/papers/"
-        cls.image_dir = "tests/scratch/assets/images/papers/"
+        cls.image_dir = "tests/scratch/assets/images/bio/"
 
     def test_add_member(self):
         with open("tests/data/add_member/in.md") as f:
@@ -32,7 +31,7 @@ class TestAddUpdateMember(unittest.TestCase):
         with open("tests/data/update_member/in.md") as f:
             issue_body = f.read()
 
-        out = mod.main(issue_body)
+        out = mod.main(issue_body, image_dir=self.image_dir)
 
         with open("tests/data/update_member/out.json") as f:
             expected = json.load(f)
