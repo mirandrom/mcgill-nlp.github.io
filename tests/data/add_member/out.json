@@ -1,7 +1,7 @@
 {
     "name": "John Doe",
     "role": "PhD",
-    "avatar": "/assets/images/bio/John Doe.jpg",
+    "avatar": "/tests/scratch/assets/images/bio/John Doe.jpg",
     "alumni": false,
     "links": []
 }
