@@ -21,14 +21,14 @@ class TestAddUpdatePublication(unittest.TestCase):
         cls.save_dir = "tests/scratch/_posts/papers/"
         cls.image_dir = "tests/scratch/assets/images/papers/"
 
-    # @classmethod
-    # def tearDownClass(cls) -> None:
-    #     for path in [
-    #         cls.save_dir,
-    #         cls.image_dir,
-    #     ]:
-    #         if os.path.exists(path):
-    #             shutil.rmtree(path)
+    @classmethod
+    def tearDownClass(cls) -> None:
+        for path in [
+            cls.save_dir,
+            cls.image_dir,
+        ]:
+            if os.path.exists(path):
+                shutil.rmtree(path)
 
     def test_add_publication(self):
         with open("tests/data/add_publication/in.md") as f:
@@ -42,8 +42,10 @@ class TestAddUpdatePublication(unittest.TestCase):
         )
 
         self.assertEqual(formatted["content"], expected)
+        path = os.path.join(self.image_dir, "1904.1234.jpg")
         self.assertTrue(
-            os.path.isfile("tests/scratch/assets/images/papers/1904.1234.jpg")
+            os.path.isfile(path),
+            msg=f"Expected a file to find a file at {path}, but only the following files were there: {os.listdir(self.image_dir)}"
         )
 
     def test_update_publication(self):

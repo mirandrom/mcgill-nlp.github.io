@@ -1,5 +1,7 @@
 import unittest
 import json
+import os
+import shutil
 from ruamel.yaml import YAML
 
 import src.python.add_update_member as mod
@@ -14,6 +16,14 @@ class TestAddUpdateMember(unittest.TestCase):
             cls.authors = yaml.load(f)
 
         cls.image_dir = "tests/scratch/assets/images/bio/"
+    
+    @classmethod
+    def tearDownClass(cls) -> None:
+        for path in [
+            cls.image_dir,
+        ]:
+            if os.path.exists(path):
+                shutil.rmtree(path)
 
     def test_add_member(self):
         with open("tests/data/add_member/in.md") as f:
