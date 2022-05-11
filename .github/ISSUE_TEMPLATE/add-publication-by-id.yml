@@ -9,7 +9,7 @@ assignees:
 body:
   - type: markdown
     attributes:
-      value: |
+      value: >
         This form will automatically generate a PR that will be reviewed by the maintainers.
 
   - type: dropdown

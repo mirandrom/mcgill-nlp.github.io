@@ -231,7 +231,7 @@ body:
         The abstract of the paper. Please do not use `###`.
 
         Note: If you select "Update publication", this field is completely ignored.
-      placeholder: |
+      placeholder: >
         Our paper introduces recursion. We show it achieves state-of-the-art results on MNIST. We  believe it is all you need because...
     validations:
       required: false

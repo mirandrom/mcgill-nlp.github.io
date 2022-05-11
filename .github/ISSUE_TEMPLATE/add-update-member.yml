@@ -55,7 +55,7 @@ body:
     id: status
     attributes:
       label: "Status"
-      description: |
+      description: >
         What's the current status of the lab member?
       multiple: false
       options:

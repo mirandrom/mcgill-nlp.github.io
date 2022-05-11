@@ -50,9 +50,9 @@ jobs:
           branch-suffix: timestamp
           commit-message: "[GH Actions] ${{ github.event.label.name }}"
           title: "[Automatic PR] ${{ github.event.issue.title }}"
-          body: |
+          body: >
             Closes #${{ github.event.issue.number }}. This pull request was 
             automatically created through GitHub Actions.
           branch: "gh-actions/process-form-issue-${{ github.event.issue.number }}"
-          team-reviewers: |
+          team-reviewers: >
             @McGill-NLP/maintainers
