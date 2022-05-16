@@ -30,6 +30,11 @@ row_code:
     btn_label: "GitHub"
     btn_class: "btn--primary"
     excerpt: "We publish code for our models and datasets on GitHub to make it easier for researchers and developers to reproduce and build upon our work. We welcome pull requests and issues on active projects from the community."
+  
+row_about_us:
+  - image_path: /assets/images/home/lunch-1.jpeg
+  - image_path: /assets/images/home/jackie-axes-2019.jpg
+  - image_path: /assets/images/home/park-1.jpeg
 
 
 ---
@@ -47,4 +52,5 @@ row_code:
 We are a group of faculty members, researchers and students affiliated with McGill University and Mila Quebec AI Institute, both located in Montreal, Canada. We often collaborate with researchers around the world.
 {: .text-center}
 
-![image-center](/assets/images/home/park-1.jpeg){: .align-center}
+{% include feature_row id="row_about_us" %}
+
