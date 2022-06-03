@@ -45,6 +45,17 @@ def merge_links(old_links, new_links):
 
     return out_links
 
+def sort_by_lastname(authors):
+    lastname_to_user = {
+        desc['name'].split()[-1] + user: user
+        for user, desc in authors.items()
+    }
+
+    for key in sorted(lastname_to_user, reverse=True):
+        user = lastname_to_user[key]
+        desc = authors.pop(user)
+        authors.insert(0, user, desc)
+
 def main(issue_body, image_dir="assets/images/bio"):
     parsed = parse_issue_body(issue_body)
     profile = format_parsed_content(parsed)
@@ -75,6 +86,8 @@ def main(issue_body, image_dir="assets/images/bio"):
         authors[username].update(profile)
     
     save_url_image(fname=username, profile=authors[username], key="avatar", image_dir=image_dir)
+    
+    sort_by_lastname(authors)
 
     with open("_data/authors.yml", "w") as f:
         yaml.dump(authors, f)
