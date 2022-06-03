@@ -12,11 +12,14 @@
 {% if author.role == include.role %}
 
 <article class="author-card">
-    {% if author.avatar %}
     <div class="author-avatar">
+        {% if author.avatar %}
         <img src="{{ author.avatar | relative_url }}" alt="">
+        {% else %}
+        <img src="{{ /assets/images/bio/default.jpg | relative_url }}" alt="">
+        {% endif %}
     </div>
-    {% endif %}
+
     <div class="author-info">
         <b class="author-name">
             {% if author.links %}
