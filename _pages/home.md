@@ -35,6 +35,12 @@ row_about_us:
   - image_path: /assets/images/home/lunch-1.jpeg
   - image_path: /assets/images/home/jackie-axes-2019.jpg
   - image_path: /assets/images/home/park-1.jpeg
+  - image_path: /assets/images/home/coffee-acl-2022.jpg
+  - image_path: /assets/images/home/michaela-acl-2022.jpg
+  - image_path: /assets/images/home/zichao-acl-2022.jpg
+  - image_path: /assets/images/home/benno-acl-2022.jpg
+  - image_path: /assets/images/home/nick-acl-2022.jpg
+  - image_path: /assets/images/home/vaibhav-acl-2022.jpg
 
 
 ---
