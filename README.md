@@ -15,6 +15,8 @@ To get started, [click here to open the issue forms](https://github.com/McGill-N
 
 Note: if you made a mistake but already submitted the form, please see how to correct it in [FAQ](#FAQ).
 
+> If you are looking to build a project website/webpage for your paper, check out the [project page template](https://github.com/McGill-NLP/project-page-template), which has the same style as this website.
+
 ## Steps to contribute
 
 For any type of contribution, please follow these steps:
