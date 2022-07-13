@@ -13,11 +13,14 @@
 /_includes/ @xhluca
 /_data/ @xhluca
 /assets/ @xhluca
+/_config.yml @xhluca
+/favicon.ico @xhluca
+/Gemfile @xhluca
 
 # Python scripts
 /src/python/ @xhluca
 
-# Tests
+# Unit Tests
 /tests/ @xhluca
 
 # GitHub issue templates (Automation)
