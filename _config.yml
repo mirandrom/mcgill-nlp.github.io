@@ -55,7 +55,7 @@ plugins:
 
 author:
   name   : "McGill NLP Member(s)"
-  avatar : "/assets/images/bio/default.jpg"
+  avatar : "/assets/images/bio/placeholder/martlet.jpeg"
   bio    : "Current or former lab member(s) worked on this."
   links:
     - label: "Website"

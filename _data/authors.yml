@@ -2,7 +2,7 @@
 # John Doe:
 #   name: "John Doe"
 #   role: "PhD"
-#   avatar: "/assets/images/bio/default.jpg"
+#   avatar: "/assets/images/bio/placeholder/martlet.jpeg"
 #   date: "Sep 2030"
 #   advisor: "John Doe Sr."
 #   bio: "Just some cool student"
@@ -153,7 +153,7 @@ Emily Goodwin:
   name: "Emily Goodwin"
   role: "Master"
   new_role: "PhD at Stanford Linguistics"
-  avatar: "/assets/images/bio/default.jpg"
+  avatar: "/assets/images/bio/placeholder/martlet.jpeg"
   date: "Jan 2020"
   advisor: "Siva Reddy, Tim O'Donnell"
   note: "Co-advised by Dzmitry Bahdanau"
@@ -167,7 +167,7 @@ Lucas Torroba Hennigen:
   role: "Intern"
   advisor: "Siva Reddy"
   new_role: "PhD at MIT Computer Science"
-  avatar: "/assets/images/bio/default.jpg"
+  avatar: "/assets/images/bio/placeholder/martlet.jpeg"
   date: "Fall 2021"
   alumni: true
 
@@ -429,14 +429,14 @@ Elinor Poole-Dayan:
   role: "Undergraduate"
   date: "Winter 2021"
   advisor: "Siva Reddy"
-  avatar: "/assets/images/bio/default.jpg"
+  avatar: "/assets/images/bio/placeholder/martlet.jpeg"
   alumni: true
 
 Victor Prokhorov:
   name: "Victor Prokhorov"
   role: "Intern"
   advisor: "Siva Reddy"
-  avatar: "/assets/images/bio/default.jpg"
+  avatar: "/assets/images/bio/placeholder/martlet.jpeg"
   date: "Fall 2021"
   alumni: true
 
@@ -481,6 +481,6 @@ Michelle Yang:
   role: "Undergraduate"
   date: "Fall 2021"
   advisor: "Siva Reddy"
-  avatar: "/assets/images/bio/default.jpg"
+  avatar: "/assets/images/bio/placeholder/martlet.jpeg"
   alumni: true
 

@@ -16,7 +16,7 @@ Current Member
 
 ### Avatar
 
-https://github.com/McGill-NLP/mcgill-nlp.github.io/raw/main/assets/images/bio/default.jpg
+https://github.com/McGill-NLP/mcgill-nlp.github.io/raw/main/assets/images/bio/placeholder/martlet.jpeg
 
 ### Advisor
 
