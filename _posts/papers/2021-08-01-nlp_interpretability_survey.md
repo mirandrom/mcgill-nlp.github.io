@@ -6,8 +6,8 @@ names: "Andreas Madsen, Siva Reddy, Sarath Chandar" # names of all authors
 link: https://arxiv.org/abs/2108.04840 # link to paper
 twitter: https://twitter.com/andreas_madsen/status/1425794989741727748  # link to twitter thread (optional)
 thumbnail: /assets/images/papers/2021-nlp_interpretability_survey.svg  # link to a thumbnail (optional)
-venue: ArXiv pre-print  # venue and year of the paper
-tags: pre-print # tag of the paper (exclude year, use shorthand)
+venue: ArXiv  # venue and year of the paper
+tags: ArXiv # tag of the paper (exclude year, use shorthand)
 ---
 
 *{{ page.names }}*
