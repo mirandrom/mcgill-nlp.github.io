@@ -43,8 +43,6 @@ class TestAddPublicationsByAuthor(unittest.TestCase):
     def test_main_siva(self):
         self.add_publication_and_verify_all("siva")
 
-    def test_main_timothy(self):
-        self.add_publication_and_verify_all("timothy")
 
 
 if __name__ == "__main__":
