@@ -29,8 +29,8 @@ class TestAddPublicationsByAuthor(unittest.TestCase):
         for file in os.listdir(out_dir):
             with open(os.path.join(out_dir, file)) as f:
                 expected_paper = f.read()
-            error_msg = f"We did not find this paper in the list of all papers by {author}: {file}\nList of all papers: {file2paper.keys()}"
-            self.assertIn(file, file2paper, msg=error_msg)
+            error_msg = f"\n\nWe did not find this paper in the list of all papers by {author}: {file}\nList of all papers: {file2paper.keys()}"
+            self.assertIn(file, list(file2paper.keys()), msg=error_msg)
             self.assertEqual(file2paper[file]["content"], expected_paper)
 
         with open("ignored/semantic_scholar_paper_ids.json") as f:
@@ -42,7 +42,12 @@ class TestAddPublicationsByAuthor(unittest.TestCase):
 
     def test_main_siva(self):
         self.add_publication_and_verify_all("siva")
+    
+    def test_main_tim(self):
+        self.add_publication_and_verify_all("timothy")
 
+    def test_main_jackie(self):
+        self.add_publication_and_verify_all("jackie")
 
 
 if __name__ == "__main__":
