@@ -44,7 +44,10 @@ row_about_us:
 
 
 ---
-<!-- Based on: https://raw.githubusercontent.com/mmistakes/minimal-mistakes/master/docs/_pages/splash-page.md -->
+{% comment %}
+Based on: https://raw.githubusercontent.com/mmistakes/minimal-mistakes/master/docs/_pages/splash-page.md
+{% endcomment %}
+
 
 {% include feature_row id="row_research" type="left" %}
 

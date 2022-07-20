@@ -20,12 +20,10 @@ classes:
   {% include posts-publication.html taxonomy="Publications" author="Siva Reddy" %}
 </div>
 
-
-<!-- ## Blog posts
+{% comment %}
+## Blog posts
 
 <div>
   {% include posts-category.html taxonomy="Blog" author="Siva Reddy" %}
 </div> 
-
--->
-
+{% endcomment %}
