@@ -10,7 +10,7 @@ classes:
 ## Teaching
 
 <div>
-  {% include posts-publication.html taxonomy="Teaching" author="Siva Reddy" %}
+  {% include posts-publication.html taxonomy="Teaching" author="Siva Reddy" disable_group_by_year=true %}
 </div>
 
 

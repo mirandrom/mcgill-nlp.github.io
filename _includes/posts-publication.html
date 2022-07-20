@@ -1,4 +1,5 @@
 {% assign posts = site.categories[include.taxonomy] | where_exp: "item", "item.hidden != true" %}
+{% assign group_by_year = include.group_by_year | default: true %}
 {% if include.author %}
   {% assign posts = posts | where_exp: "post", "post.names contains include.author" %}
   
@@ -13,6 +14,16 @@
   {% endcomment %}
 
 {% endif %}
+
+
+{% if include.disable_group_by_year == true %}
+
+  {% for post in posts %}
+    {%- include display-publications.html %}
+  {% endfor %}
+
+{% else %}
+
 {% assign postsByYear = posts | group_by_exp: 'post', 'post.date | date: "%Y"' %}
 
 <details>
@@ -39,3 +50,5 @@
     <a href="#page-title" class="back-to-top">{{ site.data.ui-text[site.locale].back_to_top | default: 'Back to Top' }} &uarr;</a>
   </section>
 {% endfor %}
+
+{% endif %}
