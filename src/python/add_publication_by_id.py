@@ -43,7 +43,7 @@ def wrangle_fetched_content(parsed, paper_json):
     paper_json["month"] = parsed.get("month", "01")
     paper_json["day"] = parsed.get("day", "01")
 
-    author_names = [parsed["name"] for parsed in paper_json["authors"]]
+    author_names = [data["name"] for data in paper_json["authors"]]
     paper_json["names"] = ", ".join(author_names)
     paper_json["tags"] = paper_json["venue"]
     paper_json["shorthand"] = str(paper_json["paperId"])
@@ -87,8 +87,7 @@ def wrangle_fetched_content(parsed, paper_json):
     return paper_json
 
 
-def main(issue_body, save_dir="_posts/papers"):
-    parsed = parse_issue_body(issue_body)
+def main(parsed, save_dir="_posts/papers"):
     paper_json = fetch_content(parsed)
     paper_json = wrangle_fetched_content(parsed, paper_json)  # in-place
     formatted = generate_publication_post(paper_json)
@@ -97,4 +96,5 @@ def main(issue_body, save_dir="_posts/papers"):
 
 if __name__ == "__main__":
     issue_body = os.environ["ISSUE_BODY"]
-    main(issue_body)
+    parsed = parse_issue_body(issue_body)
+    main(parsed)

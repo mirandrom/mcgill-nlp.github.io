@@ -10,7 +10,13 @@ import src.python.add_publications_by_author as mod
 class TestAddPublicationsByAuthor(unittest.TestCase):
     @classmethod
     def setUpClass(cls):
-        cls.save_dir = "tests/scratch/_posts/papers"    
+        cls.save_dir = "tests/scratch/_posts/papers"
+        shutil.move('records/semantic_paper_ids_ignored.json', 'records/old_semantic_scholar_paper_ids.json')
+    
+    @classmethod
+    def tearDownClass(cls):
+        shutil.move('records/old_semantic_scholar_paper_ids.json', 'records/semantic_paper_ids_ignored.json')
+
 
     def tearDown(self) -> None:
         if os.path.exists(self.save_dir):
@@ -19,8 +25,9 @@ class TestAddPublicationsByAuthor(unittest.TestCase):
     def add_publication_and_verify_all(self, author):
         with open(f"tests/data/add_publications_by_author/{author}/in.md") as f:
             issue_body = f.read()
-
-        out = mod.main(issue_body, save_dir=self.save_dir)
+        
+        parsed = mod.parse_issue_body(issue_body)
+        out = mod.main(parsed, save_dir=self.save_dir)
         papers = out["cleaned"]
         file2paper = {x["filename"]: x for x in papers}
 
@@ -33,7 +40,7 @@ class TestAddPublicationsByAuthor(unittest.TestCase):
             self.assertIn(file, list(file2paper.keys()), msg=error_msg)
             self.assertEqual(file2paper[file]["content"], expected_paper)
 
-        with open("ignored/semantic_scholar_paper_ids.json") as f:
+        with open("records/semantic_paper_ids_ignored.json") as f:
             ignored = set(json.load(f))
 
         # test if the paper was added to the list of ignored papers in semantic scholar IDs file

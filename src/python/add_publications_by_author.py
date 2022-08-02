@@ -8,7 +8,6 @@ from .add_publication_by_id import wrangle_fetched_content
 
 
 def fetch_content(parsed):
-
     url = urlopen(
         f"https://api.semanticscholar.org/graph/v1/author/{parsed['author_id']}?fields=papers.title,papers.venue,papers.year,papers.authors,papers.externalIds,papers.url,papers.abstract,papers.externalIds"
     )
@@ -17,32 +16,39 @@ def fetch_content(parsed):
     return data
 
 
-def main(issue_body, save_dir="_posts/papers"):
-    with open("ignored/semantic_scholar_paper_ids.json") as f:
-        ignored_ids = set(json.loads(f.read()))
+def main(parsed, save_dir="_posts/papers"):
+    ignore_list_fname = "records/semantic_paper_ids_ignored.json"
 
-    parsed = parse_issue_body(issue_body)
+    if os.path.exists(ignore_list_fname):
+        with open(ignore_list_fname) as f:
+            ignored_ids = set(json.loads(f.read()))
+    else:
+        ignored_ids = set()
+
     fetched = fetch_content(parsed)
     cleaned = []
 
     for paper_json in fetched["papers"]:
+        paper_id = paper_json['paperId']
+
         start = int(parsed["start"])
         end = int(parsed["end"])
         year = int(paper_json["year"])
 
-        if year >= start and year <= end:
-            ignored_ids.add(paper_json["paperId"])
+        if year >= start and year <= end and paper_id not in ignored_ids:
+            ignored_ids.add(paper_id)
             paper_json = wrangle_fetched_content(parsed, paper_json)  # in-place
             formatted = generate_publication_post(paper_json)
             cleaned.append(formatted)
             write_content_to_file(formatted, save_dir)
 
-    with open("ignored/semantic_scholar_paper_ids.json", "w") as f:
-        json.dump(list(ignored_ids), f, indent=2)
+    with open(ignore_list_fname, "w") as f:
+        json.dump(sorted(ignored_ids), f, indent=2)
 
     return {'cleaned': cleaned, 'ignored': ignored_ids}
 
 
 if __name__ == "__main__":
     issue_body = os.environ['ISSUE_BODY']
-    main(issue_body)
+    parsed = parse_issue_body(issue_body)
+    main(parsed)
