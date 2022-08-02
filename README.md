@@ -288,9 +288,13 @@ This section is meant for the maintainer(s) or developers of the site. Please co
 
 You will need to install ruby and gem to use `jekyll` locally. This is only if you want to compile and run this site locally. If you want to modify a markdown file or a yaml file, you don't need to do that; please refer to the sections above for instructions.
 
-For the instructions, see [Jekyll quickstart](https://jekyllrb.com/docs/).
+For the instructions, see [Jekyll quickstart](https://jekyllrb.com/docs/). If you are running on GitHub codespaces, you can simply run the following:
 
-To run the site locally, use the last command in the quickstart:
+```bash
+bundle install
+```
+
+To run the site locally (or remotely on Codespaces), use the last command in the quickstart:
 ```bash
 bundle exec jekyll serve
 ```

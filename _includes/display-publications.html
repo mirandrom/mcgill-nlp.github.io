@@ -12,12 +12,12 @@
         </h2>
 
         {% if post.names %}
-        <div>
-            <i>{{ post.names }}</i>
+        <div class="publication-authors">
+            {{ post.names }}
         </div>
         {% elsif post.author %}
-        <div>
-            <i>{{ post.author }}</i>
+        <div class="publication-authors">
+            {{ post.author }}
         </div>
         {% endif %}
 
