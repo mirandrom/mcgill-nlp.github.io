@@ -2,7 +2,6 @@ import os
 from urllib.request import urlopen
 
 from PIL import Image
-from pyrsistent import v
 
 def parse_issue_body(body):
     """
