@@ -2,6 +2,7 @@ import os
 from urllib.request import urlopen
 
 from PIL import Image
+from pyrsistent import v
 
 def parse_issue_body(body):
     """
@@ -34,3 +35,19 @@ def write_content_to_file(formatted, save_dir):
     os.makedirs(save_dir, exist_ok=True)
     with open(os.path.join(save_dir, formatted["filename"]), "w") as f:
         f.write(formatted["content"])
+
+
+def remove_items_with_values(dictionary, value):
+    return {
+        k: v
+        for k, v in dictionary.items()
+        if v != value
+    }
+
+def remove_keys(dictionary, keys_to_remove):
+    keys_to_remove = set(keys_to_remove)
+    
+    return {
+        k: v for k, v in dictionary.items()
+        if k not in keys_to_remove
+    }

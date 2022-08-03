@@ -4,7 +4,7 @@ from urllib.request import urlopen
 
 from ruamel.yaml import YAML
 
-from . import parse_issue_body, write_content_to_file
+from . import parse_issue_body, write_content_to_file, remove_items_with_values
 from .add_update_publication import generate_publication_post
 
 
@@ -33,13 +33,13 @@ def create_attr_to_username_map(lab_members, attribute):
         if attribute in member_info
     }
 
-
 def wrangle_fetched_content(parsed, paper_json):
     with open("_data/authors.yml") as f:
         yaml = YAML()
         yaml.preserve_quotes = True
         lab_members = yaml.load(f)
 
+    parsed = remove_items_with_values(parsed, "_No response_")
 
     author_names = [data["name"] for data in paper_json["authors"]]
     paper_json["names"] = ", ".join(author_names)

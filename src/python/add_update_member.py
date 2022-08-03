@@ -2,7 +2,7 @@ import os
 
 from ruamel.yaml import YAML
 
-from . import save_url_image, parse_issue_body
+from . import save_url_image, parse_issue_body, remove_keys, remove_items_with_values
 
 
 def format_site_label(name):
@@ -26,13 +26,13 @@ def format_parsed_content(parsed):
         if parsed[key] != "_No response_"
     ]
 
-    keys_removed = ["status", "website", "twitter", "github", "scholar", "action"]
-
-    return {
-        k: v
-        for k, v in parsed.items()
-        if v != "_No response_" and k not in keys_removed
-    }
+    parsed = remove_keys(
+        parsed, 
+        keys_to_remove=["status", "website", "twitter", "github", "scholar", "action"]
+    )
+    parsed = remove_items_with_values(parsed, "_No response_")
+    
+    return parsed
 
 def merge_links(old_links, new_links):
     new_labels = {link["label"] for link in new_links}
