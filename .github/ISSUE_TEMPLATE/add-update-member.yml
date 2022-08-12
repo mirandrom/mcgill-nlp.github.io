@@ -43,6 +43,7 @@ body:
       multiple: false
       options:
         - "Faculty"
+        - "Adjunct Faculty"
         - "Postdoc"
         - "PhD"
         - "Master"

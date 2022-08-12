@@ -11,6 +11,10 @@ layout: archive
 
 {% include card-authors-with-role.html authors=site.data.authors role="Faculty" alumni=false %}
 
+### Adjunct Faculty
+
+{% include card-authors-with-role.html authors=site.data.authors role="Adjunct Faculty" alumni=false %}
+
 ### Postdocs
 
 {% include card-authors-with-role.html authors=site.data.authors role="Postdoc" alumni=false %}
