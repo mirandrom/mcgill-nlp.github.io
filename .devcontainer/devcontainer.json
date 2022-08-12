@@ -17,5 +17,5 @@
 		"ms-python.python"
 	],
 	// Use 'postCreateCommand' to run commands after the container is created.
-    "postCreateCommand": "pip3 install --user -r src/python/requirements.txt && bundle install"
+    "postCreateCommand": "bash post-create.sh"
 }
