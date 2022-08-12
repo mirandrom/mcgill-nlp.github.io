@@ -1,6 +1,6 @@
 ---
 permalink: /
-title: "McGill NLP Group"
+title: "McGill Natural Language Processing"
 layout: splash
 header:
     overlay_filter: rgba(237, 27, 47, 0.3)
@@ -11,7 +11,7 @@ header:
         - label: "Twitter"
           url: "https://twitter.com/McGill_NLP"
 
-excerpt: "We are a research group within McGill University and Mila focusing on various topics in natural language processing."
+excerpt: "McGill NLP is a research group within McGill University and Mila focusing on various topics in natural language processing."
 
 row_research:
   - image_path: /assets/images/home/poster-1.jpeg
