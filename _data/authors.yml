@@ -545,9 +545,6 @@ Siva Reddy:
   date: "Jan 2020"
   role: "Faculty"
   links:
-  - label: "Page"
-    url: "/people/siva"
-    icon: "fas fa-fw fa-user"
   - label: "Website"
     url: "https://sivareddy.in"
   - label: "Twitter"
@@ -559,6 +556,9 @@ Siva Reddy:
   - label: "Scholar"
     icon: "fas fa-fw fa-graduation-cap"
     url: "https://scholar.google.com/citations?user=LZZAAtoAAAAJ&hl=en&oi=ao"
+  - label: "Page"
+    url: "/people/siva"
+    icon: "fas fa-fw fa-user"
 
 Michelle Yang:
   name: "Michelle Yang"
