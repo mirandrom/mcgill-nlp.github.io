@@ -7,7 +7,7 @@ link: https://arxiv.org/abs/2210.12574 # link to paper
 code: https://github.com/kazemnejad/lm_pos_investigations  # link to code (optional)
 twitter: https://twitter.com/koustuvsinha/status/1584928673463169025
 thumbnail: /assets/images/papers/lm_pos_investigation.jpg
-venue: EMNLP 2022 Findings
+venue: EMNLP Findings
 tags: EMNLP
 ---
 
