@@ -7,7 +7,7 @@ link: https://arxiv.org/abs/2110.08412 # link to paper
 code: https://github.com/AndreasMadsen/nlp-roar-interpretability # link to code (optional)
 twitter: https://twitter.com/andreas_madsen/status/1450832033282932741  # link to twitter thread (optional)
 thumbnail: /assets/images/papers/2021-nlp-recursive-roar.svg  # link to a thumbnail (optional)
-venue: EMNLP 2022 Findings (2022)  # venue and year of the paper
+venue: EMNLP Findings (2022) # venue and year of the paper
 tags: EMNLP # tag of the paper (exclude year, use shorthand)
 ---
 
