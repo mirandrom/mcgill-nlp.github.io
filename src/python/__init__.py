@@ -42,15 +42,38 @@ def parse_issue_body(body):
 
     return parsed
 
-def save_url_image(fname, profile, key, image_dir, ext='jpg', size=(400, 400)):
+def save_url_image(fname, profile, key, image_dir, size=(400, 400)):
     if key in profile and profile[key].startswith("http"):
+        url = profile[key]
+        # Get the extension of the file
+        ext = os.path.splitext(url)[1]
+        if ext == "jpeg":
+            ext = "jpg"
+
+        if ext == "":
+            raise Exception(f"Could not get extension from {url}")
+
+        # Download the image
         file_path = os.path.join(image_dir, f"{fname}.{ext}")
+
         os.makedirs(image_dir, exist_ok=True)
-        im = Image.open(urlopen(profile[key])).convert('RGB')
-        im = center_square_crop(im)
-        im.thumbnail(size)
-        im.save(file_path, quality=75)
-        profile[key] = "/" + file_path
+        with urlopen(url) as response, open(file_path, "wb") as out_file:
+            data = response.read()
+            out_file.write(data)
+        
+        if ext in ["svg", "gif"]:
+            return "/" + file_path
+        else:
+            im = Image.open(file_path)
+            im = center_square_crop(im)
+            im.thumbnail(size)
+            
+            if ext == "jpg":
+                im.save(file_path, quality=80)
+            else:
+                im.save(file_path)
+            
+            return "/" + file_path
 
 
 def write_content_to_file(formatted, save_dir):

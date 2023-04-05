@@ -86,7 +86,9 @@ def main(parsed, site_data_dir="_data/", image_dir="assets/images/bio"):
         profile['links'] = merge_links(authors[username].get('links', []), profile.get('links', []))
         authors[username].update(profile)
     
-    save_url_image(fname=username, profile=authors[username], key="avatar", image_dir=image_dir)
+    img_path = save_url_image(fname=username, profile=authors[username], key="avatar", image_dir=image_dir)
+    authors[username]["avatar"] = img_path
+    
     
     sort_by_lastname(authors)
 

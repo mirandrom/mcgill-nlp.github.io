@@ -118,12 +118,14 @@ def update_publication_post(parsed, load_dir="_posts/papers"):
     }
 
 def main(parsed, save_dir="_posts/papers", image_dir="assets/images/papers"):
-    save_url_image(
+    img_path = save_url_image(
         fname=parsed["shorthand"],
         profile=parsed,
         key="thumbnail",
         image_dir=image_dir,
     )
+    parsed["thumbnail"] = img_path
+    
     if parsed["action"] == "Add publication":
         formatted = generate_publication_post(parsed)
     else:
