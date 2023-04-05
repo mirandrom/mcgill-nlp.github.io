@@ -1,4 +1,5 @@
 from genericpath import exists
+from pathlib import Path
 import unittest
 import os
 import json
@@ -8,6 +9,7 @@ from ruamel.yaml import YAML
 import src.python.add_update_publication as mod
 
 from .config import REMOVE_GENERATED_FILES
+
 
 class TestAddUpdatePublication(unittest.TestCase):
     @classmethod
@@ -33,18 +35,23 @@ class TestAddUpdatePublication(unittest.TestCase):
                     shutil.rmtree(path)
 
     def test_add_publication(self):
-        with open("tests/data/add_publication/in.md") as f:
+        in_path = "tests/data/add_publication/in.md"
+        expected_out_path = "tests/data/add_publication/out.md"
+
+        with open(in_path) as f:
             issue_body = f.read()
 
-        with open("tests/data/add_publication/out.md") as f:
+        with open(expected_out_path) as f:
             expected = f.read()
 
         parsed = mod.parse_issue_body(issue_body)
-        formatted = mod.main(
-            parsed, save_dir=self.save_dir, image_dir=self.image_dir
-        )
+        formatted = mod.main(parsed, save_dir=self.save_dir, image_dir=self.image_dir)
 
-        self.assertEqual(formatted["content"], expected)
+        saved_file_path = Path(self.save_dir) / formatted["filename"]
+
+        error_msg = f"\n\n!!! Expected content of file {saved_file_path} to match content of file {expected_out_path}, but they did not match !!!"
+
+        self.assertEqual(formatted["content"], expected, error_msg)
 
     def test_update_publication(self):
         with open("tests/data/update_publication/in.md") as f:
@@ -54,9 +61,7 @@ class TestAddUpdatePublication(unittest.TestCase):
             expected = f.read()
 
         parsed = mod.parse_issue_body(issue_body)
-        formatted = mod.main(
-            parsed, save_dir=self.save_dir, image_dir=self.image_dir
-        )
+        formatted = mod.main(parsed, save_dir=self.save_dir, image_dir=self.image_dir)
 
         self.assertEqual(formatted["content"], expected)
 

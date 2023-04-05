@@ -28,34 +28,33 @@ def format_parsed_content(parsed):
     ]
 
     parsed = remove_keys(
-        parsed, 
-        keys_to_remove=["status", "website", "twitter", "github", "scholar", "action"]
+        parsed,
+        keys_to_remove=["status", "website", "twitter", "github", "scholar", "action"],
     )
     parsed = remove_items_with_values(parsed, "_No response_")
-    
+
     return parsed
+
 
 def merge_links(old_links, new_links):
     new_labels = {link["label"] for link in new_links}
-    out_links = [
-        link for link in old_links
-        if link["label"] not in new_labels
-    ]
+    out_links = [link for link in old_links if link["label"] not in new_labels]
 
     out_links.extend(new_links)
 
     return out_links
 
+
 def sort_by_lastname(authors):
     lastname_to_user = {
-        desc['name'].split()[-1] + user: user
-        for user, desc in authors.items()
+        desc["name"].split()[-1] + user: user for user, desc in authors.items()
     }
 
     for key in sorted(lastname_to_user, reverse=True):
         user = lastname_to_user[key]
         desc = authors.pop(user)
         authors.insert(0, user, desc)
+
 
 def main(parsed, site_data_dir="_data/", image_dir="assets/images/bio"):
     site_data_dir = Path(site_data_dir)
@@ -67,7 +66,7 @@ def main(parsed, site_data_dir="_data/", image_dir="assets/images/bio"):
         authors = yaml.load(f)
     name_to_username = {authors[username]["name"]: username for username in authors}
 
-    if parsed['action'] == 'Add member':
+    if parsed["action"] == "Add member":
         if profile["name"] not in authors:
             username = profile["name"]
         else:
@@ -77,19 +76,31 @@ def main(parsed, site_data_dir="_data/", image_dir="assets/images/bio"):
             username = k
 
         authors[username] = profile
-    
+
     else:
-        if profile['name'] not in name_to_username:
+        if profile["name"] not in name_to_username:
             raise ValueError(f'{profile["name"]} not in authors')
-        
-        username = name_to_username[profile['name']]
-        profile['links'] = merge_links(authors[username].get('links', []), profile.get('links', []))
+
+        username = name_to_username[profile["name"]]
+        profile["links"] = merge_links(
+            authors[username].get("links", []), profile.get("links", [])
+        )
         authors[username].update(profile)
-    
-    img_path = save_url_image(fname=username, profile=authors[username], key="avatar", image_dir=image_dir)
-    authors[username]["avatar"] = img_path
-    
-    
+
+    img_path = save_url_image(
+        fname=username,
+        profile=authors[username],
+        key="avatar",
+        image_dir=image_dir,
+        crop_center=True,
+        size=(300, 300),
+    )
+
+    if img_path is not None:
+        # This could either mean that a new image was saved or that the image was
+        # updated. In either case, we need to update the path to the image.
+        authors[username]["avatar"] = img_path
+
     sort_by_lastname(authors)
 
     with open(site_data_dir / "authors.yml", "w") as f:

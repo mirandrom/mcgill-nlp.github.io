@@ -1,9 +1,10 @@
 import os
-from urllib.request import urlopen
+from urllib.request import urlopen, urlretrieve
 
 from PIL import Image
 
-def center_square_crop(im):        
+
+def center_square_crop(im):
     # Do a center crop
     width, height = im.size
     if width > height:
@@ -20,10 +21,12 @@ def center_square_crop(im):
 
     return im
 
+
 def remove_prefix(text, prefix):
     if text.startswith(prefix):
-        return text[len(prefix):]
+        return text[len(prefix) :]
     return text  # or whatever
+
 
 def parse_issue_body(body):
     """
@@ -42,11 +45,21 @@ def parse_issue_body(body):
 
     return parsed
 
-def save_url_image(fname, profile, key, image_dir, size=(400, 400)):
+
+def save_url_image(
+    fname,
+    profile,
+    key,
+    image_dir,
+    size=(400, 400),
+    crop_center=False,
+    png_to_jpg=False,
+    jpg_quality=80,
+):
     if key in profile and profile[key].startswith("http"):
         url = profile[key]
         # Get the extension of the file
-        ext = os.path.splitext(url)[1]
+        ext = os.path.splitext(url)[1][1:]
         if ext == "jpeg":
             ext = "jpg"
 
@@ -57,22 +70,25 @@ def save_url_image(fname, profile, key, image_dir, size=(400, 400)):
         file_path = os.path.join(image_dir, f"{fname}.{ext}")
 
         os.makedirs(image_dir, exist_ok=True)
-        with urlopen(url) as response, open(file_path, "wb") as out_file:
-            data = response.read()
-            out_file.write(data)
-        
+        urlretrieve(url, file_path)
+
         if ext in ["svg", "gif"]:
             return "/" + file_path
         else:
             im = Image.open(file_path)
-            im = center_square_crop(im)
+            if crop_center:
+                im = center_square_crop(im)
             im.thumbnail(size)
-            
+
             if ext == "jpg":
-                im.save(file_path, quality=80)
+                im.save(file_path, quality=jpg_quality)
+            elif ext == "png" and png_to_jpg:
+                im = im.convert("RGB")
+                file_path = file_path.replace(".png", ".jpg")
+                im.save(file_path, quality=jpg_quality)
             else:
                 im.save(file_path)
-            
+
             return "/" + file_path
 
 
@@ -83,16 +99,10 @@ def write_content_to_file(formatted, save_dir):
 
 
 def remove_items_with_values(dictionary, value):
-    return {
-        k: v
-        for k, v in dictionary.items()
-        if v != value
-    }
+    return {k: v for k, v in dictionary.items() if v != value}
+
 
 def remove_keys(dictionary, keys_to_remove):
     keys_to_remove = set(keys_to_remove)
-    
-    return {
-        k: v for k, v in dictionary.items()
-        if k not in keys_to_remove
-    }
+
+    return {k: v for k, v in dictionary.items() if k not in keys_to_remove}

@@ -123,9 +123,12 @@ def main(parsed, save_dir="_posts/papers", image_dir="assets/images/papers"):
         profile=parsed,
         key="thumbnail",
         image_dir=image_dir,
+        size=(600, 600),
+        crop_center=False
     )
-    parsed["thumbnail"] = img_path
-    
+    if img_path is not None:
+        parsed["thumbnail"] = img_path
+
     if parsed["action"] == "Add publication":
         formatted = generate_publication_post(parsed)
     else:

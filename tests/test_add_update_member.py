@@ -51,14 +51,23 @@ class TestAddUpdateMember(unittest.TestCase):
         with open("tests/data/update_member/in.md") as f:
             issue_body = f.read()
 
+        exp_out_path = "tests/data/update_member/out.json"
         parsed = mod.parse_issue_body(issue_body)
         out = mod.main(parsed, image_dir=self.image_dir, site_data_dir=self.site_data_dir)
+        
 
-        with open("tests/data/update_member/out.json") as f:
+        with open(exp_out_path) as f:
             expected = json.load(f)
         
         
         output = json.loads(json.dumps(out['John Doe']))
 
-        self.assertEqual(output, expected)
+        # Sort output and expected dicts to make sure they are the same
+        output = {k: output[k] for k in sorted(output)}
+        expected = {k: expected[k] for k in sorted(expected)}
+
+        error_message = f"\n\n!!! Expected content of generated file to match content of file {exp_out_path}, but they did not match !!!"
+        self.assertEqual(output, expected, error_message)
+
+        
     
