@@ -1,5 +1,8 @@
 import os
+from pathlib import Path
+import re
 from urllib.request import urlopen, urlretrieve
+from collections import OrderedDict
 
 from PIL import Image
 
@@ -45,6 +48,17 @@ def parse_issue_body(body):
 
     return parsed
 
+def find_urls(text):
+    """
+    1. Find all urls using regex: https://stackoverflow.com/a/840110/13837091
+    2. Remove the trailing ")"
+    3. Get unique URLs only (set comprehension -> list)
+    """
+    return list(
+        OrderedDict.fromkeys(
+            [s for s in re.findall("(?P<url>https?://[^\s)]+)", text)]
+        )
+    )
 
 def save_url_image(
     fname,
@@ -53,43 +67,81 @@ def save_url_image(
     image_dir,
     size=(400, 400),
     crop_center=False,
-    png_to_jpg=False,
+    convert_to_jpg=False,
     jpg_quality=80,
 ):
-    if key in profile and profile[key].startswith("http"):
-        url = profile[key]
+    accepted_extensions = [
+        "jpg",
+        "jpeg",
+        "png",
+        "gif",
+        "svg",
+        "webp",
+        "bmp",
+        "tiff",
+        "ico",
+        "eps",
+        "blp",
+
+    ]
+    if key not in profile:
+        return None
+    
+    if profile[key] == "":
+        return None
+
+    urls = find_urls(profile[key])
+
+    if len(urls) == 0:
+        return None
+    
+    for url in urls:
         # Get the extension of the file
         ext = os.path.splitext(url)[1][1:]
+        if ext not in accepted_extensions:
+            print(f"Extension {ext} not in accepted extensions: {accepted_extensions}")
+            continue
+
         if ext == "jpeg":
             ext = "jpg"
-
-        if ext == "":
-            raise Exception(f"Could not get extension from {url}")
-
+        
+        image_dir = Path(image_dir)
         # Download the image
-        file_path = os.path.join(image_dir, f"{fname}.{ext}")
+        if ext != "":
+            # file_path = os.path.join(image_dir, f"{fname}.{ext}")
+            file_path = image_dir / f"{fname}.{ext}"
+        else:
+            file_path = image_dir / f"{fname}"
 
-        os.makedirs(image_dir, exist_ok=True)
-        urlretrieve(url, file_path)
+        image_dir.mkdir(parents=True, exist_ok=True)
+        urlretrieve(url, str(file_path))
 
         if ext in ["svg", "gif"]:
-            return "/" + file_path
+            return "/" + str(file_path)
         else:
-            im = Image.open(file_path)
-            if crop_center:
-                im = center_square_crop(im)
-            im.thumbnail(size)
-
+            try:
+                im = Image.open(file_path)
+                if crop_center:
+                    im = center_square_crop(im)
+                im.thumbnail(size)
+            
+            except Exception as e:
+                print(f"Could not open {url} as image due to error: {e}")
+                # Remove the file
+                file_path.unlink()
+                continue
+            
             if ext == "jpg":
                 im.save(file_path, quality=jpg_quality)
-            elif ext == "png" and png_to_jpg:
-                im = im.convert("RGB")
-                file_path = file_path.replace(".png", ".jpg")
-                im.save(file_path, quality=jpg_quality)
-            else:
+            elif not convert_to_jpg:
                 im.save(file_path)
+            else:
+                im = im.convert("RGB")
+                # Remove ext from file_path
+                file_path = Path(file_path).with_suffix(".jpg")
+                im.save(file_path, quality=jpg_quality)
 
-            return "/" + file_path
+            return "/" + str(file_path)
 
 
 def write_content_to_file(formatted, save_dir):

@@ -75,15 +75,17 @@ body:
     validations:
       required: false
 
-  - type: "input"
+  - type: textarea
     id: avatar
     attributes:
       label: "Avatar"
       description: |
-        Path or URL or image of the avatar of the lab member. If it's a URL, it will be automatically resized and converted to JPG and saved to `/assets/images/bio`.
-
-        Tip: A simple way to upload a picture is through GitHub; an example is in the FAQ. Otherwise, you can use imgur and give the **direct** link (e.g. https://i.imgur.com/{id}.png).
-      placeholder: "https://example.com/avatar.jpg"
+        Path or URL or image of the avatar of the lab member. If it's a URL, it will be automatically resized and saved to `/assets/images/bio`.
+        
+        Tip: You can drag and drop an image, or click on the "M" button on the bottom right of the text area.   
+        Otherwise, you can use imgur and give the **direct** link (e.g. https://i.imgur.com/{id}.png).
+      
+      placeholder: "Click here and drag an image to upload, or paste an image URL"
     validations:
       required: false
 
