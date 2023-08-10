@@ -88,7 +88,7 @@ For any type of page or post (publication, blog post, course description), we us
 
 ## Modify pages
 
-> ![WARNING]
+> [!WARNING]
 > This section is for advanced users. You will likely not need it unless you are intend to maintain this website or fix specific issues with page rendering
 
 To modify a page, navigate to [_pages](_pages/) and update the desired file. If you add a new file, you will also need to edit the [_data/navigation.yml](_data/navigation.yml) file with the correct relative URL.
