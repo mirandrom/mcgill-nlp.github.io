@@ -1,5 +1,9 @@
 # McGill NLP Website
 
+### [➡️ Click Here to Add Your Profile or Paper ⬅️](https://github.com/McGill-NLP/mcgill-nlp.github.io/issues/new/choose)
+
+<br>
+
 This is the source code of the [group website](https://mcgill-nlp.github.io/), which was built using [Jekyll](https://github.com/jekyll/jekyll) and [Minimal Mistakes](https://github.com/mmistakes/minimal-mistakes).
 
 ## Quickstart
