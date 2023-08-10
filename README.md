@@ -21,8 +21,8 @@ For certain contributions, it is possible to fill GitHub forms and everything wi
 To get started, [click here to open the issue forms](https://github.com/McGill-NLP/mcgill-nlp.github.io/issues/new/choose).
 
 > [!NOTE]
-> * If you made a mistake but already submitted the form, please see how to correct it in [FAQ](#FAQ).
-> * If you are looking to build a project website/webpage for your paper, check out the [project page template](https://github.com/McGill-NLP/project-page-template), which has the same style as this website.
+> * *If you made a mistake but already submitted the form, please see how to correct it in [FAQ](#FAQ).*
+> * *If you are looking to build a project website/webpage for your paper, check out the [project page template](https://github.com/McGill-NLP/project-page-template), which has the same style as this website.*
 
 ## Steps to contribute
 
@@ -35,7 +35,7 @@ For other types of contribution (not covered by the issue form), please follow t
 ## Add new member profile
 
 > [!NOTE]
-> Have you tried using issue forms? They should be faster and easier for most of the (simpler) scenarios. This section is only if you need to make custom changes not covered by the forms.
+> *Have you tried using issue forms? They should be faster and easier for most of the (simpler) scenarios. This section is only if you need to make custom changes not covered by the forms.*
 
 Navigate to [_data/authors.yml](./_data/authors.yml) and add the desired information at the end of the file. It has to follow the following template:
 
@@ -89,7 +89,7 @@ For any type of page or post (publication, blog post, course description), we us
 ## Modify pages
 
 > [!WARNING]
-> This section is for advanced users. You will likely not need it unless you are intend to maintain this website or fix specific issues with page rendering
+> *This section is for advanced users. You will likely not need it unless you are intend to maintain this website or fix specific issues with page rendering*
 
 To modify a page, navigate to [_pages](_pages/) and update the desired file. If you add a new file, you will also need to edit the [_data/navigation.yml](_data/navigation.yml) file with the correct relative URL.
 
@@ -239,8 +239,8 @@ You may want to delete posts forever. Then, delete the file in `_posts/`. If you
 
 ## Create a profile page
 
-> ![NOTE]
-> If you are having a hard time in this section, try to copy from someone else's profile and modify it.
+> [!NOTE]
+> *If you are having a hard time in this section, try to copy from someone else's profile and modify it.*
 
 To have your own profile, you can create a new file called `<username>.md` in the [`_pages_/profiles` directory](_pages_/profiles). Note that `<username>` will determine the URL of the file, so choose carefully. You will need to add the following at the top:
 ```yaml
@@ -300,7 +300,7 @@ John Doe:
 ## Advanced
 
 > [!WARNING]
-> This section is meant for the maintainer(s) or developers of the site. Please consult the faculty members for more information on how to become a maintainer.
+> *This section is meant for the maintainer(s) or developers of the site. Please consult the faculty members for more information on how to become a maintainer.*
 
 ### Setup
 
