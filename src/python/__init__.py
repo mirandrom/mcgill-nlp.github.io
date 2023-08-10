@@ -71,6 +71,7 @@ def save_url_image(
     jpg_quality=80,
 ):
     accepted_extensions = [
+        "",
         "jpg",
         "jpeg",
         "png",
