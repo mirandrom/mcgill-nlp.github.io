@@ -134,13 +134,19 @@ def save_url_image(
             
             if ext == "jpg":
                 im.save(file_path, quality=jpg_quality)
-            elif not convert_to_jpg:
-                im.save(file_path)
-            else:
+            elif ext == "":
+                # In this case, we force the extension to be jpg
+                file_path = file_path.with_suffix(".jpg")
+                im.convert("RGB").save(file_path, quality=jpg_quality)
+            
+            elif convert_to_jpg:
                 im = im.convert("RGB")
                 # Remove ext from file_path
                 file_path = Path(file_path).with_suffix(".jpg")
                 im.save(file_path, quality=jpg_quality)
+            
+            else:
+                im.save(file_path)
 
             return "/" + str(file_path)
 
