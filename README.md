@@ -8,7 +8,8 @@ This is the source code of the [group website](https://mcgill-nlp.github.io/), w
 
 ## Quickstart
 
-> [!IMPORTANT] You should probably read this section
+> [!IMPORTANT]
+> You should probably read this section!
 
 For certain contributions, it is possible to fill GitHub forms and everything will be automated without requiring to fork or modify the codebase. This currently works for:
 * Adding or updating the profile of a lab member
@@ -19,17 +20,22 @@ For certain contributions, it is possible to fill GitHub forms and everything wi
 
 To get started, [click here to open the issue forms](https://github.com/McGill-NLP/mcgill-nlp.github.io/issues/new/choose).
 
-> [!NOTE] If you made a mistake but already submitted the form, please see how to correct it in [FAQ](#FAQ). If you are looking to build a project website/webpage for your paper, check out the [project page template](https://github.com/McGill-NLP/project-page-template), which has the same style as this website.
+> [!NOTE]
+> * If you made a mistake but already submitted the form, please see how to correct it in [FAQ](#FAQ).
+> * If you are looking to build a project website/webpage for your paper, check out the [project page template](https://github.com/McGill-NLP/project-page-template), which has the same style as this website.
 
 ## Steps to contribute
 
-For any type of contribution, please follow these steps:
+For other types of contribution (not covered by the issue form), please follow these steps:
 1. [Fork](https://github.com/McGill-NLP/mcgill-nlp.github.io/fork) the repository.
 2. Add your contribution by editing the desired files.
 3. Create a pull request: Click on the [Pull Request](https://github.com/McGill-NLP/mcgill-nlp.github.io/pulls) tab and select "New pull request". Select the repository you forked and modified.
 4. Wait for a team member to review and merge your pull request.
 
 ## Add new member profile
+
+> [!NOTE]
+> Have you tried using issue forms? They should be faster and easier for most of the (simpler) scenarios. This section is only if you need to make custom changes not covered by the forms.
 
 Navigate to [_data/authors.yml](./_data/authors.yml) and add the desired information at the end of the file. It has to follow the following template:
 
@@ -81,6 +87,9 @@ If you wish to delete a member (e.g. added by mistake, duplicates, etc.) you can
 For any type of page or post (publication, blog post, course description), we use something called ["Front Matters"](https://jekyllrb.com/docs/front-matter/) to tell Jekyll about the purpose of the file. This is a block of YAML text at the beginning of the file. The rest of the file is regular [markdown](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet).
 
 ## Modify pages
+
+> ![WARNING]
+> This section is for advanced users. You will likely not need it unless you are intend to maintain this website or fix specific issues with page rendering
 
 To modify a page, navigate to [_pages](_pages/) and update the desired file. If you add a new file, you will also need to edit the [_data/navigation.yml](_data/navigation.yml) file with the correct relative URL.
 
@@ -230,6 +239,9 @@ You may want to delete posts forever. Then, delete the file in `_posts/`. If you
 
 ## Create a profile page
 
+> ![NOTE]
+> If you are having a hard time in this section, try to copy from someone else's profile and modify it.
+
 To have your own profile, you can create a new file called `<username>.md` in the [`_pages_/profiles` directory](_pages_/profiles). Note that `<username>` will determine the URL of the file, so choose carefully. You will need to add the following at the top:
 ```yaml
 ---
@@ -287,7 +299,8 @@ John Doe:
 
 ## Advanced
 
-This section is meant for the maintainer(s) or developers of the site. Please consult the faculty members for more information on how to become a maintainer.
+> [!WARNING]
+> This section is meant for the maintainer(s) or developers of the site. Please consult the faculty members for more information on how to become a maintainer.
 
 ### Setup
 
