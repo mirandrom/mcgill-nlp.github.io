@@ -64,7 +64,7 @@ def get_non_alpha(text):
     for ch in text:
         if not ch.isalpha():
             return ch
-        return None
+    return None
 
 def save_url_image(
     fname,

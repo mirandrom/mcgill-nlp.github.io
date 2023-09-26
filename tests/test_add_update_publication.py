@@ -34,6 +34,26 @@ class TestAddUpdatePublication(unittest.TestCase):
                 if os.path.exists(path):
                     shutil.rmtree(path)
 
+    def template_test_update_publication(
+        self, in_path, expected_out_path, expected_image_path
+    ):
+        with open(in_path) as f:
+            issue_body = f.read()
+
+        with open(expected_out_path) as f:
+            expected = f.read()
+
+        parsed = mod.parse_issue_body(issue_body)
+        formatted = mod.main(parsed, save_dir=self.save_dir, image_dir=self.image_dir)
+
+        self.assertEqual(formatted["content"], expected)
+
+        path = os.path.join(self.image_dir, expected_image_path)
+        self.assertTrue(
+            os.path.isfile(path),
+            msg=f"Expected a file to find a file at {path}, but only the following files were there: {os.listdir(self.image_dir)}",
+        )
+
     def test_add_publication(self):
         in_path = "tests/data/add_publication/in.md"
         expected_out_path = "tests/data/add_publication/out.md"
@@ -54,19 +74,20 @@ class TestAddUpdatePublication(unittest.TestCase):
         self.assertEqual(formatted["content"], expected, error_msg)
 
     def test_update_publication(self):
-        with open("tests/data/update_publication/in.md") as f:
-            issue_body = f.read()
+        self.template_test_update_publication(
+            in_path="tests/data/update_publication/in.md",
+            expected_out_path="tests/data/update_publication/out.md",
+            expected_image_path="1904.1234.jpg",
+        )
 
-        with open("tests/data/update_publication/out.md") as f:
-            expected = f.read()
-
-        parsed = mod.parse_issue_body(issue_body)
-        formatted = mod.main(parsed, save_dir=self.save_dir, image_dir=self.image_dir)
-
-        self.assertEqual(formatted["content"], expected)
-
-        path = os.path.join(self.image_dir, "1904.1234.jpg")
-        self.assertTrue(
-            os.path.isfile(path),
-            msg=f"Expected a file to find a file at {path}, but only the following files were there: {os.listdir(self.image_dir)}",
+    def test_update_publication_for_benno(self):
+        # First, copy out_benno.md to the save_dir
+        shutil.copy(
+            "tests/data/update_publication/out_benno_before.md",
+            os.path.join(self.save_dir, "2023-05-25-2305.16397.md"),
+        )
+        self.template_test_update_publication(
+            in_path="tests/data/update_publication/in_benno.md",
+            expected_out_path="tests/data/update_publication/out_benno.md",
+            expected_image_path="2305.16397.jpg",
         )

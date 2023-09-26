@@ -1,3 +1,4 @@
+import argparse
 import json
 import os
 from io import StringIO
@@ -139,6 +140,15 @@ def main(parsed, save_dir="_posts/papers", image_dir="assets/images/papers"):
 
 
 if __name__ == "__main__":
-    issue_body = os.environ["ISSUE_BODY"]
+    parser = argparse.ArgumentParser()
+    parser.add_argument("-f", "--issue_body_file", type=str)
+    args = parser.parse_args()
+    
+    if args.issue_body_file is not None:
+        with open(args.issue_body_file, "r") as f:
+            issue_body = f.read()
+    else:
+        issue_body = os.environ["ISSUE_BODY"]
+    
     parsed = parse_issue_body(issue_body)
     main(parsed)
