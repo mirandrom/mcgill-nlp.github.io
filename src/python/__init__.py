@@ -60,6 +60,12 @@ def find_urls(text):
         )
     )
 
+def get_non_alpha(text):
+    for ch in text:
+        if not ch.isalpha():
+            return ch
+        return None
+
 def save_url_image(
     fname,
     profile,
@@ -99,6 +105,10 @@ def save_url_image(
     for url in urls:
         # Get the extension of the file
         ext = os.path.splitext(url)[1][1:]
+        potential_sep_char = get_non_alpha(ext)
+        if potential_sep_char is not None:
+            ext = ext.partition(potential_sep_char)[0]
+        
         if ext not in accepted_extensions:
             print(f"Extension {ext} not in accepted extensions: {accepted_extensions}")
             continue
