@@ -62,7 +62,8 @@ Malik H. Altakrori:
   bio: Interested in writing style analysis, authorship identification and authorship
     obfuscation using DL/NLP
   note: Graduating in Dec. 2022
-  alumni: false
+  alumni: true
+  new_role: Postdoctoral Researcher at IBM
   links:
   - label: Website
     url: https://malikaltakrori.github.io/
@@ -123,7 +124,7 @@ Laurestine Bradford:
   name: Laurestine Bradford
   role: PhD
   advisor: Siva Reddy, Tim O'Donnell
-  date: Jan-2022
+  date: Jan 2022
   bio: Language in math and connecting syntax to semantics
   alumni: false
   links:
@@ -281,9 +282,10 @@ Jasper Jian:
   avatar: /assets/images/bio/Jasper Jian.jpg
   advisor: Siva Reddy
   date: Summer 2022
+  new_role: PhD at Stanford Linguistics
   bio: Works on interpreting and extracting linguistic representations from large
     language models.
-  alumni: false
+  alumni: true
   links:
   - label: Website
     url: https://sites.google.com/view/jasperjian
@@ -321,7 +323,7 @@ Zdeněk Kasner:
   advisor: Siva Reddy
   date: Feb 2023
   bio: Intern working on language & code generation
-  alumni: false
+  alumni: true
   links:
   - label: Website
     url: https://kasnerz.github.io/
@@ -407,7 +409,7 @@ Zichao Li:
 
 Xing Han Lu:
   name: Xing Han Lu
-  role: Master
+  role: PhD
   avatar: /assets/images/bio/Xing Han Lu.jpg
   advisor: Siva Reddy
   date: Fall 2021
@@ -592,10 +594,11 @@ Edoardo M. Ponti:
   - label: Scholar
     url: https://scholar.google.com/citations?user=tklL2q0AAAAJ
   semantic_scholar_id: '3381663'
-
   new_role: Lecturer (Assistant Professor) at University of Edinburgh, UK
+
 Elinor Poole-Dayan:
   name: "Elinor Poole-Dayan"
+  new_role: "Master's at MIT"
   role: "Undergraduate"
   date: "Winter 2021"
   advisor: "Siva Reddy"
