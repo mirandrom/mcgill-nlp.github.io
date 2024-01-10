@@ -21,6 +21,7 @@
 #       url: "https://scholar.google.com/citations?user=<user_id>"
 
 David Adelani:
+  bio: "Assistant Professor"
   name: David Adelani
   role: Faculty
   semantic_scholar_id: '2518906'
