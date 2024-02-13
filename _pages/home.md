@@ -12,7 +12,6 @@ header:
           url: "https://twitter.com/McGill_NLP"
 
 excerpt: "McGill NLP is a research group within McGill University and Mila focusing on various topics in natural language processing."
-excerpt_separator: "<!--more-->"
 
 row_research:
   - image_path: /assets/images/home/poster-1.jpg
