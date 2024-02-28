@@ -243,11 +243,12 @@ Aylin Erman:
   links:
   - label: Website
     url: https://aylinerma.github.io
+
 Emily Goodwin:
   name: "Emily Goodwin"
   role: "Master"
   new_role: "PhD at Stanford Linguistics"
-  avatar: "/assets/images/bio/placeholder/martlet.jpeg"
+  avatar: "/assets/images/bio/Emily Goodwin.jpg"
   date: "Jan 2020"
   advisor: "Siva Reddy, Tim O'Donnell"
   note: "Co-advised by Dzmitry Bahdanau"
@@ -310,7 +311,9 @@ Jad Kabbara:
   semantic_scholar_id: '2631301'
   advisor: Jackie Cheung
   bio: Works on computational pragmatics and its intersection with NLG and NLU
+  new_role: Postdoc at MIT
   alumni: true
+  avatar: /assets/images/bio/Jad Kabbara.jpg
   links:
   - label: Website
     url: https://www.cs.mcgill.ca/~jkabba/
@@ -520,10 +523,11 @@ Sivan Milton:
   advisor: Siva Reddy
   date: Summer 2021
   bio: Works on Semantic Role Labelling
+  new_role: PhD at University of Edinburgh
   alumni: true
   links:
-  - label: Scholar
-    url: https://scholar.google.com/citations?user=psPfrkMAAAAJ&hl=en&authuser=1
+  - label: Website
+    url: https://www.inf.ed.ac.uk/people/students/Sivan_Milton.html
 
 Andrei Mircea:
   name: Andrei Mircea
