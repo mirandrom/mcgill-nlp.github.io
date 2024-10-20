@@ -524,24 +524,6 @@ Amirhossein Kazemnejad:
 Aditi Khandelwal:
   name: Aditi Khandelwal
   role: PhD
-  username: aditi.khandelwal@mila.quebec
-  semantic_scholar_id: https://www.semanticscholar.org/author/Aditi-Khandelwal/47000634
-  avatar: '[https://drive.google.com/file/d/1cCnu4dtU-iuiGnl_KtMzEzwRO2xvSNst/view?usp=sharing](url)'
-  advisor: Prof. Siva Reddy and Prof. Golnoosh Farnadi
-  date: Sept.2024
-  bio: I work on building AI that understands and adapts to diverse languages and
-    cultures, making tech more inclusive for everyone.
-  alumni: false
-  links:
-  - label: Twitter
-    url: https://x.com/Aditi184
-  - label: GitHub
-    url: https://github.com/aditi184
-  - label: Scholar
-    url: https://scholar.google.com/citations?view_op=list_works&hl=en&user=mahkGIoAAAAJ
-Aditi Khandelwal 2:
-  name: Aditi Khandelwal
-  role: PhD
   username: aditi.khandelwal
   semantic_scholar_id: '47000634'
   avatar: /assets/images/bio/Aditi Khandelwal 2.jpg
@@ -561,9 +543,9 @@ Aditi Khandelwal 2:
 Aravind Krishnan:
   name: Aravind Krishnan
   role: Intern
-  username: aravind.krishnan@mila.quebec
-  avatar: https://github.com/Krishnan-Aravind/Krishnan-Aravind.github.io/blob/master/assets/img/krishnan_profile_headshot.jpg
-  advisor: Prof. Siva Reddy,  Dr. Marius Mosbach
+  username: aravind.krishnan
+  avatar: /assets/images/bio/Aravind Krishnan.jpg
+  advisor: Siva Reddy
   date: October 2024
   bio: I'm a master student at Saarland University, my research interests include
     language modeling and interpretability in multimodal settings
