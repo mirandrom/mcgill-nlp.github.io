@@ -39,7 +39,6 @@ layout: default
 
     <!-- This section is the meta element for the authors that are properly parsed. -->
     {% assign authors = page.names | split: ',' %}
-    {{ authors | inspect }}
     {% for author in authors %}
       <!-- Strip author name -->
       {% assign authorNameStriped = author | strip %}
@@ -47,7 +46,7 @@ layout: default
       <span itemprop="author" itemscope itemtype="https://schema.org/Person">
         <meta itemprop="name" content="{{ authorNameStriped }}">
         <meta itemprop="identifier" content="{{ authorNameStriped }}">
-        {{ authorNameStriped }}
+        
         {% if site.data.authors[authorNameStriped] != nil %}
         {% assign first_link = site.data.authors[authorNameStriped].links | first %}
           <meta itemprop="url" content="{{ first_link.url }}">
