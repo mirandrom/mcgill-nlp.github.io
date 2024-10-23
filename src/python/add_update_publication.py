@@ -68,6 +68,8 @@ def generate_publication_post(parsed):
         parsed, keys_removed=["year", "month", "day", "shorthand", "abstract", "action"]
     )
 
+    d['layout'] = 'paper'
+
     front_matter = front_matters_from_dict(d)
     top = dedent(f"---\n{front_matter}\n---\n")
 
