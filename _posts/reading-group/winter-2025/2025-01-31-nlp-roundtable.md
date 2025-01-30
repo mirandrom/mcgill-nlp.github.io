@@ -31,4 +31,4 @@ The topic of the roundtable will be about the progress of NLP in the last recent
 
 Date: January 31st<br>
 Time: 3PM <br>
-Location: Zoom (See email)
+Location: F01 or Zoom (See email)
