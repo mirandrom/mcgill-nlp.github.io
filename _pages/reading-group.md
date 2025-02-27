@@ -11,15 +11,17 @@ The McGill NLP reading group hosts speaker presentations and NLP-related discuss
 
 ## Admin
 
-The current organizers are Cesare Spinoso and Ori Ernst. For more information about the reading group or for requests to join the mailing list, send an e-mail to the organizers at `compling-owner at cs dot mcgill dot ca`. For spam filtering reasons, you will need to reply to a confirmation e-mail. Note that this mailing list is used for people outside of Mila. If you already have a Mila email, you will automatically receive reading group announcements through the `mila-tous` mailing list.
+The current organizers are Cesare Spinoso and Ori Ernst. For more information about the reading group or for requests to join the mailing list, send an e-mail to the organizers at `compling-owner at cs dot mcgill dot ca`. For spam filtering reasons, you will need to reply to a confirmation e-mail. Note that this mailing list is used for people outside of Mila. If you already have a Mila email, you will automatically receive reading group announcements through the `mila-event-announcement` mailing list.
 
 ## Schedule
 
-For the Winter 2025 semester, the reading group will meet every other week on Fridays at 3PM (with some exceptions to be expected). Meetings will be held in a hybrid fashion. More information including room locations, Zoom link and Google calendar link will be found in the emails we will send announcing speakers/discussion topics both to the Mila-wide email and the CompLing mailing list. Below is a **tentative schedule** of speakers/topics for the semester. It is **actively updated**. All times are in ET.
+For the Winter 2025 semester, the reading group will meet every other week on **Fridays at 1PM** (with some exceptions to be expected). Meetings will be held in a hybrid fashion. More information including room locations, Zoom link and Google calendar link will be found in the emails we will send announcing speakers/discussion topics both to the Mila-wide email and the CompLing mailing list. Below is a **tentative schedule** of speakers/topics for the semester. It is **actively updated**. All times are in ET.
 
 | **Date @ Time** | **Speaker(s)** | **Topic** | **More Information** |
 |---|---|---|---|
 | January 31st @ 3PM | Group Discussion | NLP Roundtable: Where have we been and where are we going? | [click here]({% link _posts/reading-group/winter-2025/2025-01-31-nlp-roundtable.md %}) |
+| February 21st @ 1PM | Group Discussion | NLP Roundtable: The Reviewing Process | [click here]({% link _posts/reading-group/winter-2025/2025-02-21-nlp-roundtable.md %}) |
+| February 28th @ 1PM | Amal Zouaq | LLMs/VLMs and Nonparametric Memory | [click here]({% link _posts/reading-group/winter-2025/2025-02-28-amal-zouaq.md %}) |
 
 ## History
 
