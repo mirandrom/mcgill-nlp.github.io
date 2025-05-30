@@ -1,5 +1,5 @@
 ---
-title: "Epistemic Injustice in the Age of Language Models"
+title: "Large language models, large culture models? The role of language in the cultural values exhibited by LLMs"
 venue: Université de Montréal 
 names: Ayla Rigouts Terryn
 author: Ayla Rigouts Terryn
