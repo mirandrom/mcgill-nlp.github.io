@@ -19,9 +19,9 @@ For more information about the reading group or for requests to join the mailing
 
 For the Summer 2025 semester, the reading group will meet on **Fridays at 1PM**. Meetings will be held in a hybrid fashion. More information including room locations, Zoom link and Google calendar link will be found in the emails we will send announcing speakers/discussion topics both to the Mila-wide email and the CompLing mailing list. Below is a **tentative schedule** of speakers/topics for the semester. It is **actively updated**. All times are in ET.
 
-| **Date @ Time** | **Organizer in Charge** | **Speaker(s)** | **Topic** | **More Information** |
-|---|---|---|---|---|
-| *TBD* | *TBD* | *TBD* | *TBD* | *TBD* |
+| **Date @ Time** | **Speaker(s)** | **Topic** | **More Information** |
+|---|---|---|---|
+| June 13 @1PM | Several Mila students | Lightning talks of NLP research at Mila| TBD |
 
 
 ## History
