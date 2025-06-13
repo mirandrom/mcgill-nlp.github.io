@@ -21,7 +21,7 @@ For the Summer 2025 semester, the reading group will meet on **Fridays at 1PM**.
 
 | **Date @ Time** | **Speaker(s)** | **Topic** | **More Information** |
 |---|---|---|---|
-| June 13 @1PM | Several Mila students | Lightning talks of NLP research at Mila| TBD |
+| June 13 @1PM | Several Mila students | Lightning talks of NLP research at Mila| See Email |
 
 
 ## History
