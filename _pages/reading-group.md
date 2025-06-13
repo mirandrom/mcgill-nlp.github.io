@@ -7,7 +7,7 @@ classes:
     - no-sidebar
 ---
 
-The McGill NLP reading group hosts speaker presentations and NLP-related discussions in a hybrid fashion at Mila. It is called the McGill NLP reading group for historical reasons, but actively gathers NLP researchers from different Mila-affiliated research institutes across Montreal (McGill University, University of Montreal, etc.).
+The McGill NLP reading group hosts speaker presentations and NLP-related discussions in a hybrid fashion at Mila. It is called the McGill NLP reading group for historical reasons, but actively gathers NLP researchers from different Mila-affiliated research institutes across Montreal (McGill University, University of Montreal, etc.). The organizer for the month of June is Andrei, the meta-organizer is Cesare.
 
 ## Admin
 
