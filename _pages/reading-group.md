@@ -7,11 +7,11 @@ classes:
     - no-sidebar
 ---
 
-The McGill NLP reading group hosts speaker presentations and NLP-related discussions in a hybrid fashion at Mila. It is called the McGill NLP reading group for historical reasons, but actively gathers NLP researchers from different Mila-affiliated research institutes across Montreal (McGill University, University of Montreal, etc.).
+The McGill NLP reading group hosts speaker presentations and NLP-related discussions in a hybrid fashion at Mila. It is called the McGill NLP reading group for historical reasons, but actively gathers NLP researchers from different Mila-affiliated research institutes across Montreal (McGill University, University of Montreal, etc.). 
 
 ## Admin
 
-The current organizers are [Andrei Mircea](https://mirandrom.github.io/), [Cesare Spinoso](https://cesare-spinoso.github.io/), [David Austin](https://scholar.google.com/citations?user=c-iLCzEAAAAJ&hl=en), [Senyu Li](https://scholar.google.com/citations?user=9MzYLOcAAAAJ&hl=en), and [Ziling Cheng](https://scholar.google.com/citations?user=_2W8Ai4AAAAJ&hl=en)[^1]. They will be taking **monthly turns** organizing the reading group and its related activities.
+The current organizers are [Andrei Mircea](https://mirandrom.github.io/), [Cesare Spinoso](https://cesare-spinoso.github.io/), [David Austin](https://scholar.google.com/citations?user=c-iLCzEAAAAJ&hl=en), [Senyu Li](https://scholar.google.com/citations?user=9MzYLOcAAAAJ&hl=en), and [Ziling Cheng](https://scholar.google.com/citations?user=_2W8Ai4AAAAJ&hl=en)[^1]. They will be taking **monthly turns** organizing the reading group and its related activities. The organizer for the month of June is Andrei, the meta-organizer is Cesare.
 
 For more information about the reading group or for requests to join the mailing list, send an e-mail to the organizers at `compling-owner at cs dot mcgill dot ca`. For spam filtering reasons, you will need to reply to a confirmation e-mail. Note that this mailing list is used for people outside of Mila. If you already have a Mila email, you will automatically receive reading group announcements through the `mila-event-announcement` mailing list.
 
