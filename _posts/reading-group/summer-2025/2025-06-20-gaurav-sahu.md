@@ -1,13 +1,13 @@
 ---
 title: "LitLLMs, LLMs for Literature Review: Are we there yet?"
-venue: UdeM
+venue: UdeM / Mila
 names: Gaurav Sahu
 author: Gaurav Sahu
 tags:
 - NLP RG
 categories:
     - Reading-Group
-    - Winter-2025
+    - Summer-2025
 layout: archive
 classes:
     - wide
@@ -29,6 +29,6 @@ Literature reviews are an essential component of scientific research, but they r
 Gaurav Sahu is a Postdoctoral Fellow at Mila - Quebec AI Institute, where he develops specialized large language models for scientific workflows, including automated literature discovery and streamlining the peer-review process. He holds a Ph.D. in Computer Science from the University of Waterloo, where he developed efficient strategies to adapt generalist LLMs for diverse natural language processing tasks such as data augmentation, automated data analysis, and computational modeling of aesthetic preferences. His research sits at the intersection of generative AI and natural language processing, with a particular emphasis on leveraging artificial intelligence to advance scientific discovery and research workflows.
 
 ## Logistics
-Logistics:
-Time: June 20th @ 1PM <br>
+Date: June 20th <br>
+Time: 1PM <br>
 Location: At Mila in A14 or Zoom <br>
